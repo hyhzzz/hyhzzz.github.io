@@ -6,7 +6,7 @@
   <link href="https://hyhzzz.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyhzzz.github.io/"/>
-  <updated>2021-07-02T00:34:19.919Z</updated>
+  <updated>2021-07-02T01:47:41.683Z</updated>
   <id>https://hyhzzz.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://hyhzzz.github.io/2021/07/02/hexo-an-zhuang/"/>
+    <id>https://hyhzzz.github.io/2021/07/02/hexo-an-zhuang/</id>
+    <published>2021-07-02T01:40:10.321Z</published>
+    <updated>2021-07-02T01:47:41.683Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;title: Hexo安装&lt;br&gt;date: 1625190010321&lt;/p&gt;
+&lt;p&gt;categories:</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
