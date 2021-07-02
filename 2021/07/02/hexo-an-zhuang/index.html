@@ -471,14 +471,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    84
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -502,6 +502,95 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>Hexo就是我们的个人博客网站的框架， 这里需要自己在电脑常里创建一个文件夹，可以命名为Blog，Hexo框架与以后你自己发布的网页都在这个文件夹中。创建好后，进入文件夹中，按住shift键，右击鼠标点击命令行</p>
+<img src="hexo%E5%AE%89%E8%A3%85.assets/image-20210701221623450.2a3pi6uzmljw.png" alt="image-20210701221623450" style="zoom:67%;" />
+
+<p>使用npm命令安装Hexo，输入：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> -g hexo-cli <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这个安装时间较长耐心等待，安装完成后，初始化我们的博客，输入：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo init blog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>注意，这里的命令都是作用在刚刚创建的Blog文件夹中。</p>
+<p>为了检测我们的网站雏形，分别按顺序输入以下三条命令：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo new test_my_site
+
+hexo g
+hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这些命令在后面作介绍，完成后，打开浏览器输入地址：</p>
+<p>localhost:4000</p>
+<p>现在来介绍常用的Hexo 命令</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> hexo -g <span class="token comment">#安装Hexo</span>
+<span class="token function">npm</span> update hexo -g <span class="token comment">#升级</span>
+hexo init <span class="token comment">#初始化博客</span>
+
+命令简写
+hexo n <span class="token string">"我的博客"</span> <span class="token operator">==</span> hexo new <span class="token string">"我的博客"</span> <span class="token comment">#新建文章</span>
+hexo g <span class="token operator">==</span> hexo generate <span class="token comment">#生成</span>
+hexo s <span class="token operator">==</span> hexo server <span class="token comment">#启动服务预览</span>
+hexo d <span class="token operator">==</span> hexo deploy <span class="token comment">#部署</span>
+
+hexo server <span class="token comment">#Hexo会监视文件变动并自动更新，无须重启服务器</span>
+hexo server -s <span class="token comment">#静态模式</span>
+hexo server -p <span class="token number">5000</span> <span class="token comment">#更改端口</span>
+hexo server -i <span class="token number">192.168</span>.1.1 <span class="token comment">#自定义 IP</span>
+hexo clean <span class="token comment">#清除缓存，若是网页正常情况下可以忽略这条命令</span>
+
+刚刚的三个命令依次是新建一篇博客文章、生成网页、在本地预览的操作。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>推送网站</strong></p>
+<p>上面只是在本地预览，接下来要做的就是就是推送网站，也就是发布网站，让我们的网站可以被更多的人访问。在设置之前，需要解释一个概念，在blog根目录里的_config.yml文件称为<strong>站点</strong>配置文件，如下图</p>
+<img src="hexo%E5%AE%89%E8%A3%85.assets/image-20210701221623450.2a3pi6uzmljw.png" alt="image-20210701221623450" style="zoom: 67%;" />
+
+<p>进入根目录里的themes文件夹，里面也有个_config.yml文件，这个称为<strong>主题</strong>配置文件，如下图</p>
+<img src="hexo%E5%AE%89%E8%A3%85.assets/image-20210701221623450.2a3pi6uzmljw.png" alt="image-20210701221623450" style="zoom:67%;" />
+
+<p>下一步将我们的Hexo与GitHub关联起来，打开站点的配置文件_config.yml，翻到最后修改为：</p>
+<p>deploy:<br>type: git<br>repo: 这里填入你之前在GitHub上创建仓库的完整路径，记得加上 .git<br>branch: master参考如下：</p>
+<p><img src="hexo%E5%AE%89%E8%A3%85.assets/image-20210701222057385.o7pub58p5c0.png" alt="image-20210701222057385"></p>
+<p><img src="hexo%E5%AE%89%E8%A3%85.assets/image-20210701232250830.kqo2foszquo.png" alt="image-20210701232250830"></p>
+<p>保存站点配置文件。</p>
+<p>其实就是给hexo d 这个命令做相应的配置，让hexo知道你要把blog部署在哪个位置，很显然，我们部署在我们GitHub的仓库里。最后安装Git部署插件，输入命令：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这时，我们分别输入三条命令：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo clean 
+hexo g
+hexo d或者hexo g -d
+<span class="token number">1554283077</span>@qq.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>其实第三条的 hexo d 就是部署网站命令，d是deploy的缩写。完成后，打开浏览器，在地址栏输入你的放置个人网站的仓库路径，即 <a href="https://link.zhihu.com/?target=http://xxxx.github.io">http://xxxx.github.io</a> (知乎排版可能会出现”http://“字样，参考下图) 比如我的xxxx就是我的GitHub用户名：</p>
+<p><img src="hexo%E5%AE%89%E8%A3%85.assets/image-20210701222128025.6vp42n5q2ts0.png" alt="image-20210701222128025"></p>
+<p>你就会发现你的博客已经上线了，可以在网络上被访问了。</p>
+<p>需要修改这个</p>
+<p><img src="hexo%E5%AE%89%E8%A3%85.assets/image-20210701232217616.3ezcnizgsxo0.png" alt="image-20210701232217616"></p>
+<img src="hexo%E5%AE%89%E8%A3%85.assets/image-20210701232203590.73r6rsbnfbk0.png" alt="image-20210701232203590" style="zoom:67%;" />
+
+<p><img src="hexo%E5%AE%89%E8%A3%85.assets/image-20210701232139938.10jea1dhzbs0.png" alt="image-20210701232139938"></p>
+<p>这里面写博客</p>
+<img src="hexo%E5%AE%89%E8%A3%85.assets/image-20210701231709461.2a4leoafwsro.png" alt="image-20210701231709461" style="zoom:67%;" />
+
+
+
+
+
+<p>创建 Hexo 主题非常容易，您只要在 <code>themes</code> 文件夹内，新增一个任意名称的文件夹，并修改 <code>_config.yml</code> 内的 <code>theme</code> 设定，即可切换主题。一个主题可能会有以下的结构：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token builtin class-name">.</span>
+├── _config.yml
+主题的配置文件。和 Hexo 配置文件不同，主题配置文件修改时会自动更新，无需重启 Hexo Server。
+├── languages
+语言文件夹
+├── layout
+布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式，Hexo 内建 Swig 模板引擎，您可以另外安装插件来获得 EJS、Haml、Jade 或 Pug 支持，Hexo 根据模板文件的扩展名来决定所使用的模板引擎，例如：
+	layout.ejs   - 使用 EJS
+	layout.swig  - 使用 Swig
+├── scripts
+脚本文件夹。在启动时，Hexo 会载入此文件夹内的 JavaScript 文件
+└── <span class="token builtin class-name">source</span>
+资源文件夹，除了模板以外的 Asset，例如 CSS、JavaScript 文件等，都应该放在这个文件夹中。文件或文件夹开头名称为 _（下划线线）或隐藏的文件会被忽略。
+
+如果文件可以被渲染的话，会经过解析然后储存到 public 文件夹，否则会直接拷贝到 public 文件夹。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -1022,7 +1111,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">157</span>
+                        class="white-color">1.2k</span>
             
             
             
