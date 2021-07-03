@@ -457,28 +457,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-02
+                    2021-07-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-02
+                    2021-07-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    813
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    3 分
                 </div>
                 
 
@@ -516,8 +516,6 @@
 hexo g
 hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>这些命令在后面作介绍，完成后，打开浏览器输入地址：</p>
-<p>localhost:4000</p>
 <p>现在来介绍常用的Hexo 命令</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install hexo -g #安装Hexo
 npm update hexo -g #升级
@@ -553,10 +551,8 @@ hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令
 <p>这时，我们分别输入三条命令：</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo clean 
 hexo g
-hexo d或者hexo g -d
-1554283077@qq.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p>其实第三条的 hexo d 就是部署网站命令，d是deploy的缩写。完成后，打开浏览器，在地址栏输入你的放置个人网站的仓库路径，即 <a href="https://link.zhihu.com/?target=http://xxxx.github.io">http://xxxx.github.io</a> (知乎排版可能会出现”http://“字样，参考下图) 比如我的xxxx就是我的GitHub用户名：</p>
 <p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701222128025.6vp42n5q2ts0.png">https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701222128025.6vp42n5q2ts0.png</a></p>
 <p>你就会发现你的博客已经上线了，可以在网络上被访问了。</p>
 <p>需要修改这个</p>
@@ -565,23 +561,6 @@ hexo d或者hexo g -d
 <p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701232139938.10jea1dhzbs0.png">https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701232139938.10jea1dhzbs0.png</a></p>
 <p>这里面写博客</p>
 <p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701231709461.2a4leoafwsro.png">https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701231709461.2a4leoafwsro.png</a></p>
-<p>创建 Hexo 主题非常容易，您只要在 <code>themes</code> 文件夹内，新增一个任意名称的文件夹，并修改 <code>_config.yml</code> 内的 <code>theme</code> 设定，即可切换主题。一个主题可能会有以下的结构：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">.
-├── _config.yml
-主题的配置文件。和 Hexo 配置文件不同，主题配置文件修改时会自动更新，无需重启 Hexo Server。
-├── languages
-语言文件夹
-├── layout
-布局文件夹。用于存放主题的模板文件，决定了网站内容的呈现方式，Hexo 内建 Swig 模板引擎，您可以另外安装插件来获得 EJS、Haml、Jade 或 Pug 支持，Hexo 根据模板文件的扩展名来决定所使用的模板引擎，例如：
-	layout.ejs   - 使用 EJS
-	layout.swig  - 使用 Swig
-├── scripts
-脚本文件夹。在启动时，Hexo 会载入此文件夹内的 JavaScript 文件
-└── source
-资源文件夹，除了模板以外的 Asset，例如 CSS、JavaScript 文件等，都应该放在这个文件夹中。文件或文件夹开头名称为 _（下划线线）或隐藏的文件会被忽略。
-
-如果文件可以被渲染的话，会经过解析然后储存到 public 文件夹，否则会直接拷贝到 public 文件夹。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 
                 
             </div>
@@ -608,7 +587,7 @@ hexo d或者hexo g -d
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hyhzzz.github.io/2021/07/02/hexo-an-zhuang/">https://hyhzzz.github.io/2021/07/02/hexo-an-zhuang/</a>
+                    <a href="https://hyhzzz.github.io/2021/07/03/hexo-an-zhuang/">https://hyhzzz.github.io/2021/07/03/hexo-an-zhuang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -818,7 +797,7 @@ hexo d或者hexo g -d
         repo: 'boke-comment',
         owner: 'hyhzzz',
         admin: "hyhzzz",
-        id: '2021-07-02T09-40-10',
+        id: '2021-07-03T11-11-35',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -846,60 +825,12 @@ hexo d或者hexo g -d
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2021/07/02/mian-shi-bao-dian/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="面试宝典">
-                        
-                        <span class="card-title">面试宝典</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            从HTML开始一直到后面的东西
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-02
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/JavaScript/" class="post-category">
-                                    JavaScript
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%A4%A7%E4%BF%9D%E5%81%A5/">
-                        <span class="chip bg-color">前端面试大保健</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2021/07/02/hexo-an-zhuang/">
+                <a href="/2021/07/03/hexo-an-zhuang/">
                     <div class="card-image">
                         
                         
@@ -916,7 +847,7 @@ hexo d或者hexo g -d
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-03
                             </span>
                         <span class="publish-author">
                             
@@ -936,6 +867,55 @@ hexo d或者hexo g -d
                     
                     <a href="/tags/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/">
                         <span class="chip bg-color">博客部署</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/07/03/java-mian-shi-da-bao-jian/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="JAVA面试大保健">
+                        
+                        <span class="card-title">JAVA面试大保健</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            主要记录java相关面试题
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JAVA/" class="post-category">
+                                    JAVA
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/JAVA-SpringBoot-SpringCloud-Redis-JUC-MQ-%E5%88%86%E5%B8%83%E5%BC%8F-%E5%BE%AE%E6%9C%8D%E5%8A%A1-MYSQL/">
+                        <span class="chip bg-color">JAVA SpringBoot SpringCloud Redis JUC MQ 分布式 微服务 MYSQL</span>
                     </a>
                     
                 </div>
@@ -1177,7 +1157,7 @@ hexo d或者hexo g -d
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">1.2k</span>
+                        class="white-color">822</span>
             
             
             
