@@ -6,7 +6,7 @@
   <link href="https://hyhzzz.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyhzzz.github.io/"/>
-  <updated>2021-07-03T01:25:57.340Z</updated>
+  <updated>2021-07-03T15:34:58.698Z</updated>
   <id>https://hyhzzz.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hexo安装</title>
+    <title>Hexo部署</title>
     <link href="https://hyhzzz.github.io/2021/07/03/hexo-an-zhuang/"/>
     <id>https://hyhzzz.github.io/2021/07/03/hexo-an-zhuang/</id>
     <published>2021-07-03T03:11:35.315Z</published>
-    <updated>2021-07-03T01:25:57.340Z</updated>
+    <updated>2021-07-03T15:34:58.698Z</updated>
     
     
       
@@ -38,7 +38,7 @@
     <category term="Hexo" scheme="https://hyhzzz.github.io/categories/Hexo/"/>
     
     
-    <category term="博客部署" scheme="https://hyhzzz.github.io/tags/%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2/"/>
+    <category term="Hexo" scheme="https://hyhzzz.github.io/tags/Hexo/"/>
     
   </entry>
   
