@@ -79,7 +79,7 @@
     
     
     <entry>
-      <title>Git</title>
+      <title>Git/GitHub</title>
       <link href="/2021/07/02/git/"/>
       <url>/2021/07/02/git/</url>
       
@@ -88,14 +88,14 @@
       
       <categories>
           
-          <category> 版本控制 </category>
+          <category> 版本控制 分布式 代码托管/交友平台 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> git github </tag>
+            <tag> Git GitHub </tag>
             
         </tags>
       
