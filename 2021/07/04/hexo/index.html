@@ -457,28 +457,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-03
+                    2021-07-04
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-03
+                    2021-07-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    813
+                    687
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    2 分
                 </div>
                 
 
@@ -501,8 +501,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Hexo就是我们的个人博客网站的框架， 这里需要自己在电脑常里创建一个文件夹，可以命名为Blog，Hexo框架与以后你自己发布的网页都在这个文件夹中。创建好后，进入文件夹中，按住shift键，右击鼠标点击命令行</p>
-<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701221623450.2a3pi6uzmljw.png">https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701221623450.2a3pi6uzmljw.png</a></p>
+                <h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>Hexo就是我们的个人博客网站的框架， 这里需要自己在电脑常里创建一个文件夹，可以命名为Blog，Hexo框架与以后你自己发布的网页都在这个文件夹中。创建好后，进入文件夹中，按住shift键，右击鼠标点击命令行</p>
+<img src="hexo.assets/image-20210704160002438.png" alt="image-20210704160002438" style="zoom: 80%;" />
+
 <p>使用npm命令安装Hexo，输入：</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install -g hexo-cli <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -516,6 +517,8 @@
 hexo g
 hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p>这些命令在后面作介绍，完成后，打开浏览器输入地址：</p>
+<p>localhost:4000</p>
 <p>现在来介绍常用的Hexo 命令</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install hexo -g #安装Hexo
 npm update hexo -g #升级
@@ -537,30 +540,25 @@ hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令
 
 <p><strong>推送网站</strong></p>
 <p>上面只是在本地预览，接下来要做的就是就是推送网站，也就是发布网站，让我们的网站可以被更多的人访问。在设置之前，需要解释一个概念，在blog根目录里的_config.yml文件称为<strong>站点</strong>配置文件，如下图</p>
-<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701221857900.2fnl96495wnw.png">https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701221857900.2fnl96495wnw.png</a></p>
+<img src="hexo.assets/image-20210704160019582.png" alt="image-20210704160019582" style="zoom:67%;" />
+
 <p>进入根目录里的themes文件夹，里面也有个_config.yml文件，这个称为<strong>主题</strong>配置文件，如下图</p>
-<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701221910524.4yzaxciun5s0.png">https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701221910524.4yzaxciun5s0.png</a></p>
+<img src="hexo.assets/image-20210704160029366.png" alt="image-20210704160029366" style="zoom:67%;" />
+
 <p>下一步将我们的Hexo与GitHub关联起来，打开站点的配置文件_config.yml，翻到最后修改为：</p>
 <p>deploy:<br>type: git<br>repo: 这里填入你之前在GitHub上创建仓库的完整路径，记得加上 .git<br>branch: master参考如下：</p>
-<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701222057385.o7pub58p5c0.png">https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701222057385.o7pub58p5c0.png</a></p>
-<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701232250830.kqo2foszquo.png">https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701232250830.kqo2foszquo.png</a></p>
+<img src="hexo.assets/image-20210704160045502.png" alt="image-20210704160045502" style="zoom:67%;" />
+
 <p>保存站点配置文件。</p>
 <p>其实就是给hexo d 这个命令做相应的配置，让hexo知道你要把blog部署在哪个位置，很显然，我们部署在我们GitHub的仓库里。最后安装Git部署插件，输入命令：</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>这时，我们分别输入三条命令：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo clean 
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo clean
 hexo g
 hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701222128025.6vp42n5q2ts0.png">https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701222128025.6vp42n5q2ts0.png</a></p>
 <p>你就会发现你的博客已经上线了，可以在网络上被访问了。</p>
-<p>需要修改这个</p>
-<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701232217616.3ezcnizgsxo0.png">https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701232217616.3ezcnizgsxo0.png</a></p>
-<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701232203590.73r6rsbnfbk0.png">https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701232203590.73r6rsbnfbk0.png</a></p>
-<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701232139938.10jea1dhzbs0.png">https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701232139938.10jea1dhzbs0.png</a></p>
-<p>这里面写博客</p>
-<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701231709461.2a4leoafwsro.png">https://cdn.jsdelivr.net/gh/hyhzzz/image-picture@master/20210702/image-20210701231709461.2a4leoafwsro.png</a></p>
 
                 
             </div>
@@ -587,7 +585,7 @@ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hyhzzz.github.io/2021/07/03/hexo-an-zhuang/">https://hyhzzz.github.io/2021/07/03/hexo-an-zhuang/</a>
+                    <a href="https://hyhzzz.github.io/2021/07/04/hexo/">https://hyhzzz.github.io/2021/07/04/hexo/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -797,7 +795,7 @@ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
         repo: 'boke-comment',
         owner: 'hyhzzz',
         admin: "hyhzzz",
-        id: '2021-07-03T11-11-35',
+        id: '2021-07-04T15-58-05',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -830,7 +828,7 @@ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2021/07/03/hexo-an-zhuang/">
+                <a href="/2021/07/04/hexo/">
                     <div class="card-image">
                         
                         
@@ -847,7 +845,7 @@ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-04
                             </span>
                         <span class="publish-author">
                             
@@ -1103,7 +1101,7 @@ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">820</span>
+                        class="white-color">694</span>
             
             
             
