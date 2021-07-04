@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>Flink1.12 JAVA版入门到实战</title>
+      <link href="/2021/07/04/flink-ru-men-dao-shi-zhan/"/>
+      <url>/2021/07/04/flink-ru-men-dao-shi-zhan/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Flink"><a href="#Flink" class="headerlink" title="Flink"></a>Flink</h1><h2 id="Flink简介"><a href="#Flink简介" class="headerlink" title="Flink简介"></a>Flink简介</h2><h2 id="Flink快速上手"><a href="#Flink快速上手" class="headerlink" title="Flink快速上手"></a>Flink快速上手</h2><h2 id="Flink部署"><a href="#Flink部署" class="headerlink" title="Flink部署"></a>Flink部署</h2><h2 id="Flink运行架构"><a href="#Flink运行架构" class="headerlink" title="Flink运行架构"></a>Flink运行架构</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大数据 Flink </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> FlinkSQL FlinkTable FlinkDataStream/DataSet FlinkProcess </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Spark3.0入门到实战</title>
+      <link href="/2021/07/04/spark-ru-men-dao-shi-zhan/"/>
+      <url>/2021/07/04/spark-ru-men-dao-shi-zhan/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Spark-简介"><a href="#Spark-简介" class="headerlink" title="Spark 简介"></a>Spark 简介</h2><h2 id="Spark和Hadoop的区别"><a href="#Spark和Hadoop的区别" class="headerlink" title="Spark和Hadoop的区别"></a>Spark和Hadoop的区别</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大数据 Spark </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> SparkCore SparkSQL SparkStreaming </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hadoop3.0入门到实战</title>
+      <link href="/2021/07/04/hadoop-ru-men-dao-shi-zhan/"/>
+      <url>/2021/07/04/hadoop-ru-men-dao-shi-zhan/</url>
+      
+        <content type="html"><![CDATA[<h2 id="知识点大纲"><a href="#知识点大纲" class="headerlink" title="知识点大纲"></a>知识点大纲</h2><h2 id="大数据概述"><a href="#大数据概述" class="headerlink" title="大数据概述"></a>大数据概述</h2><h2 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h2><h2 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h2><h2 id="Yarn"><a href="#Yarn" class="headerlink" title="Yarn"></a>Yarn</h2><h2 id="生产调优手段以及相关参数"><a href="#生产调优手段以及相关参数" class="headerlink" title="生产调优手段以及相关参数"></a>生产调优手段以及相关参数</h2><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大数据 Hadoop </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux HDFS MapReduce </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>SprinCloud全套入门到实战</title>
       <link href="/2021/07/04/sprincloud-ru-men-dao-shi-zhan/"/>
       <url>/2021/07/04/sprincloud-ru-men-dao-shi-zhan/</url>

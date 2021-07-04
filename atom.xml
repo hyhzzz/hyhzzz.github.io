@@ -6,7 +6,7 @@
   <link href="https://hyhzzz.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyhzzz.github.io/"/>
-  <updated>2021-07-04T10:31:56.985Z</updated>
+  <updated>2021-07-04T10:52:13.032Z</updated>
   <id>https://hyhzzz.github.io/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flink1.12 JAVA版入门到实战</title>
+    <link href="https://hyhzzz.github.io/2021/07/04/flink-ru-men-dao-shi-zhan/"/>
+    <id>https://hyhzzz.github.io/2021/07/04/flink-ru-men-dao-shi-zhan/</id>
+    <published>2021-07-04T10:43:22.000Z</published>
+    <updated>2021-07-04T10:52:13.032Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Flink&quot;&gt;&lt;a href=&quot;#Flink&quot; class=&quot;headerlink&quot; title=&quot;Flink&quot;&gt;&lt;/a&gt;Flink&lt;/h1&gt;&lt;h2 id=&quot;Flink简介&quot;&gt;&lt;a href=&quot;#Flink简介&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="大数据 Flink" scheme="https://hyhzzz.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE-Flink/"/>
+    
+    
+    <category term="FlinkSQL FlinkTable FlinkDataStream/DataSet FlinkProcess" scheme="https://hyhzzz.github.io/tags/FlinkSQL-FlinkTable-FlinkDataStream-DataSet-FlinkProcess/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spark3.0入门到实战</title>
+    <link href="https://hyhzzz.github.io/2021/07/04/spark-ru-men-dao-shi-zhan/"/>
+    <id>https://hyhzzz.github.io/2021/07/04/spark-ru-men-dao-shi-zhan/</id>
+    <published>2021-07-04T10:40:51.000Z</published>
+    <updated>2021-07-04T10:50:24.913Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Spark-简介&quot;&gt;&lt;a href=&quot;#Spark-简介&quot; class=&quot;headerlink&quot; title=&quot;Spark 简介&quot;&gt;&lt;/a&gt;Spark 简介&lt;/h2&gt;&lt;h2 id=&quot;Spark和Hadoop的区别&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="大数据 Spark" scheme="https://hyhzzz.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE-Spark/"/>
+    
+    
+    <category term="SparkCore SparkSQL SparkStreaming" scheme="https://hyhzzz.github.io/tags/SparkCore-SparkSQL-SparkStreaming/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hadoop3.0入门到实战</title>
+    <link href="https://hyhzzz.github.io/2021/07/04/hadoop-ru-men-dao-shi-zhan/"/>
+    <id>https://hyhzzz.github.io/2021/07/04/hadoop-ru-men-dao-shi-zhan/</id>
+    <published>2021-07-04T10:33:56.000Z</published>
+    <updated>2021-07-04T10:50:20.780Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;知识点大纲&quot;&gt;&lt;a href=&quot;#知识点大纲&quot; class=&quot;headerlink&quot; title=&quot;知识点大纲&quot;&gt;&lt;/a&gt;知识点大纲&lt;/h2&gt;&lt;h2 id=&quot;大数据概述&quot;&gt;&lt;a href=&quot;#大数据概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="大数据 Hadoop" scheme="https://hyhzzz.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE-Hadoop/"/>
+    
+    
+    <category term="Linux HDFS MapReduce" scheme="https://hyhzzz.github.io/tags/Linux-HDFS-MapReduce/"/>
+    
+  </entry>
   
   <entry>
     <title>SprinCloud全套入门到实战</title>
