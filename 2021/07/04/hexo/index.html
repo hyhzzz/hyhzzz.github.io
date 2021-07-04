@@ -502,7 +502,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>Hexo就是我们的个人博客网站的框架， 这里需要自己在电脑常里创建一个文件夹，可以命名为Blog，Hexo框架与以后你自己发布的网页都在这个文件夹中。创建好后，进入文件夹中，按住shift键，右击鼠标点击命令行</p>
-<img src="./img/1.png" alt="1.png" />
+<img src="/img/1.png" alt="1.png" />
 
 <p>使用npm命令安装Hexo，输入：</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install -g hexo-cli <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -540,14 +540,14 @@ hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令
 
 <p><strong>推送网站</strong></p>
 <p>上面只是在本地预览，接下来要做的就是就是推送网站，也就是发布网站，让我们的网站可以被更多的人访问。在设置之前，需要解释一个概念，在blog根目录里的_config.yml文件称为<strong>站点</strong>配置文件，如下图</p>
-<img src="./img/2.png" alt="3.png"  />
+<img src="/img/2.png" alt="2.png"  />
 
 <p>进入根目录里的themes文件夹，里面也有个_config.yml文件，这个称为<strong>主题</strong>配置文件，如下图</p>
-<img src="./img/3.png" alt="2.png" />
+<img src="/img/3.png" alt="3.png" />
 
 <p>下一步将我们的Hexo与GitHub关联起来，打开站点的配置文件_config.yml，翻到最后修改为：</p>
 <p>deploy:<br>type: git<br>repo: 这里填入你之前在GitHub上创建仓库的完整路径，记得加上 .git<br>branch: master参考如下：</p>
-<img src="./img/4.png" alt="4.png"  />
+<img src="/img/4.png" alt="4.png"  />
 
 <p>保存站点配置文件。</p>
 <p>其实就是给hexo d 这个命令做相应的配置，让hexo知道你要把blog部署在哪个位置，很显然，我们部署在我们GitHub的仓库里。最后安装Git部署插件，输入命令：</p>
