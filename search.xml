@@ -4,36 +4,11 @@
   
     
     <entry>
-      <title>Flink1.12 JAVA版入门到实战</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
+      <title>Spark入门到实战</title>
+      <link href="/posts/dba7b746.html"/>
+      <url>/posts/dba7b746.html</url>
       
-        <content type="html"><![CDATA[<h1 id="Flink"><a href="#Flink" class="headerlink" title="Flink"></a>Flink</h1><h2 id="Flink简介"><a href="#Flink简介" class="headerlink" title="Flink简介"></a>Flink简介</h2><h2 id="Flink快速上手"><a href="#Flink快速上手" class="headerlink" title="Flink快速上手"></a>Flink快速上手</h2><h2 id="Flink部署"><a href="#Flink部署" class="headerlink" title="Flink部署"></a>Flink部署</h2><h2 id="Flink运行架构"><a href="#Flink运行架构" class="headerlink" title="Flink运行架构"></a>Flink运行架构</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 大数据 Flink </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> FlinkSQL FlinkTable FlinkDataStream/DataSet FlinkProcess </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Spark3.0入门到实战</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Spark-简介"><a href="#Spark-简介" class="headerlink" title="Spark 简介"></a>Spark 简介</h2><h2 id="Spark和Hadoop的区别"><a href="#Spark和Hadoop的区别" class="headerlink" title="Spark和Hadoop的区别"></a>Spark和Hadoop的区别</h2>]]></content>
+        <content type="html"><![CDATA[<h1 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h1><h2 id="Spark-简介"><a href="#Spark-简介" class="headerlink" title="Spark 简介"></a>Spark 简介</h2><h2 id="Spark和Hadoop的区别"><a href="#Spark和Hadoop的区别" class="headerlink" title="Spark和Hadoop的区别"></a>Spark和Hadoop的区别</h2>]]></content>
       
       
       <categories>
@@ -54,11 +29,11 @@
     
     
     <entry>
-      <title>Hadoop3.0入门到实战</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
+      <title>Hadoop入门到实战</title>
+      <link href="/posts/2e852b48.html"/>
+      <url>/posts/2e852b48.html</url>
       
-        <content type="html"><![CDATA[<h2 id="知识点大纲"><a href="#知识点大纲" class="headerlink" title="知识点大纲"></a>知识点大纲</h2><h2 id="大数据概述"><a href="#大数据概述" class="headerlink" title="大数据概述"></a>大数据概述</h2><h2 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h2><h2 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h2><h2 id="Yarn"><a href="#Yarn" class="headerlink" title="Yarn"></a>Yarn</h2><h2 id="生产调优手段以及相关参数"><a href="#生产调优手段以及相关参数" class="headerlink" title="生产调优手段以及相关参数"></a>生产调优手段以及相关参数</h2><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2>]]></content>
+        <content type="html"><![CDATA[<h1 id="知识点大纲"><a href="#知识点大纲" class="headerlink" title="知识点大纲"></a>知识点大纲</h1><h2 id="大数据概述"><a href="#大数据概述" class="headerlink" title="大数据概述"></a>大数据概述</h2><h2 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h2><h2 id="MapReduce"><a href="#MapReduce" class="headerlink" title="MapReduce"></a>MapReduce</h2><h2 id="Yarn"><a href="#Yarn" class="headerlink" title="Yarn"></a>Yarn</h2><h2 id="生产调优手段以及相关参数"><a href="#生产调优手段以及相关参数" class="headerlink" title="生产调优手段以及相关参数"></a>生产调优手段以及相关参数</h2><h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2>]]></content>
       
       
       <categories>
@@ -79,134 +54,9 @@
     
     
     <entry>
-      <title>SprinCloud全套入门到实战</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="微服务架构概念以及优势"><a href="#微服务架构概念以及优势" class="headerlink" title="微服务架构概念以及优势"></a>微服务架构概念以及优势</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 微服务 分布式 SpringCloud </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Eureka Ribbon Hystrix Feign Zuul Config Bus Stream Sleuth Sentinel Seata Nacos </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>SpringBoot详细入门</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="SpringBoot概述"><a href="#SpringBoot概述" class="headerlink" title="SpringBoot概述"></a>SpringBoot概述</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> JAVA 微服务 分布式 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Web SSM SpringBoot </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hexo部署</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>Hexo就是我们的个人博客网站的框架， 这里需要自己在电脑常里创建一个文件夹，可以命名为Blog，Hexo框架与以后你自己发布的网页都在这个文件夹中。创建好后，进入文件夹中，按住shift键，右击鼠标点击命令行</p><img src="/img/1.png" alt="1.png" /><p>使用npm命令安装Hexo，输入：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install -g hexo-cli <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这个安装时间较长耐心等待，安装完成后，初始化我们的博客，输入：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo init blog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>注意，这里的命令都是作用在刚刚创建的Blog文件夹中。</p><p>为了检测我们的网站雏形，分别按顺序输入以下三条命令：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo new test_my_sitehexo ghexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>这些命令在后面作介绍，完成后，打开浏览器输入地址：</p><p>localhost:4000</p><p>现在来介绍常用的Hexo 命令</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install hexo -g #安装Hexonpm update hexo -g #升级hexo init #初始化博客命令简写hexo n &quot;我的博客&quot; &#x3D;&#x3D; hexo new &quot;我的博客&quot; #新建文章hexo g &#x3D;&#x3D; hexo generate #生成hexo s &#x3D;&#x3D; hexo server #启动服务预览hexo d &#x3D;&#x3D; hexo deploy #部署hexo server #Hexo会监视文件变动并自动更新，无须重启服务器hexo server -s #静态模式hexo server -p 5000 #更改端口hexo server -i 192.168.1.1 #自定义 IPhexo clean #清除缓存，若是网页正常情况下可以忽略这条命令刚刚的三个命令依次是新建一篇博客文章、生成网页、在本地预览的操作。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>推送网站</strong></p><p>上面只是在本地预览，接下来要做的就是就是推送网站，也就是发布网站，让我们的网站可以被更多的人访问。在设置之前，需要解释一个概念，在blog根目录里的_config.yml文件称为<strong>站点</strong>配置文件，如下图</p><img src="/img/2.png" alt="2.png"  /><p>进入根目录里的themes文件夹，里面也有个_config.yml文件，这个称为<strong>主题</strong>配置文件，如下图</p><img src="/img/3.png" alt="3.png" /><p>下一步将我们的Hexo与GitHub关联起来，打开站点的配置文件_config.yml，翻到最后修改为：</p><p>deploy:<br>type: git<br>repo: 这里填入你之前在GitHub上创建仓库的完整路径，记得加上 .git<br>branch: master参考如下：</p><img src="/img/4.png" alt="4.png"  /><p>保存站点配置文件。</p><p>其实就是给hexo d 这个命令做相应的配置，让hexo知道你要把blog部署在哪个位置，很显然，我们部署在我们GitHub的仓库里。最后安装Git部署插件，输入命令：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这时，我们分别输入三条命令：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo cleanhexo ghexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>你就会发现你的博客已经上线了，可以在网络上被访问了。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Hexo </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JAVA面试大保健</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="SSM"><a href="#SSM" class="headerlink" title="SSM"></a>SSM</h2><h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><h2 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h2><h2 id="SpringCloud"><a href="#SpringCloud" class="headerlink" title="SpringCloud"></a>SpringCloud</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> JAVA面试大保健 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> JAVA SpringBoot SpringCloud Redis JUC MQ 分布式 微服务 MYSQL </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>大数据面试大保健</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><h2 id="Hadoop"><a href="#Hadoop" class="headerlink" title="Hadoop"></a>Hadoop</h2><h2 id="Hive"><a href="#Hive" class="headerlink" title="Hive"></a>Hive</h2><h2 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h2><h2 id="Flink"><a href="#Flink" class="headerlink" title="Flink"></a>Flink</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 大数据面试大保健 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux Flink Hadoop Spark HIVE 离线数仓 实时数仓 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Git/GitHub</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
+      <link href="/posts/939cdcd3.html"/>
+      <url>/posts/939cdcd3.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -229,11 +79,61 @@
     
     
     <entry>
-      <title>Node.js入门到实战</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
+      <title>SprinCloud入门到实战</title>
+      <link href="/posts/5f840d92.html"/>
+      <url>/posts/5f840d92.html</url>
       
-        <content type="html"><![CDATA[<h1 id="Node概述"><a href="#Node概述" class="headerlink" title="Node概述"></a>Node概述</h1>]]></content>
+        <content type="html"><![CDATA[<h1 id="SpringCloud"><a href="#SpringCloud" class="headerlink" title="SpringCloud"></a>SpringCloud</h1><h2 id="微服务架构概念以及优势"><a href="#微服务架构概念以及优势" class="headerlink" title="微服务架构概念以及优势"></a>微服务架构概念以及优势</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 微服务 分布式 SpringCloud </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Eureka Ribbon Hystrix Feign Zuul Config Bus Stream Sleuth Sentinel Seata Nacos </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Flink1.12 JAVA版入门到实战</title>
+      <link href="/posts/85cfc545.html"/>
+      <url>/posts/85cfc545.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Flink"><a href="#Flink" class="headerlink" title="Flink"></a>Flink</h1><h2 id="Flink简介"><a href="#Flink简介" class="headerlink" title="Flink简介"></a>Flink简介</h2><h2 id="Flink快速上手"><a href="#Flink快速上手" class="headerlink" title="Flink快速上手"></a>Flink快速上手</h2><h2 id="Flink部署"><a href="#Flink部署" class="headerlink" title="Flink部署"></a>Flink部署</h2><h2 id="Flink运行架构"><a href="#Flink运行架构" class="headerlink" title="Flink运行架构"></a>Flink运行架构</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大数据 Flink </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> FlinkSQL FlinkTable FlinkDataStream/DataSet FlinkProcess </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Node-js入门到实战</title>
+      <link href="/posts/a62cb03e.html"/>
+      <url>/posts/a62cb03e.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Node"><a href="#Node" class="headerlink" title="Node"></a>Node</h1><h1 id="Node概述"><a href="#Node概述" class="headerlink" title="Node概述"></a>Node概述</h1>]]></content>
       
       
       <categories>
@@ -254,9 +154,84 @@
     
     
     <entry>
-      <title>前端面试大保健</title>
-      <link href="/posts/undefined.html"/>
-      <url>/posts/undefined.html</url>
+      <title>JAVA面试大保健</title>
+      <link href="/posts/2516a51a.html"/>
+      <url>/posts/2516a51a.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="面试大保健"><a href="#面试大保健" class="headerlink" title="面试大保健"></a>面试大保健</h1><h2 id="SSM"><a href="#SSM" class="headerlink" title="SSM"></a>SSM</h2><h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><h2 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h2><h2 id="SpringCloud"><a href="#SpringCloud" class="headerlink" title="SpringCloud"></a>SpringCloud</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> JAVA面试大保健 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JAVA SpringBoot SpringCloud Redis JUC MQ 分布式 微服务 MYSQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>SpringBoot入门到实战</title>
+      <link href="/posts/7a36aef8.html"/>
+      <url>/posts/7a36aef8.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h1><h2 id="SpringBoot简介"><a href="#SpringBoot简介" class="headerlink" title="SpringBoot简介"></a>SpringBoot简介</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> JAVA 微服务 分布式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Web SSM SpringBoot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>大数据面试大保健</title>
+      <link href="/posts/ae5d0700.html"/>
+      <url>/posts/ae5d0700.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="面试大保健"><a href="#面试大保健" class="headerlink" title="面试大保健"></a>面试大保健</h1><h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><h2 id="Hadoop"><a href="#Hadoop" class="headerlink" title="Hadoop"></a>Hadoop</h2><h2 id="Hive"><a href="#Hive" class="headerlink" title="Hive"></a>Hive</h2><h2 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h2><h2 id="Flink"><a href="#Flink" class="headerlink" title="Flink"></a>Flink</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 大数据面试大保健 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux Flink Hadoop Spark HIVE 离线数仓 实时数仓 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>前端面试宝典</title>
+      <link href="/posts/298dca6b.html"/>
+      <url>/posts/298dca6b.html</url>
       
         <content type="html"><![CDATA[<h2 id="HTML-CSS"><a href="#HTML-CSS" class="headerlink" title="HTML+CSS"></a>HTML+CSS</h2><h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2>]]></content>
       
@@ -271,6 +246,31 @@
         <tags>
             
             <tag> HTML CSS JS Node Webpack5 Vue React </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo</title>
+      <link href="/posts/b132932.html"/>
+      <url>/posts/b132932.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><p>Hexo就是我们的个人博客网站的框架， 这里需要自己在电脑常里创建一个文件夹，可以命名为Blog，Hexo框架与以后你自己发布的网页都在这个文件夹中。创建好后，进入文件夹中，按住shift键，右击鼠标点击命令行<br><img src="/img/1.png" alt="1.png" /></p><p>使用npm命令安装Hexo，输入：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install -g hexo-cli <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这个安装时间较长耐心等待，安装完成后，初始化我们的博客，输入：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo init blog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>注意，这里的命令都是作用在刚刚创建的Blog文件夹中。</p><p>为了检测我们的网站雏形，分别按顺序输入以下三条命令：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo new test_my_sitehexo ghexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>这些命令在后面作介绍，完成后，打开浏览器输入地址：</p><p>localhost:4000</p><p>现在来介绍常用的Hexo 命令</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install hexo -g #安装Hexonpm update hexo -g #升级hexo init #初始化博客命令简写hexo n &quot;我的博客&quot; &#x3D;&#x3D; hexo new &quot;我的博客&quot; #新建文章hexo g &#x3D;&#x3D; hexo generate #生成hexo s &#x3D;&#x3D; hexo server #启动服务预览hexo d &#x3D;&#x3D; hexo deploy #部署hexo server #Hexo会监视文件变动并自动更新，无须重启服务器hexo server -s #静态模式hexo server -p 5000 #更改端口hexo server -i 192.168.1.1 #自定义 IPhexo clean #清除缓存，若是网页正常情况下可以忽略这条命令刚刚的三个命令依次是新建一篇博客文章、生成网页、在本地预览的操作。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>推送网站</strong></p><p>上面只是在本地预览，接下来要做的就是就是推送网站，也就是发布网站，让我们的网站可以被更多的人访问。在设置之前，需要解释一个概念，在blog根目录里的_config.yml文件称为<strong>站点</strong>配置文件，如下图</p><img src="/img/2.png" alt="2.png"  /><p>进入根目录里的themes文件夹，里面也有个_config.yml文件，这个称为<strong>主题</strong>配置文件，如下图</p><img src="/img/3.png" alt="3.png" /><p>下一步将我们的Hexo与GitHub关联起来，打开站点的配置文件_config.yml，翻到最后修改为：</p><p>deploy:<br>type: git<br>repo: 这里填入你之前在GitHub上创建仓库的完整路径，记得加上 .git<br>branch: master参考如下：</p><img src="/img/4.png" alt="4.png"  /><p>保存站点配置文件。</p><p>其实就是给hexo d 这个命令做相应的配置，让hexo知道你要把blog部署在哪个位置，很显然，我们部署在我们GitHub的仓库里。最后安装Git部署插件，输入命令：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这时，我们分别输入三条命令：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo cleanhexo ghexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>你就会发现你的博客已经上线了，可以在网络上被访问了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
             
         </tags>
       
