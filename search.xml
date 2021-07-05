@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>啊啊啊这是随笔文章模板</title>
+      <link href="/posts/essay-demo.html"/>
+      <url>/posts/essay-demo.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="这是博主的随笔板块，后续会更新文章，目前弄好了模板格式"><a href="#这是博主的随笔板块，后续会更新文章，目前弄好了模板格式" class="headerlink" title="这是博主的随笔板块，后续会更新文章，目前弄好了模板格式~"></a>这是博主的随笔板块，后续会更新文章，目前弄好了模板格式~</h3><div class="ipage">    <div class="ititle">节选自《你若安好便是晴天》- 前言</div>  <div class="izhengwen">    <p>几场梅雨，几卷荷风，江南已是烟水迷离。小院里湿润的青苔在雨中纯净生长。    </p>  </div></div><div class="ipage">  <div class="ititle">测试随笔</div>  <div class="izhengwen">    <p>测试随笔哈哈哈</p>    <p>正文</p>  </div></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 随笔 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Spark入门到实战</title>
       <link href="/posts/dba7b746.html"/>
       <url>/posts/dba7b746.html</url>
