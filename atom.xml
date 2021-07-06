@@ -6,7 +6,7 @@
   <link href="https://hyhzzz.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyhzzz.github.io/"/>
-  <updated>2021-07-06T11:36:23.032Z</updated>
+  <updated>2021-07-06T11:41:15.422Z</updated>
   <id>https://hyhzzz.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://hyhzzz.github.io/posts/undefined.html"/>
     <id>https://hyhzzz.github.io/posts/undefined.html</id>
     <published>2021-07-06T11:25:48.000Z</published>
-    <updated>2021-07-06T11:36:23.032Z</updated>
+    <updated>2021-07-06T11:41:15.422Z</updated>
     
     
       
@@ -38,6 +38,32 @@
     
     
     <category term="HTML CSS" scheme="https://hyhzzz.github.io/tags/HTML-CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VScode常用插件和配置</title>
+    <link href="https://hyhzzz.github.io/posts/1000.html"/>
+    <id>https://hyhzzz.github.io/posts/1000.html</id>
+    <published>2021-07-06T11:17:39.000Z</published>
+    <updated>2021-07-06T11:43:43.506Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;基本插件列表&quot;&gt;&lt;a href=&quot;#基本插件列表&quot; class=&quot;headerlink&quot; title=&quot;基本插件列表&quot;&gt;&lt;/a&gt;基本插件列表&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;1、Chinese (Simplified) Language Pack:</summary>
+        
+      
+    
+    
+    
+    <category term="前端开发工具" scheme="https://hyhzzz.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="VScode" scheme="https://hyhzzz.github.io/tags/VScode/"/>
     
   </entry>
   
