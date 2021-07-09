@@ -1946,117 +1946,118 @@ Null类型也是只有一个值：<span class="token keyword">null</span><span c
 			  类是用来写css的 <span class="token function">，id是用来写js的</span><span class="token punctuation">(</span>很少用<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="十二、DOM下"><a href="#十二、DOM下" class="headerlink" title="十二、DOM下"></a>十二、DOM下</h2><p>​        一、keyup &amp; keydown &amp; focus(获取焦点事件) &amp; blur<br>​                1.  keyup，keydown(键盘)事件       一般用的都是keyup事件，它能够确保键盘事件只执行一次；<br>​                2.    keycode     存在于事件对象当中，也就是我们回调函数的第一个形参；这个对象不是我们创建，当事件发生的时候，系统会创建好<br>​                这个事件对象，并且传参调用；事件对象当中包含了和事件相关的一切；</p>
-<h2 id="十三、-节点"><a href="#十三、-节点" class="headerlink" title="十三、 节点"></a>十三、 节点</h2><pre><code>    第一节:  节点的概念和操作
-            什么是节点  文档树所有包含的东西都可以称作节点；最关注的是元素节点
-            查找节点是相对的操作；如果你拿html的子节点,就是html当中所有的节点但是不包含后代节点，只是子节点
+<h2 id="十三、-节点"><a href="#十三、-节点" class="headerlink" title="十三、 节点"></a>十三、 节点</h2><pre class="line-numbers language-js" data-language="js"><code class="language-js">第一节<span class="token operator">:</span>  节点的概念和操作
+		什么是节点  文档树所有包含的东西都可以称作节点；最关注的是元素节点
+		查找节点是相对的操作；如果你拿html的子节点<span class="token punctuation">,</span>就是html当中所有的节点但是不包含后代节点，只是子节点
 
-            节点的分类12种，重点了解3种   元素   文本    属性    注释
+	    节点的分类<span class="token number">12</span>种，重点了解<span class="token number">3</span>种   元素   文本    属性    注释
 
-    第二节:  子节点和子元素（父节点和父元素）
-        子节点和子元素
-            childNodes拿到的是某个元素的子节点：包括元素子节点和文本子节点，如果有注释还有注释节点； 
-            
-                子节点:childNodes (儿子节点):
-                    高级浏览器: 元素,文本(文本,空格,换行),注释
-                    低版本浏览器: 元素,文本(不包括空格和换行),注释
-                子元素 children(儿子元素):  
-                    高级浏览器:元素  
-                    低版本浏览器:元素,注释
-            
-            console.log(box.childNodes); //拿的是儿子节点
-            console.log(box.children); //拿的是儿子元素
-    
-        父节点和父元素
-                parentNode
-                parentElement
-                    父节点:parentNode 其实就是父元素(标签) 获取父亲节点 所有浏览器都能使用
-                    父元素:parentElement 父标签   获取父亲元素 所有浏览器都能用
-
-
-    第三节:  兼容性封装获取其它节点的方式
-        获取其它节点：
-            第一个子节点        高级浏览器和低级浏览器都认识   firstChild
-            第一个子元素节点    只有高级浏览器可以使用  firstElementChild
-            最后一个子节点        高级浏览器和低级浏览器都认识   lastChild
-            最后一个元素节点    只有高级浏览器可以使用  lastElementChild
-            上一个兄弟节点      高级浏览器和低级浏览器都认识  previousSibling
-            上一个兄弟元素节点  只有高级浏览器可以使用 previousElementSibling
-            下一个兄弟节点      高级浏览器和低级浏览器都认识 nextSibling
-            下一个兄弟元素节点  只有高级浏览器可以使用  nextElementSibling
-
-    第四节:  创建节点的方式
-            Document.createElement(&#39;想要创建的元素名&#39;) 
-            元素对象.appendChild(被追加的元素对象);
-
-    第五节:  节点常用方法
-             以下方法都是父元素调用,操作子元素
-                • 创建节点
-                    – document.createElement(标签名)
-                • 删除节点
-                    – 父节点.removeChild(子节点)
-                • 替换节点
-                    – 父节点.replaceChild(新节点 , 旧节点)
-                • 插入节点
-                    – 父节点.appendChild(子节点)
-                    – 父节点.insertBefore(新节点 , 旧节点)
-                节点.remove（pc端 ie不支持） 
-</code></pre>
-<h2 id="十四、-BOM"><a href="#十四、-BOM" class="headerlink" title="十四、 BOM"></a>十四、 BOM</h2><pre><code>    第一节:  事件绑定和解绑（要对应）
-              DOM 0 1  2  3 
-            dom 0  和 dom2   有自己独立的事件绑定和解绑方式
-                dom0事件所有的浏览器都可以使用
-                dom2事件 addEventListener()  高级浏览器可以使用   
-                ie10以下的不能使用，IE10以下给出了另外一种绑定方式；
-                dom1和dom3 没有
-
-              Dom0事件绑定和解绑  pc端用的多
-                  dom0事件解绑  本质上就是把事件函数和事件对象的事件属性断开指向；
-                  box.onclick = null;
-            
-             Dom2事件绑定和解绑   移动端用的多
-                 可以添加同一类事件多次
-                 高级浏览器和ie绑定方式（兼容封装）
-
-    第二节:  事件流（事件传播）
-        1. 冒泡事件流（ie） 最终我们所用的事件传播都是冒泡
-        2. 标准DOM事件流   这个是我们现用的最标准的事件流，里面包含两个阶段：获取元素  然最后冒泡
-        这个两个阶段当中的冒泡可以由程序员自己选择。但是通常情况我们都是使用默认 （冒泡）；
-
-    第三节:  事件冒泡和事件委派
-        阻止事件冒泡
-        事件冒泡的好处就是可以进行事件委派（事件委托，事件代理）
-
-        事件委托用法，
-            什么时候用：出现新添加的东西，并且新添加的东西要和老的拥有同样的行为；此时我们就想事件委派；
-
-            事件委派的做法： 给爹添加事件，不给元素本身添加，事件发生后通过爹去找，真正发生事件的元素进行处理；
-
-        好处，原理
-        onmouseenter onmouseleave   如果是一个父子元素模型，对父元素添加移入和移出，当鼠标移入父元素里面的子元素的时候，事件并没有移出然后再移入。也就是说事件元素没有切换；
-        
-        onmouseover onmouseout 这两对之间的区别
-            如果是一个父子元素模型，对父元素添加移入和移出，当鼠标移入父元素里面的子元素的时候，事件会移出然后再移入。也就是说事件元素会有切换；事件委派的时候，必须使用这一对；
+第二节<span class="token operator">:</span>  子节点和子元素（父节点和父元素）
+	子节点和子元素
+		childNodes拿到的是某个元素的子节点：包括元素子节点和文本子节点，如果有注释还有注释节点； 
+		
+			子节点<span class="token operator">:</span><span class="token function">childNodes</span> <span class="token punctuation">(</span>儿子节点<span class="token punctuation">)</span><span class="token operator">:</span>
+				高级浏览器<span class="token operator">:</span> 元素<span class="token punctuation">,</span><span class="token function">文本</span><span class="token punctuation">(</span>文本<span class="token punctuation">,</span>空格<span class="token punctuation">,</span>换行<span class="token punctuation">)</span><span class="token punctuation">,</span>注释
+				低版本浏览器<span class="token operator">:</span> 元素<span class="token punctuation">,</span><span class="token function">文本</span><span class="token punctuation">(</span>不包括空格和换行<span class="token punctuation">)</span><span class="token punctuation">,</span>注释
+			子元素 <span class="token function">children</span><span class="token punctuation">(</span>儿子元素<span class="token punctuation">)</span><span class="token operator">:</span>  
+				高级浏览器<span class="token operator">:</span>元素  
+				低版本浏览器<span class="token operator">:</span>元素<span class="token punctuation">,</span>注释
+		
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>childNodes<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//拿的是儿子节点</span>
+   		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>children<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//拿的是儿子元素</span>
+   
+   	父节点和父元素
+			parentNode
+			parentElement
+				父节点<span class="token operator">:</span>parentNode <span class="token function">其实就是父元素</span><span class="token punctuation">(</span>标签<span class="token punctuation">)</span> 获取父亲节点 所有浏览器都能使用
+				父元素<span class="token operator">:</span>parentElement 父标签   获取父亲元素 所有浏览器都能用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
-    第四节:  window对象是bom的顶级对象
-        • ECMAScript无疑是JavaScript的核心，但是要想在浏览器中使用JavaScript，那么BOM（浏览器对象模型）才是真正的核心。
-        • BOM 提供了很多对象，用于访问浏览器的功能，这些功能与任何网页内容无关。
-        • BOM将浏览器中的各个部分转换成了一个一个的对象，我们通过修改这些对象的属性，调用他们的方法，从而控制浏览器的各种行为。
-        1.  window对象概念，使用
-            function  add()&#123;
-            &#125;
-            add()
-            window.add()
-        2.  location  window.location可以让用户获取当前页面地址以及重定向到一个新的页面。
-            window.location.href   可以读也可以写，写的时候相当于转向另外一个页面
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">第三节<span class="token operator">:</span>  兼容性封装获取其它节点的方式
+	获取其它节点：
+		第一个子节点        高级浏览器和低级浏览器都认识   firstChild
+		第一个子元素节点    只有高级浏览器可以使用  firstElementChild
+		最后一个子节点        高级浏览器和低级浏览器都认识   lastChild
+		最后一个元素节点    只有高级浏览器可以使用  lastElementChild
+		上一个兄弟节点      高级浏览器和低级浏览器都认识  previousSibling
+		上一个兄弟元素节点  只有高级浏览器可以使用 previousElementSibling
+		下一个兄弟节点      高级浏览器和低级浏览器都认识 nextSibling
+		下一个兄弟元素节点  只有高级浏览器可以使用  nextElementSibling
 
-            history   对象包含浏览器的历史记录，window可以省略。这些历史记录以栈（FIFO）的形式保存。页面前进则入栈，页面返回则出栈。
-            navigator 是一个只读对象，它用来描述浏览器本身的信息，包括浏览器的名称、版本、语言、系统平台、用户特性字符串等信息。
-             screen    提供了用户显示屏幕的相关属性，比如显示屏幕的宽度、高度，可用宽度、高度。
-                
-        3.   window.onload
-             window.onresize   //浏览器窗口发生改变，就会执行这个事件；
-</code></pre>
+第四节<span class="token operator">:</span>  创建节点的方式
+		Document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">'想要创建的元素名'</span><span class="token punctuation">)</span> 
+		元素对象<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>被追加的元素对象<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+第五节<span class="token operator">:</span>  节点常用方法
+		 以下方法都是父元素调用<span class="token punctuation">,</span>操作子元素
+			• 创建节点
+               	– document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span>标签名<span class="token punctuation">)</span>
+               • 删除节点
+               	– 父节点<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>子节点<span class="token punctuation">)</span>
+               • 替换节点
+               	– 父节点<span class="token punctuation">.</span><span class="token function">replaceChild</span><span class="token punctuation">(</span>新节点 <span class="token punctuation">,</span> 旧节点<span class="token punctuation">)</span>
+               • 插入节点
+               	– 父节点<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>子节点<span class="token punctuation">)</span>
+               	– 父节点<span class="token punctuation">.</span><span class="token function">insertBefore</span><span class="token punctuation">(</span>新节点 <span class="token punctuation">,</span> 旧节点<span class="token punctuation">)</span>
+			节点<span class="token punctuation">.</span>remove（pc端 ie不支持） <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="十四、-BOM"><a href="#十四、-BOM" class="headerlink" title="十四、 BOM"></a>十四、 BOM</h2><pre class="line-numbers language-js" data-language="js"><code class="language-js">第一节<span class="token operator">:</span>  事件绑定和解绑（要对应）
+	  	<span class="token constant">DOM</span> <span class="token number">0</span> <span class="token number">1</span>  <span class="token number">2</span>  <span class="token number">3</span> 
+		dom <span class="token number">0</span>  和 dom2   有自己独立的事件绑定和解绑方式
+               dom0事件所有的浏览器都可以使用
+               dom2事件 <span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  高级浏览器可以使用   
+               ie10以下的不能使用，<span class="token constant">IE10</span>以下给出了另外一种绑定方式；
+               dom1和dom3 没有
+
+  		Dom0事件绑定和解绑  pc端用的多
+	  		dom0事件解绑  本质上就是把事件函数和事件对象的事件属性断开指向；
+	  		box<span class="token punctuation">.</span>onclick <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+		
+ 		Dom2事件绑定和解绑   移动端用的多
+	 		可以添加同一类事件多次
+	 		高级浏览器和ie绑定方式（兼容封装）
+
+第二节<span class="token operator">:</span>  事件流（事件传播）
+	<span class="token number">1.</span> 冒泡事件流（ie） 最终我们所用的事件传播都是冒泡
+	<span class="token number">2.</span> 标准<span class="token constant">DOM</span>事件流   这个是我们现用的最标准的事件流，里面包含两个阶段：获取元素  然最后冒泡
+	这个两个阶段当中的冒泡可以由程序员自己选择。但是通常情况我们都是使用默认 （冒泡）；
+
+第三节<span class="token operator">:</span>  事件冒泡和事件委派
+	阻止事件冒泡
+	事件冒泡的好处就是可以进行事件委派（事件委托，事件代理）
+
+	事件委托用法，
+		什么时候用：出现新添加的东西，并且新添加的东西要和老的拥有同样的行为；此时我们就想事件委派；
+
+		事件委派的做法： 给爹添加事件，不给元素本身添加，事件发生后通过爹去找，真正发生事件的元素进行处理；
+
+	好处，原理
+	onmouseenter onmouseleave   如果是一个父子元素模型，对父元素添加移入和移出，当鼠标移入父元素里面的子元素的时候，事件并没有移出然后再移入。也就是说事件元素没有切换；
+	
+	onmouseover onmouseout 这两对之间的区别
+		如果是一个父子元素模型，对父元素添加移入和移出，当鼠标移入父元素里面的子元素的时候，事件会移出然后再移入。也就是说事件元素会有切换；事件委派的时候，必须使用这一对；<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">第四节<span class="token operator">:</span>  window对象是bom的顶级对象
+	• ECMAScript无疑是JavaScript的核心，但是要想在浏览器中使用JavaScript，那么<span class="token constant">BOM</span>（浏览器对象模型）才是真正的核心。
+	• <span class="token constant">BOM</span> 提供了很多对象，用于访问浏览器的功能，这些功能与任何网页内容无关。
+	• <span class="token constant">BOM</span>将浏览器中的各个部分转换成了一个一个的对象，我们通过修改这些对象的属性，调用他们的方法，从而控制浏览器的各种行为。
+	<span class="token number">1.</span>  window对象概念，使用
+		<span class="token keyword">function</span>  <span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+		window<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+	<span class="token number">2.</span>  location  window<span class="token punctuation">.</span>location可以让用户获取当前页面地址以及重定向到一个新的页面。
+	    window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>href   可以读也可以写，写的时候相当于转向另外一个页面
+
+		history   对象包含浏览器的历史记录，window可以省略。这些历史记录以栈（<span class="token constant">FIFO</span>）的形式保存。页面前进则入栈，页面返回则出栈。
+		navigator 是一个只读对象，它用来描述浏览器本身的信息，包括浏览器的名称、版本、语言、系统平台、用户特性字符串等信息。
+		 screen    提供了用户显示屏幕的相关属性，比如显示屏幕的宽度、高度，可用宽度、高度。
+			
+	<span class="token number">3.</span>   window<span class="token punctuation">.</span>onload
+		 window<span class="token punctuation">.</span>onresize   <span class="token comment">//浏览器窗口发生改变，就会执行这个事件；</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 <pre class="line-numbers language-js" data-language="js"><code class="language-js">	第五节<span class="token operator">:</span>  event 对象
 		<span class="token number">1.</span>  event概念，作用
 				系统给我们封装的，任何事件都会有这个event对象，就是回调函数的第一个形参；
@@ -2492,98 +2493,95 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <li><p>replace() 替换与正则表达式匹配的子串。该方法可以使用模式单元的后向引用</p>
 </li>
 <li><p>split() 把字符串分割为字符串数组。</p>
-<pre><code>一  正则的基本使用
-</code></pre>
+<p>一  正则的基本使用</p>
 <p>​        1、正则的概念<br>​                是什么？<br>​                    正则表达式是描述字符模式的对象。<br>​                    正则表达式用于对字符串模式匹配及检索替换，是对字符串执行模式匹配的强大工具。<br>​                    简单点：正则表达式是一种字符串匹配规则；<br>​        正则就是让我们用来在一个字符串当中 去查找符合正则规则的字符串</p>
-<pre><code>        为什么？
-            假设我想要知道一个字符串当中是否有6，该如何去做
-            假设我想知道字符串当中是否有数字又该如何
-            假设我想从字符串当中找到abcd怎么去做
-            假设我想知道这个电话号码是否合法
-
-        怎么玩？
-    2、创建方式
-        字面量创建
-            var patt=/pattern/modifiers;
-        构造函数创建
-            var patt=new RegExp(pattern,modifiers);
-
-        pattern（模式） 描述了表达式的模式
-        modifiers(修饰符) 用于指定全局匹配、区分大小写的匹配和多行匹配
-
-        注意：当使用构造函数创造正则对象时，需要常规的字符转义规则（在前面加反斜杠 \）。比如，以下是等价的：
-            var re = new RegExp(&quot;\\d+&quot;);
-            var re = /\d+/;
-
-    3、正则表达式规则写法
-        修饰符
-            修饰符用于执行区分大小写和全局匹配:
-            i:忽略大小写
-            g: 执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。
-            m:执行多行匹配
-        
-        方括号
-            方括号用于查找某个范围内的字符：
-            [abc]    查找abc任意一个
-            [^abc]   查找不是abc的任意一个
-            [0-9]    查找任意一个数字    \d
-            [a-z]    查找任意一个小写字母
-            [A-Z]    查找任意一个大写字母
-        元字符
-            .  匹配任意字符不包含\n（换行和结束符）
-            \d  任意数字  等价于[0-9]
-            \D  任意非数字  等价于[^0-9]
-            \w  任意单词字符 数字 字母  下划线  [a-z A-Z 0-9 _]
-            \W  任意非单词字符 [^a-z A-Z 0-9 _]
-            \s   任意空白字符
-            \S   任意非空白字符
-            \b   单词边界
-            \B   非单词边界
-            \n   换行符
-            \f   换页符
-            \r   回车符
-            \t   制表符
-            \v   垂直制表符
-        量词
-            +   1个或者多个前一个字符   \d+
-            *   0个或者多个前一个字符   \d*
-            ？  0个或者1个前一个字符 \d?
-            &#123;n&#125;  n个前一个字符      \d&#123;2&#125;     (\d&#123;11&#125;)\1;
-            &#123;m,n&#125; m到n个前一个字符  \d&#123;2,4&#125;
-            &#123;m,&#125; 至少m个前一 个字符   \d&#123;2,&#125;
-            $   结       ^\d&#123;11&#125;$
-            ^   开头
-        分组
-            （）分组后的反向引用
-            | 
-        贪婪和非贪婪
-            量词后面的？代表非贪婪
-
-    第二节:  字符串正则相关方法
-        正则对象的方法：
-            Reg.test() 
-                test() 方法用于检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本，则返回 true，否则返回 false。
-
-            Reg.exec()
-                exec() 方法用于检索字符串中的正则表达式的匹配。
-                该函数返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 null。
-                注意：此方法每次只会返回一个结果，如果要找到所有的，需要循环去调用必须全局匹配修饰；
-
-         字符串方法使用正则
-                str.match()：在字符串中搜索符合规则的内容，搜索成功就返回内容，格式为数组，失败就返回null。如果不加g，那么返回第一次符合的结果，加g返回所有结果的数组
-
-                str.search()：在字符串搜索符合正则的内容，搜索到就返回出现的位置（从0开始，如果匹配的不只是一个字母，那只会返回第一个字母的位置）， 如果搜索失败就返回 -1     只能返回第一次；
-
-                注意：上面两个方法类似正则的方法 test和exec
-                Reg.exec()和str.match()     
-                当不使用全局匹配时，两者的匹配效果都是返回第一次匹配成功的结果：
-
-                reg.test（）和str.search（）  前者返回的是true或者false   后者返回到的是匹配到的子串位置或者-1；
-
-                str.replace():查找符合正则的字符串，就替换成对应的字符串。返回替换后的内容。
-                    这个方法象当于做了两件事     先查找匹配    然后再用新的串把匹配到的串替换掉
-</code></pre>
-</li>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">	为什么？
+		假设我想要知道一个字符串当中是否有<span class="token number">6</span>，该如何去做
+		假设我想知道字符串当中是否有数字又该如何
+		假设我想从字符串当中找到abcd怎么去做
+		假设我想知道这个电话号码是否合法
+  
+	怎么玩？
+<span class="token number">2</span>、创建方式
+	字面量创建
+		<span class="token keyword">var</span> patt<span class="token operator">=</span><span class="token operator">/</span>pattern<span class="token operator">/</span>modifiers<span class="token punctuation">;</span>
+	构造函数创建
+		<span class="token keyword">var</span> patt<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span>pattern<span class="token punctuation">,</span>modifiers<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  
+	pattern（模式） 描述了表达式的模式
+	<span class="token function">modifiers</span><span class="token punctuation">(</span>修饰符<span class="token punctuation">)</span> 用于指定全局匹配、区分大小写的匹配和多行匹配
+  
+	注意：当使用构造函数创造正则对象时，需要常规的字符转义规则（在前面加反斜杠 \）。比如，以下是等价的：
+		<span class="token keyword">var</span> re <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">"\\d+"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">var</span> re <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">\d+</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+  
+<span class="token number">3</span>、正则表达式规则写法
+	修饰符
+		修饰符用于执行区分大小写和全局匹配<span class="token operator">:</span>
+		i<span class="token operator">:</span>忽略大小写
+		g<span class="token operator">:</span> 执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）。
+		m<span class="token operator">:</span>执行多行匹配
+	
+	方括号
+		方括号用于查找某个范围内的字符：
+		<span class="token punctuation">[</span>abc<span class="token punctuation">]</span>    查找abc任意一个
+		<span class="token punctuation">[</span><span class="token operator">^</span>abc<span class="token punctuation">]</span>   查找不是abc的任意一个
+		<span class="token punctuation">[</span><span class="token number">0</span><span class="token operator">-</span><span class="token number">9</span><span class="token punctuation">]</span>    查找任意一个数字    \d
+		<span class="token punctuation">[</span>a<span class="token operator">-</span>z<span class="token punctuation">]</span>    查找任意一个小写字母
+		<span class="token punctuation">[</span><span class="token constant">A</span><span class="token operator">-</span><span class="token constant">Z</span><span class="token punctuation">]</span>    查找任意一个大写字母
+	元字符
+		<span class="token punctuation">.</span>  匹配任意字符不包含\n（换行和结束符）
+		\d  任意数字  等价于<span class="token punctuation">[</span><span class="token number">0</span><span class="token operator">-</span><span class="token number">9</span><span class="token punctuation">]</span>
+		\<span class="token constant">D</span>  任意非数字  等价于<span class="token punctuation">[</span><span class="token operator">^</span><span class="token number">0</span><span class="token operator">-</span><span class="token number">9</span><span class="token punctuation">]</span>
+		\w  任意单词字符 数字 字母  下划线  <span class="token punctuation">[</span>a<span class="token operator">-</span>z <span class="token constant">A</span><span class="token operator">-</span><span class="token constant">Z</span> <span class="token number">0</span><span class="token operator">-</span><span class="token number">9</span> _<span class="token punctuation">]</span>
+		\<span class="token constant">W</span>  任意非单词字符 <span class="token punctuation">[</span><span class="token operator">^</span>a<span class="token operator">-</span>z <span class="token constant">A</span><span class="token operator">-</span><span class="token constant">Z</span> <span class="token number">0</span><span class="token operator">-</span><span class="token number">9</span> _<span class="token punctuation">]</span>
+		\s   任意空白字符
+		\<span class="token constant">S</span>   任意非空白字符
+		\b   单词边界
+		\<span class="token constant">B</span>   非单词边界
+		\n   换行符
+		\f   换页符
+		\r   回车符
+		\t   制表符
+		\v   垂直制表符
+	量词
+		<span class="token operator">+</span>   <span class="token number">1</span>个或者多个前一个字符   \d<span class="token operator">+</span>
+		<span class="token operator">*</span>   <span class="token number">0</span>个或者多个前一个字符   \d<span class="token operator">*</span>
+		？  <span class="token number">0</span>个或者<span class="token number">1</span>个前一个字符 \d<span class="token operator">?</span>
+		<span class="token punctuation">&#123;</span>n<span class="token punctuation">&#125;</span>  n个前一个字符      \d<span class="token punctuation">&#123;</span><span class="token number">2</span><span class="token punctuation">&#125;</span>     <span class="token punctuation">(</span>\d<span class="token punctuation">&#123;</span><span class="token number">11</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span>\<span class="token number">1</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#123;</span>m<span class="token punctuation">,</span>n<span class="token punctuation">&#125;</span> m到n个前一个字符  \d<span class="token punctuation">&#123;</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">&#125;</span>
+		<span class="token punctuation">&#123;</span>m<span class="token punctuation">,</span><span class="token punctuation">&#125;</span> 至少m个前一 个字符   \d<span class="token punctuation">&#123;</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">&#125;</span>
+		$   结       <span class="token operator">^</span>\d<span class="token punctuation">&#123;</span><span class="token number">11</span><span class="token punctuation">&#125;</span>$
+		<span class="token operator">^</span>   开头
+	分组
+		（）分组后的反向引用
+		<span class="token operator">|</span> 
+	贪婪和非贪婪
+		量词后面的？代表非贪婪
+  
+第二节<span class="token operator">:</span>  字符串正则相关方法
+	正则对象的方法：
+		Reg<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 
+			<span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 方法用于检测一个字符串是否匹配某个模式，如果字符串中含有匹配的文本，则返回 <span class="token boolean">true</span>，否则返回 <span class="token boolean">false</span>。
+  
+		Reg<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+			<span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 方法用于检索字符串中的正则表达式的匹配。
+			该函数返回一个数组，其中存放匹配的结果。如果未找到匹配，则返回值为 <span class="token keyword">null</span>。
+			注意：此方法每次只会返回一个结果，如果要找到所有的，需要循环去调用必须全局匹配修饰；
+  
+	 字符串方法使用正则
+			str<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token punctuation">)</span>：在字符串中搜索符合规则的内容，搜索成功就返回内容，格式为数组，失败就返回<span class="token keyword">null</span>。如果不加g，那么返回第一次符合的结果，加g返回所有结果的数组
+  
+			str<span class="token punctuation">.</span><span class="token function">search</span><span class="token punctuation">(</span><span class="token punctuation">)</span>：在字符串搜索符合正则的内容，搜索到就返回出现的位置（从<span class="token number">0</span>开始，如果匹配的不只是一个字母，那只会返回第一个字母的位置）， 如果搜索失败就返回 <span class="token operator">-</span><span class="token number">1</span> 	只能返回第一次；
+  
+			注意：上面两个方法类似正则的方法 test和exec
+			Reg<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span>和str<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     
+			当不使用全局匹配时，两者的匹配效果都是返回第一次匹配成功的结果：
+  
+			reg<span class="token punctuation">.</span>test（）和str<span class="token punctuation">.</span>search（）  前者返回的是<span class="token boolean">true</span>或者<span class="token boolean">false</span>   后者返回到的是匹配到的子串位置或者<span class="token operator">-</span><span class="token number">1</span>；
+  
+			str<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span>查找符合正则的字符串，就替换成对应的字符串。返回替换后的内容。
+				这个方法象当于做了两件事     先查找匹配    然后再用新的串把匹配到的串替换掉<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 
                                     
