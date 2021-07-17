@@ -6,7 +6,7 @@
   <link href="https://hyhzzz.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyhzzz.github.io/"/>
-  <updated>2021-07-09T04:35:09.670Z</updated>
+  <updated>2021-07-17T00:08:20.565Z</updated>
   <id>https://hyhzzz.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Shell入门到实战</title>
+    <link href="https://hyhzzz.github.io/posts/1004.html"/>
+    <id>https://hyhzzz.github.io/posts/1004.html</id>
+    <published>2021-07-16T23:48:31.000Z</published>
+    <updated>2021-07-17T00:08:20.565Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Shell&quot;&gt;&lt;a href=&quot;#Shell&quot; class=&quot;headerlink&quot; title=&quot;Shell&quot;&gt;&lt;/a&gt;Shell&lt;/h1&gt;&lt;h2 id=&quot;1-Shell概述&quot;&gt;&lt;a href=&quot;#1-Shell概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="大数据" scheme="https://hyhzzz.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+    
+    <category term="Shell Linux 大数据" scheme="https://hyhzzz.github.io/tags/Shell-Linux-%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>JS入门到精通</title>

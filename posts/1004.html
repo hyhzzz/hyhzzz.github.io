@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Spark入门到实战, coderhyh,jin">
+    <meta name="keywords" content="Shell入门到实战, coderhyh,jin">
     <meta name="description" content="学习交流的网站">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Spark入门到实战 | coderhyh</title>
+    <title>Shell入门到实战 | coderhyh</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -355,12 +355,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Spark入门到实战</h1>
+                    <h1 class="description center-align post-title">Shell入门到实战</h1>
                 </div>
             </div>
         </div>
@@ -476,8 +476,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/SparkCore-SparkSQL-SparkStreaming/">
-                                    <span class="chip bg-color">SparkCore SparkSQL SparkStreaming</span>
+                                <a href="/tags/Shell-Linux-%E5%A4%A7%E6%95%B0%E6%8D%AE/">
+                                    <span class="chip bg-color">Shell Linux 大数据</span>
                                 </a>
                                 
                         </div>
@@ -488,8 +488,8 @@
                         <div class="post-cate">
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                                <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE-Spark/" class="post-category">
-                                    大数据 Spark
+                                <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" class="post-category">
+                                    大数据
                                 </a>
                                 
                         </div>
@@ -502,7 +502,7 @@
                     <div class="post-date info-break-policy">
                         <i class="far fa-calendar-minus fa-fw"></i>
                         发布日期:&nbsp;&nbsp;
-                            2021-07-05
+                            2021-07-17
                     </div>
                     
 
@@ -510,7 +510,7 @@
                             <div class="post-date info-break-policy">
                                 <i class="far fa-calendar-check fa-fw"></i>
                                 更新日期:&nbsp;&nbsp;
-                                    2021-07-06
+                                    2021-07-17
                             </div>
                             
 
@@ -518,7 +518,7 @@
                                     <div class="info-break-policy">
                                         <i class="far fa-file-word fa-fw"></i>
                                         文章字数:&nbsp;&nbsp;
-                                            8
+                                            6.8k
                                     </div>
                                     
 
@@ -526,7 +526,7 @@
                                             <div class="info-break-policy">
                                                 <i class="far fa-clock fa-fw"></i>
                                                 阅读时长:&nbsp;&nbsp;
-                                                    1
+                                                    31
                                                         分
                                             </div>
                                             
@@ -551,7 +551,636 @@
 
                         <div class="card-content article-card-content">
                             <div id="articleContent">
-                                <h1 id="Spark"><a href="#Spark" class="headerlink" title="Spark"></a>Spark</h1><h2 id="Spark-简介"><a href="#Spark-简介" class="headerlink" title="Spark 简介"></a>Spark 简介</h2><h2 id="Spark和Hadoop的区别"><a href="#Spark和Hadoop的区别" class="headerlink" title="Spark和Hadoop的区别"></a>Spark和Hadoop的区别</h2>
+                                <h1 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h1><h2 id="1-Shell概述"><a href="#1-Shell概述" class="headerlink" title="1. Shell概述"></a>1. Shell概述</h2><p>大数据工程师为什么要学习shell</p>
+<p>（1）能够编写简单的shell脚本用于大数据集群的管理（启动、停止等）</p>
+<p>（2）能够大概看懂运维编写的脚本</p>
+<img src="../img/shell/image-20210102100342576.png"/>
+Linux系统的核心是内核。内核控制着计算机系统上的所有硬件和软件，在必要时为应用程序分配硬件， 并根据需要执行程序中的代码。 
+
+<p>内核主要负责以下四种功能：</p>
+<ul>
+<li><p>系统内存管理</p>
+</li>
+<li><p>软件程序管理</p>
+</li>
+<li><p>硬件设备管理</p>
+</li>
+<li><p>文件系统管理</p>
+</li>
+</ul>
+<p>简单来说Shell是一种特殊的交互式工具，核心是命令提示符，允许输入文本命令，解释命令，并在内核中执行命令。</p>
+<p>Liunx操作系统的核心是Kernal（内核）</p>
+<p>当应用程序在执行时，需要调用计算机 硬件CPU、内存等资源。</p>
+<p>程序将指令发送给内核执行</p>
+<p>为了防止程序发送一些恶意指令导致损坏内核，在内核和应用程序接口之间设置了一个中间层，称为shell</p>
+<p>本质上来说：</p>
+<p>​        shelll：是一个可以解释shell规定的语法命令的解释器，解释器负责将应用程序的指令进行检查、合法后交给内核执行，返回结果</p>
+<p>​        shell语言：shell解释器要求的指定语法编写的命令</p>
+<p>​        shell脚本：多条shell命令，可以编写在一个文件中，文件中的指令可以按照顺序执行，将这个文件称为shell脚本。</p>
+<h2 id="2-Shell解析器"><a href="#2-Shell解析器" class="headerlink" title="2.Shell解析器"></a>2.Shell解析器</h2><p>Linux提供的Shell解析器有：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 ~]$ cat &#x2F;etc&#x2F;shells 
+&#x2F;bin&#x2F;sh
+&#x2F;bin&#x2F;bash
+&#x2F;sbin&#x2F;nologin
+&#x2F;bin&#x2F;dash
+&#x2F;bin&#x2F;tcsh
+&#x2F;bin&#x2F;csh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>（2）bash和sh的关系</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 bin]$ ll | grep bash
+
+-rwxr-xr-x. 1 root root 941880 5月  11 2016 bash
+
+lrwxrwxrwx. 1 root root    4 5月  27 2017 sh -&gt; bash<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>（3）Centos默认的解析器是bash</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop102 bin]$ echo $SHELL
+&#x2F;bin&#x2F;bash<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h2 id="3-Shell脚本入门"><a href="#3-Shell脚本入门" class="headerlink" title="3.Shell脚本入门"></a>3.Shell脚本入门</h2><p>1．脚本格式</p>
+<p>脚本以#!/bin/bash开头（指定解析器）</p>
+<p>2．第一个Shell脚本：helloworld</p>
+<p>（1）需求：创建一个Shell脚本，输出helloworld</p>
+<p>（2）案例实操：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ touch helloworld.sh
+[atguigu@hadoop101 datas]$ vim helloworld.sh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>在helloworld.sh中输入如下内容</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#!&#x2F;bin&#x2F;bash
+echo &quot;helloworld&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>（3）脚本的常用执行方式</p>
+<p>第一种：采用bash或sh+脚本的相对路径或绝对路径（不用赋予脚本+x权限）</p>
+<p>​    sh+脚本的相对路径</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ sh helloworld.sh <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Helloworld</p>
+<p>​    sh+脚本的绝对路径</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ sh &#x2F;home&#x2F;atguigu&#x2F;datas&#x2F;helloworld.sh <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>helloworld</p>
+<p>​    bash+脚本的相对路径</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ bash helloworld.sh <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Helloworld</p>
+<p>​    bash+脚本的绝对路径</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ bash &#x2F;home&#x2F;atguigu&#x2F;datas&#x2F;helloworld.sh <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Helloworld</p>
+<p>第二种：采用输入脚本的绝对路径或相对路径执行脚本（必须具有可执行权限+x）</p>
+<p>（a）首先要赋予helloworld.sh 脚本的+x权限</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ chmod +x helloworld.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（b）执行脚本</p>
+<p>相对路径</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ .&#x2F;helloworld.sh <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Helloworld</p>
+<p>绝对路径</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ &#x2F;home&#x2F;atguigu&#x2F;datas&#x2F;helloworld.sh <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>Helloworld</p>
+<p>注意：第一种执行方法，本质是bash解析器帮你执行脚本，所以脚本本身不需要执行权限。第二种执行方法，本质是脚本需要自己执行，所以需要执行权限。</p>
+<p>3．第二个Shell脚本：多命令处理</p>
+<p>（1）需求： </p>
+<p>在/home/atguigu/目录下创建一个banzhang.txt,在banzhang.txt文件中增加“I love cls”。</p>
+<p>（2）案例实操：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ touch batch.sh[atguigu@hadoop101 datas]$ vim batch.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在batch.sh中输入如下内容</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#!&#x2F;bin&#x2F;bashcd &#x2F;home&#x2F;atguigutouch cls.txtecho &quot;I love cls&quot; &gt;&gt;cls.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="4-Shell中的变量"><a href="#4-Shell中的变量" class="headerlink" title="4.Shell中的变量"></a>4.Shell中的变量</h2><h3 id="4-1系统变量"><a href="#4-1系统变量" class="headerlink" title="4.1系统变量"></a>4.1系统变量</h3><ol>
+<li>常用系统变量</li>
+</ol>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$HOME、$PWD、$SHELL、$USER等<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="2">
+<li>案例实操</li>
+</ol>
+<p>（1）查看系统变量的值</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ echo $HOME&#x2F;home&#x2F;atguigu<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（2）显示当前Shell中所有变量：set</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ setBASH&#x3D;&#x2F;bin&#x2F;bashBASH_ALIASES&#x3D;()BASH_ARGC&#x3D;()BASH_ARGV&#x3D;()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="4-2自定义变量"><a href="#4-2自定义变量" class="headerlink" title="4.2自定义变量"></a>4.2自定义变量</h3><p>1．基本语法</p>
+<p>（1）定义变量：变量=值 </p>
+<p>（2）撤销变量：unset 变量</p>
+<p>（3）声明静态变量：readonly变量，注意：不能unset</p>
+<p>2．变量定义规则</p>
+<p>​    （1）变量名称可以由字母、数字和下划线组成，但是不能以数字开头，==环境变量名建议大写==。</p>
+<p>​    （2）==等号两侧不能有空格==</p>
+<p>​    （3）在bash中，变量默认类型都是字符串类型，无法直接进行数值运算。</p>
+<p>​    （4）变量的值如果有空格，需要使用双引号或单引号括起来。</p>
+<p>3．案例实操</p>
+<p>​    （1）定义变量A</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ A&#x3D;5[atguigu@hadoop101 datas]$ echo $A5<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>​    （2）给变量A重新赋值</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ A&#x3D;8[atguigu@hadoop101 datas]$ echo $A8<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>​    （3）撤销变量A</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ unset A[atguigu@hadoop101 datas]$ echo $A<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>​    （4）声明静态(只读)的变量B=2，不能unset</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ readonly B&#x3D;2[atguigu@hadoop101 datas]$ echo $B2[atguigu@hadoop101 datas]$ B&#x3D;9-bash: B: readonly variable<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>​    （5）在bash中，变量默认类型都是字符串类型，无法直接进行数值运算</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop102 ~]$ C&#x3D;1+2[atguigu@hadoop102 ~]$ echo $C1+2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（6）变量的值如果有空格，需要使用双引号或单引号括起来,无需注意数据的类型</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop102 ~]$ D&#x3D;I love banzhang-bash: world: command not found[atguigu@hadoop102 ~]$ D&#x3D;&quot;I love banzhang&quot;[atguigu@hadoop102 ~]$ echo $AI love banzhang<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>​    （7）可把变量提升为全局环境变量，可供其他Shell程序使用</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ vim helloworld.sh 在helloworld.sh文件中增加echo $B#!&#x2F;bin&#x2F;bashecho &quot;helloworld&quot;echo $B[atguigu@hadoop101 datas]$ .&#x2F;helloworld.sh Helloworld<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>发现并没有打印输出变量B的值。</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ export B[atguigu@hadoop101 datas]$ .&#x2F;helloworld.sh helloworld<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>​     （8）使用双引号可以识别变量</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@0725pc shells]# echo $Ahello[root@0725pc shells]# B&#x3D;&quot;hello $A&quot;[root@0725pc shells]# echo $Bhello hello[root@0725pc shells]# C&#x3D;&#39;hello $A&#39;[root@0725pc shells]# echo $Chello $A<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（9）使用反引号，将命令运行的结果赋值给参数，即A=<code>ll</code> 等同于 A=$(ll)</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@0725pc shells]# D&#x3D;&#96;ll&#96;[root@0725pc shells]# echo $D总用量 4 -rwxr--r--. 1 root root 23 10月 8 21:36 test1.sh[root@0725pc shells]# E&#x3D;$(ll)[root@0725pc shells]# echo $E总用量 4 -rwxr--r--. 1 root root 23 10月 8 21:36 test1.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="4-3特殊变量：-n"><a href="#4-3特殊变量：-n" class="headerlink" title="4.3特殊变量：$n"></a>4.3特殊变量：$n</h3><p>1．基本语法</p>
+<p>​    $n    （功能描述：n为数字，$0代表该脚本名称，$1-$9代表第一到第九个参数，十以上的参数，十以上的参数需要用大括号包含，如${10}）</p>
+<p>2．案例实操</p>
+<p>（1）输出该脚本文件名称、输入参数1和输入参数2 的值</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ touch parameter.sh [atguigu@hadoop101 datas]$ vim parameter.sh#!&#x2F;bin&#x2F;bashecho &quot;$0  $1   $2&quot;[atguigu@hadoop101 datas]$ chmod 777 parameter.sh[atguigu@hadoop101 datas]$ .&#x2F;parameter.sh cls  xz.&#x2F;parameter.sh  cls   xz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="4-4特殊变量："><a href="#4-4特殊变量：" class="headerlink" title="4.4特殊变量：$#"></a>4.4特殊变量：$#</h3><p>1．基本语法</p>
+<p>​    $#    （功能描述：获取所有输入参数个数，常用于循环）。</p>
+<p>2．案例实操</p>
+<p>（1）获取输入参数的个数</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ vim parameter.sh#!&#x2F;bin&#x2F;bashecho &quot;$0  $1   $2&quot;echo $#[atguigu@hadoop101 datas]$ chmod 777 parameter.sh[atguigu@hadoop101 datas]$ .&#x2F;parameter.sh cls  xzparameter.sh cls xz 2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="4-5特殊变量：-、"><a href="#4-5特殊变量：-、" class="headerlink" title="4.5特殊变量：$*、$@"></a>4.5特殊变量：$*、$@</h3><p>1．基本语法</p>
+<p>​    $*    （功能描述：这个变量代表命令行中所有的参数，$*把所有的参数看成一个整体）</p>
+<p>​    $@    （功能描述：这个变量也代表命令行中所有的参数，不过$@把每个参数区分对待）</p>
+<p>2．案例实操</p>
+<p>（1）打印输入的所有参数</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ vim parameter.sh#!&#x2F;bin&#x2F;bashecho &quot;$0  $1   $2&quot;echo $#echo $*echo $@[atguigu@hadoop101 datas]$ bash parameter.sh 1 2 3parameter.sh  1   231 2 31 2 3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="4-6特殊变量-？"><a href="#4-6特殊变量-？" class="headerlink" title="4.6特殊变量$？"></a>4.6特殊变量$？</h3><p>1．基本语法</p>
+<p>$？    （功能描述：最后一次执行的命令的返回状态。如果这个变量的值为0，证明上一个命令正确执行；如果这个变量的值为非0（具体是哪个数，由命令自己来决定），则证明上一个命令执行不正确了。）</p>
+<p>2．案例实操</p>
+<p>​    （1）判断helloworld.sh脚本是否正确执行</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ .&#x2F;helloworld.sh hello world[atguigu@hadoop101 datas]$ echo $?0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="5-运算符"><a href="#5-运算符" class="headerlink" title="5.运算符"></a>5.运算符</h2><p>1．基本语法</p>
+<p>（1）“$((运算式))”或“$[运算式]”</p>
+<p>（2）expr  + , - , *,  /,  %   加，减，乘，除，取余</p>
+<p>注意：expr运算符间要有空格</p>
+<p>2．案例实操： </p>
+<p>（1）计算3+2的值</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ expr 2 + 35<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（2）计算3-2的值</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ expr 3 - 2 1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（3）计算（2+3）X4的值</p>
+<p>​    （a）expr一步完成计算</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ expr &#96;expr 2 + 3&#96; \* 420<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（b）采用$[运算式]方式</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]# S&#x3D;$[(2+3)*4][atguigu@hadoop101 datas]# echo $S<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="6-条件判断"><a href="#6-条件判断" class="headerlink" title="6.条件判断"></a>6.条件判断</h2><ol>
+<li>基本语法</li>
+</ol>
+<p>[ condition ]（==注意condition前后要有空格==）</p>
+<p>注意：条件非空即为true，[ atguigu ]返回true，[] 返回false。</p>
+<ol start="2">
+<li>常用判断条件</li>
+</ol>
+<p>（1）两个整数之间比较</p>
+<p>= 字符串比较</p>
+<p>-lt 小于（less than）            -le 小于等于（less equal）</p>
+<p>-eq 等于（equal）                -gt 大于（greater than）</p>
+<p>-ge 大于等于（greater equal）    -ne 不等于（Not equal）</p>
+<p>（2）按照文件权限进行判断</p>
+<p>-r 有读的权限（read）            -w 有写的权限（write）</p>
+<p>-x 有执行的权限（execute）</p>
+<p>（3）按照文件类型进行判断</p>
+<p>-f 文件存在并且是一个常规的文件（file）</p>
+<p>-e 文件存在（existence）        -d 文件存在并是一个目录（directory）</p>
+<ol start="3">
+<li>案例实操</li>
+</ol>
+<p>​    （1）23是否大于等于22</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ [ 23 -ge 22 ][atguigu@hadoop101 datas]$ echo $?0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>​    （2）helloworld.sh是否具有写权限</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ [ -w helloworld.sh ][atguigu@hadoop101 datas]$ echo $?0<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>​    （3）/home/atguigu/cls.txt目录中的文件是否存在</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ [ -e &#x2F;home&#x2F;atguigu&#x2F;cls.txt ][atguigu@hadoop101 datas]$ echo $?1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（4）多条件判断（&amp;&amp; 表示前一条命令执行成功时，才执行后一条命令，|| 表示上一条命令执行失败后，才执行下一条命令）</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 ~]$ [ condition ] &amp;&amp; echo OK || echo notokOK[atguigu@hadoop101 datas]$ [ condition ] &amp;&amp; [ ] || echo notoknotok<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="7-流程控制（重点）"><a href="#7-流程控制（重点）" class="headerlink" title="7.流程控制（重点）"></a>7.流程控制（重点）</h2><h3 id="7-1-if-判断"><a href="#7-1-if-判断" class="headerlink" title="7.1 if 判断"></a>7.1 if 判断</h3><ol>
+<li>基本语法</li>
+</ol>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">if [ 条件判断式 ] ; then 程序 fi <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>或者 </p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">if  [ 条件判断式 ]  then  程序 fi<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="2">
+<li>多分支</li>
+</ol>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">if  [ 条件判断式 ]  then  程序 elif  [ 条件判断式 ]​	then​		程序else​	程序fi<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>​    注意事项：</p>
+<p>（1）[ 条件判断式 ]，中括号和条件判断式之间必须有==空格==</p>
+<p>（2）if后要有空格</p>
+<p>2．案例实操</p>
+<p>（1）输入一个数字，如果是1，则输出banzhang zhen shuai，如果是2，则输出cls zhen mei，如果是其它，什么也不输出。</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ touch if.sh[atguigu@hadoop101 datas]$ vim if.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#!&#x2F;bin&#x2F;bashif [ $1 -eq &quot;1&quot; ]thenecho &quot;banzhang zhen shuai&quot;elif [ $1 -eq &quot;2&quot; ]thenecho &quot;cls zhen mei&quot;fi<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>[atguigu@hadoop101 datas]$ chmod 777 if.sh </p>
+<p>[atguigu@hadoop101 datas]$ ./if.sh 1</p>
+<p>banzhang zhen shuai</p>
+<h3 id="7-2-case-语句"><a href="#7-2-case-语句" class="headerlink" title="7.2 case 语句"></a>7.2 case 语句</h3><p>1．基本语法</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">case $变量名 in   &quot;值1&quot;）     如果变量的值等于值1，则执行程序1     ;;   &quot;值2&quot;）     如果变量的值等于值2，则执行程序2     ;;   …省略其他分支…   *）     如果变量的值都不是以上的值，则执行此程序     ;; esac<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>注意事项：</p>
+<ol>
+<li><p>case行尾必须为单词“in”，每一个模式匹配必须以右括号“）”结束。</p>
+</li>
+<li><p>双分号“****;;****”表示命令序列结束，相当于java中的break。</p>
+</li>
+<li><p>最后的“<em>）”表示默认模式，相当于java中的default，</em>不可以加双引号。</p>
+</li>
+</ol>
+<p>2．案例实操</p>
+<p>（1）输入一个数字，如果是1，则输出banzhang，如果是2，则输出cls，如果是其它，输出renyao。</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ touch case.sh[atguigu@hadoop101 datas]$ vim case.sh!&#x2F;bin&#x2F;bashcase $1 in&quot;1&quot;)        echo &quot;banzhang&quot;;;&quot;2&quot;)        echo &quot;cls&quot;;;*)        echo &quot;renyao&quot;;;esac[atguigu@hadoop101 datas]$ chmod 777 case.sh[atguigu@hadoop101 datas]$ .&#x2F;case.sh 11<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="7-3-for-循环"><a href="#7-3-for-循环" class="headerlink" title="7.3 for 循环"></a>7.3 for 循环</h3><p>1．基本语法1</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">for (( 初始值;循环控制条件;变量变化 ))   do     程序   done<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>2．案例实操</p>
+<p>（1）从1加到100</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ touch for1.sh[atguigu@hadoop101 datas]$ vim for1.sh#!&#x2F;bin&#x2F;bashs&#x3D;0for((i&#x3D;0;i&lt;&#x3D;100;i++))do        s&#x3D;$[$s+$i]doneecho $s[atguigu@hadoop101 datas]$ chmod 777 for1.sh [atguigu@hadoop101 datas]$ .&#x2F;for1.sh “5050”[root@0725pc shells]# tail -n 4 test1.sh SUM2&#x3D;0for((i&#x3D;0;i&lt;&#x3D;10;i++));do SUM2&#x3D;$(($SUM2+$i)); doneecho &quot;从1加到100的值是：$SUM2&quot;[root@0725pc shells]# .&#x2F;test1.sh 从1加到100的值是：55<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>3．基本语法2</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">for 变量 in 值1 值2 值3…   do     程序   done<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>4．案例实操</p>
+<p>​    （1）打印所有输入参数</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ touch for2.sh[atguigu@hadoop101 datas]$ vim for2.sh#!&#x2F;bin&#x2F;bash#打印数字for i in $*    do      echo &quot;ban zhang love $i &quot;    done[atguigu@hadoop101 datas]$ chmod 777 for2.sh [atguigu@hadoop101 datas]$ bash for2.sh cls xz bdban zhang love clsban zhang love xzban zhang love bd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>多种写法啊</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@0725pc shells]# cat test2.sh #! &#x2F;bin&#x2F;bashfor i in 1 2 3do 	echo $idoneecho &quot;--------------------&quot;for i in 1 2 3 ;do echo $i;doneecho &quot;--------------------&quot;for i in &#123;1..3&#125;;do echo $i;done[root@0725pc shells]# .&#x2F;test2.sh 123--------------------123--------------------123<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（2）比较$*和$@区别</p>
+<p>（a）$*和$@都表示传递给函数或脚本的所有参数，不被双引号“”包含时，都以$1 $2 …$n的形式输出所有参数。</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ touch for.sh[atguigu@hadoop101 datas]$ vim for.sh#!&#x2F;bin&#x2F;bash for i in $*do      echo &quot;ban zhang love $i &quot;donefor j in $@do              echo &quot;ban zhang love $j&quot;done[atguigu@hadoop101 datas]$ bash for.sh cls xz bdban zhang love cls ban zhang love xz ban zhang love bd ban zhang love clsban zhang love xzban zhang love bd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（b）当它们被双引号“”包含时，“$*”会将所有的参数作为一个整体，以“$1 $2 …$n”的形式输出所有参数；“$@”会将各个参数分开，以“$1” “$2”…”$n”的形式输出所有参数。</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ vim for.sh#!&#x2F;bin&#x2F;bash for i in &quot;$*&quot; #$*中的所有参数看成是一个整体，所以这个for循环只会循环一次         do                 echo &quot;ban zhang love $i&quot;        done for j in &quot;$@&quot; #$@中的每个参数都看成是独立的，所以“$@”中有几个参数，就会循环几次         do                 echo &quot;ban zhang love $j&quot; done[atguigu@hadoop101 datas]$ chmod 777 for.sh[atguigu@hadoop101 datas]$ bash for.sh cls xz bdban zhang love cls xz bdban zhang love clsban zhang love xzban zhang love bd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="7-4-while-循环"><a href="#7-4-while-循环" class="headerlink" title="7.4 while 循环"></a>7.4 while 循环</h3><p>1．基本语法</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">while  [ 条件判断式 ]   do     程序  done<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>2．案例实操</p>
+<p>​    （1）从1加到100</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ touch while.sh[atguigu@hadoop101 datas]$ vim while.sh#!&#x2F;bin&#x2F;bashs&#x3D;0i&#x3D;1while [ $i -le 100 ]do        s&#x3D;$[$s+$i]        i&#x3D;$[$i+1]doneecho $s[atguigu@hadoop101 datas]$ chmod 777 while.sh [atguigu@hadoop101 datas]$ .&#x2F;while.sh 5050<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>​     （2）从0开始，累加加11次</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@0725pc shells]# bash test3.sh 11[root@0725pc shells]# cat test3.sh #! &#x2F;bin&#x2F;bashNUM&#x3D;0while((NUM&lt;&#x3D;10));do let NUM++; doneecho $NUM<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>注意事项：</p>
+<p>while后面需要有空格</p>
+<h2 id="8-read读取控制台输入"><a href="#8-read读取控制台输入" class="headerlink" title="8.read读取控制台输入"></a>8.read读取控制台输入</h2><p>1．基本语法</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">read(选项)(参数)选项：-p：指定读取值时的提示符；-t：指定读取值时等待的时间（秒）。参数	变量：指定读取值的变量名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>2．案例实操</p>
+<p>​    （1）提示7秒内，读取控制台输入的名称</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ touch read.sh[atguigu@hadoop101 datas]$ vim read.sh#!&#x2F;bin&#x2F;bashread -t 7 -p &quot;Enter your name in 7 seconds &quot; NAMEecho $NAME[atguigu@hadoop101 datas]$ .&#x2F;read.sh Enter your name in 7 seconds xiaozexiaoz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="9-函数"><a href="#9-函数" class="headerlink" title="9.函数"></a>9.函数</h2><h3 id="9-1-系统函数"><a href="#9-1-系统函数" class="headerlink" title="9.1 系统函数"></a>9.1 系统函数</h3><p>1．basename基本语法</p>
+<p>basename [string / pathname] [suffix]  （功能描述：basename命令会删掉所有的前缀包括最后一个（‘/’）字符，然后将字符串显示出来。</p>
+<p>选项：</p>
+<p>suffix为后缀，如果suffix被指定了，basename会将pathname或string中的suffix去掉。</p>
+<p>2．案例实操</p>
+<p>（1）截取该/home/atguigu/banzhang.txt路径的文件名称</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ basename &#x2F;home&#x2F;atguigu&#x2F;banzhang.txt banzhang.txt[atguigu@hadoop101 datas]$ basename &#x2F;home&#x2F;atguigu&#x2F;banzhang.txt .txtbanzhang<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ol start="3">
+<li>   dirname基本语法</li>
+</ol>
+<p>​    dirname 文件绝对路径        （功能描述：从给定的包含绝对路径的文件名中去除文件名（非目录的部分），然后返回剩下的路径（目录的部分））</p>
+<p>4．案例实操</p>
+<p>（1）获取banzhang.txt文件的路径</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 ~]$ dirname &#x2F;home&#x2F;atguigu&#x2F;banzhang.txt &#x2F;home&#x2F;atguigu<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="9-2-自定义函数"><a href="#9-2-自定义函数" class="headerlink" title="9.2 自定义函数"></a>9.2 自定义函数</h3><p>1．基本语法</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[ function ] funname[()]&#123;	Action;	[return int;]&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>2．经验技巧</p>
+<p>​    （1）必须在调用函数地方之前，先声明函数，shell脚本是逐行运行。不会像其它语言一样先编译。</p>
+<p>​    （2）函数返回值，只能通过$?系统变量获得，可以显示加return返回，如果不加，将以最后一条命令运行结果，作为返回值。return后跟数值n(0-255)</p>
+<p>3．案例实操</p>
+<p>​    （1）计算两个输入参数的和</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ touch fun.sh[atguigu@hadoop101 datas]$ vim fun.sh#!&#x2F;bin&#x2F;bashfunction sum()&#123;    s&#x3D;0    s&#x3D;$[ $1 + $2 ]    echo &quot;$s&quot;&#125;read -p &quot;Please input the number1: &quot; n1;read -p &quot;Please input the number2: &quot; n2;sum $n1 $n2;[atguigu@hadoop101 datas]$ chmod 777 fun.sh[atguigu@hadoop101 datas]$ .&#x2F;fun.sh Please input the number1: 2Please input the number2: 57<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="10-Shell工具（重点）"><a href="#10-Shell工具（重点）" class="headerlink" title="10.Shell工具（重点）"></a>10.Shell工具（重点）</h2><h3 id="10-1-wc"><a href="#10-1-wc" class="headerlink" title="10.1 wc"></a>10.1 wc</h3><p>​     wc命令用来计算数字。利用wc指令我们可以计算文件的Byte数、字数或是列数，若不指定文件名称，或是所给予的文件名为“-”，则wc指令会从标准输入设备读取数据。</p>
+<p>​    1. 基本用法</p>
+<p>​         wc [选项参数] filename</p>
+<p>​    2. 参数说明</p>
+<table>
+<thead>
+<tr>
+<th>选项参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-l</td>
+<td>统计文件行数</td>
+</tr>
+<tr>
+<td>-w</td>
+<td>统计文件的单词数</td>
+</tr>
+<tr>
+<td>-m</td>
+<td>统计文件的字符数</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>统计文件的字节数</td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li>案例实操</li>
+</ol>
+<p>​             统计redis_6379.conf文件的行数、单词数、字节数！</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@0725pc myredis]# ll | grep redis_6379.conf-rw-r--r--. 1 root root      188 10月  9 15:33 redis_6379.conf[root@0725pc myredis]# cat -n redis_6379.conf      1	include &#x2F;root&#x2F;myredis&#x2F;redis.conf     2	pidfile &quot;&#x2F;var&#x2F;run&#x2F;redis_6379.pid&quot;     3	port 6379     4	dbfilename &quot;dump_6379.rdb&quot;     5	cluster-enabled yes     6	cluster-config-file nodes-6379.conf     7	cluster-node-timeout 15000     8	[root@0725pc myredis]# wc -w redis_6379.conf 14 redis_6379.conf[root@0725pc myredis]# wc -l redis_6379.conf 8 redis_6379.conf[root@0725pc myredis]# wc -m redis_6379.conf 188 redis_6379.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="10-2-cut"><a href="#10-2-cut" class="headerlink" title="10.2 cut"></a>10.2 cut</h3><p>cut的工作就是“剪”，具体的说就是在文件中负责剪切数据用的。cut 命令从文件的每一行剪切字节、字符和字段并将这些字节、字符和字段输出。</p>
+<p>1.基本用法</p>
+<p>cut [选项参数]  filename </p>
+<p>说明：默认分隔符是制表符</p>
+<p>2.选项参数说明</p>
+<table>
+<thead>
+<tr>
+<th>选项参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-f</td>
+<td>f为fileds，列号，提取第几列</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>d为Descriptor分隔符，按照指定分隔符分割列</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>指定具体字符</td>
+</tr>
+</tbody></table>
+<p>3.案例实操 </p>
+<p>（0）以：为间隔，切割PATH环境变量的第一列</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@0725pc ~]# echo $PATH&#x2F;usr&#x2F;lib64&#x2F;qt-3.3&#x2F;bin:&#x2F;usr&#x2F;local&#x2F;sbin:&#x2F;usr&#x2F;local&#x2F;bin:&#x2F;sbin:&#x2F;bin:&#x2F;usr&#x2F;sbin:&#x2F;usr&#x2F;bin:&#x2F;opt&#x2F;jdk1.8.0_121&#x2F;bin:&#x2F;root&#x2F;bin[root@0725pc ~]# echo $PATH | cut -d &#39;:&#39; -f 1&#x2F;usr&#x2F;lib64&#x2F;qt-3.3&#x2F;bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（2）以：为间隔，切割PATH环境变量的第二、三列</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@0725pc ~]# echo $PATH&#x2F;usr&#x2F;lib64&#x2F;qt-3.3&#x2F;bin:&#x2F;usr&#x2F;local&#x2F;sbin:&#x2F;usr&#x2F;local&#x2F;bin:&#x2F;sbin:&#x2F;bin:&#x2F;usr&#x2F;sbin:&#x2F;usr&#x2F;bin:&#x2F;opt&#x2F;jdk1.8.0_121&#x2F;bin:&#x2F;root&#x2F;bin[root@0725pc ~]# echo $PATH | cut -d &#39;:&#39; -f 2,3&#x2F;usr&#x2F;local&#x2F;sbin:&#x2F;usr&#x2F;local&#x2F;bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（3）选取系统PATH变量值，第2个“：”开始后的所有路径：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ echo $PATH&#x2F;usr&#x2F;lib64&#x2F;qt-3.3&#x2F;bin:&#x2F;usr&#x2F;local&#x2F;bin:&#x2F;bin:&#x2F;usr&#x2F;bin:&#x2F;usr&#x2F;local&#x2F;sbin:&#x2F;usr&#x2F;sbin:&#x2F;sbin:&#x2F;home&#x2F;atguigu&#x2F;bin[atguigu@hadoop102 datas]$ echo $PATH | cut -d: -f 3-&#x2F;usr&#x2F;local&#x2F;bin:&#x2F;bin:&#x2F;usr&#x2F;bin:&#x2F;usr&#x2F;local&#x2F;sbin:&#x2F;usr&#x2F;sbin:&#x2F;sbin:&#x2F;home&#x2F;atguigu&#x2F;bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p> （4）以：为间隔，切割PATH环境变量的第一到三列，和第五列</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@0725pc ~]# echo $PATH&#x2F;usr&#x2F;lib64&#x2F;qt-3.3&#x2F;bin:&#x2F;usr&#x2F;local&#x2F;sbin:&#x2F;usr&#x2F;local&#x2F;bin:&#x2F;sbin:&#x2F;bin:&#x2F;usr&#x2F;sbin:&#x2F;usr&#x2F;bin:&#x2F;opt&#x2F;jdk1.8.0_121&#x2F;bin:&#x2F;root&#x2F;bin[root@0725pc ~]# echo $PATH | cut -d &#39;:&#39; -f 1-3,5&#x2F;usr&#x2F;lib64&#x2F;qt-3.3&#x2F;bin:&#x2F;usr&#x2F;local&#x2F;sbin:&#x2F;usr&#x2F;local&#x2F;bin:&#x2F;bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（5）切割ifconfig 后打印的IP地址</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop101 datas]$ ifconfig eth0 | grep &quot;inet addr&quot; | cut -d: -f 2 | cut -d&quot; &quot; -f1ifconfig ens33 |grep &#39;netmask&#39;  | cut -d &#39;t&#39; -f 2 |cut -d &quot; &quot; -f 2192.168.1.102<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="10-3-awk"><a href="#10-3-awk" class="headerlink" title="10.3 awk"></a>10.3 awk</h3><p>一个强大的文本分析工具，把文件逐行的读入，以空格为默认分隔符将每行切片，切开的部分再进行分析处理。</p>
+<ol>
+<li>基本用法</li>
+</ol>
+<p>awk [选项参数] ‘pattern1{action1} pattern2{action2}…’ filename</p>
+<p>pattern：表示AWK在数据中查找的内容，就是匹配模式</p>
+<p>action：在找到匹配内容时所执行的一系列命令</p>
+<ol start="2">
+<li>选项参数说明</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>选项参数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-F</td>
+<td>指定输入文件折分隔符</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>赋值一个用户定义变量</td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li>案例实操</li>
+</ol>
+<p>（0）数据准备</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop102 datas]$ sudo cp &#x2F;etc&#x2F;passwd .&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（1）搜索passwd文件以root关键字开头的所有行，并输出该行的第7列。</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop102 datas]$ awk -F: &#39;&#x2F;^root&#x2F;&#123;print $7&#125;&#39; passwd &#x2F;bin&#x2F;bash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（2）搜索passwd文件以root关键字开头的所有行，并输出该行的第1列和第7列，中间以“，”号分割。</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop102 datas]$ awk -F: &#39;&#x2F;^root&#x2F;&#123;print $1&quot;,&quot;$7&#125;&#39; passwd root,&#x2F;bin&#x2F;bash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>注意：只有匹配了patter的行才会执行action</p>
+<p>（3）只显示/etc/passwd的第一列和第七列，以逗号分割，且在所有行前面添加列名user，shell在最后一行添加”dahaige，/bin/zuishuai”。</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop102 datas]$ awk -F : &#39;BEGIN&#123;print &quot;user, shell&quot;&#125; &#123;print $1&quot;,&quot;$7&#125; END&#123;print &quot;dahaige,&#x2F;bin&#x2F;zuishuai&quot;&#125;&#39; passwduser, shellroot,&#x2F;bin&#x2F;bashbin,&#x2F;sbin&#x2F;nologin。。。atguigu,&#x2F;bin&#x2F;bashdahaige,&#x2F;bin&#x2F;zuishuai<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>注意：BEGIN 在所有数据读取行之前执行；END 在所有数据执行之后执行。</p>
+<p>（4）将passwd文件中的用户id增加数值1并输出</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop102 datas]$ awk -v i&#x3D;1 -F: &#39;&#123;print $3+i&#125;&#39; passwd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+<ol start="4">
+<li>awk的内置变量</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>FILENAME</td>
+<td>文件名</td>
+</tr>
+<tr>
+<td>NR</td>
+<td>已读的记录数（行号）</td>
+</tr>
+<tr>
+<td>NF</td>
+<td>浏览记录的域的个数（切割后列的个数）</td>
+</tr>
+</tbody></table>
+<ol start="5">
+<li>案例实操</li>
+</ol>
+<p>（1）统计passwd文件名，每行的行号，每行的列数</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop102 datas]$ awk -F: &#39;&#123;print &quot;filename:&quot;  FILENAME &quot;, linenumber:&quot; NR  &quot;,columns:&quot; NF&#125;&#39; passwd filename:passwd, linenumber:1,columns:7filename:passwd, linenumber:2,columns:7filename:passwd, linenumber:3,columns:7<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>​      （2）切割IP</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop102 datas]$ ifconfig eth0 | grep &quot;inet addr&quot; | awk -F: &#39;&#123;print $2&#125;&#39; | awk -F &quot; &quot; &#39;&#123;print $1&#125;&#39; ifconfig |grep &quot;netmask&quot; |  awk -F &quot;inet&quot; &#39;&#123;print $2&#125;&#39;| awk -F &quot; &quot; &#39;&#123;print $1&#125;&#39;192.168.1.102<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>​      （3）查询sed.txt中空行所在的行号</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop102 datas]$ awk &#39;&#x2F;^$&#x2F;&#123;print NR&#125;&#39; sed.txt 5<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="10-4-sort"><a href="#10-4-sort" class="headerlink" title="10.4 sort"></a>10.4 sort</h3><p>sort命令是在Linux里非常有用，它将文件进行排序，并将排序结果标准输出。默认情况以第一个字符串的字典顺序来排序！</p>
+<ol>
+<li>基本语法</li>
+</ol>
+<p>sort(选项)(参数)</p>
+<p>表1-57</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-n</td>
+<td>依照数值的大小排序</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>以相反的顺序来排序</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>设置排序时所用的分隔字符，默认使用TAB</td>
+</tr>
+<tr>
+<td>-k</td>
+<td>指定需要排序的列</td>
+</tr>
+<tr>
+<td>-u</td>
+<td>u为unique的缩写，即如果出现相同的数据，只出现一行</td>
+</tr>
+</tbody></table>
+<p>参数：指定待排序的文件列表</p>
+<ol start="2">
+<li>案例实操</li>
+</ol>
+<p>（0）数据准备</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop102 datas]$ touch sort.sh[atguigu@hadoop102 datas]$ vim sort.sh bb:40:5.4bd:20:4.2xz:50:2.3cls:10:3.5ss:30:1.6<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>（1）按照“：”分割后的第三列倒序排序。</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop102 datas]$ sort -t : -nrk 3  sort.sh bb:40:5.4bd:20:4.2cls:10:3.5xz:50:2.3ss:30:1.6<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="11-常见错误及解决方案"><a href="#11-常见错误及解决方案" class="headerlink" title="11.常见错误及解决方案"></a>11.常见错误及解决方案</h2><ol>
+<li>虚拟化支持异常情况如下几种情况</li>
+</ol>
+<img src="../img/shell/image-20201018074324883.png"/>
+图1-168
+
+ <img src="../img/shell/image-20201018074328941.png"/>
+
+<p>图1-169</p>
+ <img src="../img/shell/image-20201018074331717.png"/>
+
+<p>图1-170</p>
+<img src="../img/shell/image-20201018074335164.png"/>
+
+<p>图1-171</p>
+<p>问题原因：宿主机BIOS设置中的硬件虚拟化被禁用了</p>
+<p>解决办法：需要打开笔记本BIOS中的IVT对虚拟化的支持</p>
+ <img src="../img/shell/image-20201018074340923.png"/>
+
+<p>图1-172</p>
+<h2 id="12-企业真实面试题"><a href="#12-企业真实面试题" class="headerlink" title="12.企业真实面试题"></a>12.企业真实面试题</h2><h3 id="12-1-百度-amp-考满分"><a href="#12-1-百度-amp-考满分" class="headerlink" title="12.1 百度&amp;考满分"></a>12.1 百度&amp;考满分</h3><p>问题：Linux常用命令</p>
+<p>参考答案：find、df、tar、ps、top、netstat等。（尽量说一些高级命令）</p>
+<h3 id="12-2-瓜子二手车"><a href="#12-2-瓜子二手车" class="headerlink" title="12.2 瓜子二手车"></a>12.2 瓜子二手车</h3><p>问题：Linux查看内存、磁盘存储、io 读写、端口占用、进程等命令</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">答案：1、查看内存：top2、查看磁盘存储情况：df -h3、查看磁盘IO读写情况：iotop（需要安装一下：yum install iotop）、iotop -o（直接查看输出比较高的磁盘读写程序）4、查看端口占用情况：netstat -tunlp | grep 端口号5、查看进程：ps aux<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="12-3-京东"><a href="#12-3-京东" class="headerlink" title="12.3 京东"></a>12.3 京东</h3><p>问题1：使用Linux命令查询file1中空行所在的行号</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">答案：[atguigu@hadoop102 datas]$ awk &#39;&#x2F;^$&#x2F;&#123;print NR&#125;&#39; sed.txt 5<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>问题2：有文件chengji.txt内容如下:</p>
+<p>张三 40</p>
+<p>李四 50</p>
+<p>王五 60</p>
+<p>使用Linux命令计算第二列的和并输出</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop102 datas]$ cat chengji.txt | awk -F &quot; &quot; &#39;&#123;sum+&#x3D;$2&#125; END&#123;print sum&#125;&#39;150<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="12-4-搜狐-amp-和讯网"><a href="#12-4-搜狐-amp-和讯网" class="headerlink" title="12.4 搜狐&amp;和讯网"></a>12.4 搜狐&amp;和讯网</h3><p>问题1：Shell脚本里如何检查一个文件是否存在？如果不存在该如何处理？</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#!&#x2F;bin&#x2F;bashif [ -f file.txt ]; then   echo &quot;文件存在!&quot;else   echo &quot;文件不存在!&quot;fi<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="12-5-新浪"><a href="#12-5-新浪" class="headerlink" title="12.5 新浪"></a>12.5 新浪</h3><p>问题1：用shell写一个脚本，对文本中无序的一列数字排序</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@CentOS6-2 ~]# cat test.txt98765432101[root@CentOS6-2 ~]# sort -n test.txt|awk &#39;&#123;a+&#x3D;$0;print $0&#125;END&#123;print &quot;SUM&#x3D;&quot;a&#125;&#39;12345678910SUM&#x3D;55<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="12-6-金和网络"><a href="#12-6-金和网络" class="headerlink" title="12.6 金和网络"></a>12.6 金和网络</h3><p>问题1：请用shell脚本写出查找当前文件夹（/home）下所有的文本文件内容中包含有字符”shen”的文件名称</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[atguigu@hadoop102 datas]$ grep -r &quot;shen&quot; &#x2F;home | cut -d &quot;:&quot; -f 1&#x2F;home&#x2F;atguigu&#x2F;datas&#x2F;sed.txt&#x2F;home&#x2F;atguigu&#x2F;datas&#x2F;cut.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="13-正则表达式入门"><a href="#13-正则表达式入门" class="headerlink" title="13.正则表达式入门"></a>13.正则表达式入门</h2><p>正则表达式使用单个字符串来描述、匹配一系列符合某个语法规则的字符串。在很多文本编辑器里，正则表达式通常被用来检索、替换那些符合某个模式的文本。在Linux中，grep，awk等命令都支持通过正则表达式进行模式匹配。</p>
+<h3 id="13-1-常规匹配"><a href="#13-1-常规匹配" class="headerlink" title="13.1 常规匹配"></a>13.1 常规匹配</h3><p>一串不包含特殊字符的正则表达式匹配它自己，例如：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@hadoop101 datas]$ cat &#x2F;etc&#x2F;passwd | grep atguigu<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>就会匹配所有包含atguigu的行</p>
+<h3 id="13-2-常用特殊字符"><a href="#13-2-常用特殊字符" class="headerlink" title="13.2 常用特殊字符"></a>13.2 常用特殊字符</h3><p><strong>1****）特殊字符：^</strong></p>
+<p>^ 匹配一行的开头，例如：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@hadoop101 datas]$ cat &#x2F;etc&#x2F;passwd | grep ^a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>会匹配出所有以a开头的行</p>
+<p><strong>2****）特殊字符：$</strong></p>
+<p>$ 匹配一行的结束，例如</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@hadoop101 datas]$ cat &#x2F;etc&#x2F;passwd | grep t$<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>会匹配出所有以t结尾的行</p>
+<p><strong>思考：^$</strong> <strong>匹配什么？</strong></p>
+<p><strong>3****）特殊字符：.</strong></p>
+<p>. 匹配一个任意的字符，例如</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@hadoop101 datas]$ cat &#x2F;etc&#x2F;passwd | grep r..t<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>会匹配包含rabt,rbbt,rxdt,root等的所有行</p>
+<p><strong>4****）特殊字符：*</strong></p>
+<p>* 不单独使用，他和上一个字符连用，表示匹配上一个字符0次或多次，例如</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@hadoop101 datas]$ cat &#x2F;etc&#x2F;passwd | grep ro*t<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>会匹配rt, rot, root, rooot, roooot等所有行</p>
+<p>思考：.* 匹配什么？</p>
+<p><strong>5****）特殊字符：[ ]</strong></p>
+<p>[ ] 表示匹配某个范围内的一个字符，例如</p>
+<p>[6,8]——匹配6或者8</p>
+<p>[a-z]——匹配一个a-z之间的字符</p>
+<p>[a-z]*—–匹配任意字母字符串</p>
+<p>[a-c, e-f]-匹配a-c或者e-f之间的任意字符</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@hadoop101 datas]$ cat &#x2F;etc&#x2F;passwd | grep r[a,b,c]*t<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>会匹配rat, rbt, rabt, rbact等等所有行</p>
+<p>*<em>6</em>**<em>）特殊字符：*</em></p>
+<p>\ 表示转义，并不会单独使用。由于所有特殊字符都有其特定匹配模式，当我们想匹配某一特殊字符本身时（例如，我想找出所有包含 ‘$’ 的行），就会碰到困难。此时我们就要将转义字符和特殊字符连用，来表示特殊字符本身，例如</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">[root@hadoop101 datas]$ cat &#x2F;etc&#x2F;passwd | grep a\$b<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>就会匹配所有包含 a$b 的行。</p>
+
                                     
                             </div>
                             <hr />
@@ -577,7 +1206,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hyhzzz.github.io/posts/dba7b746.html">https://hyhzzz.github.io/posts/dba7b746.html</a>
+                    <a href="https://hyhzzz.github.io/posts/1004.html">https://hyhzzz.github.io/posts/1004.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -615,8 +1244,8 @@
                                         
                                             <div class="article-tag">
                                                 
-                                                    <a href="/tags/SparkCore-SparkSQL-SparkStreaming/">
-                                                        <span class="chip bg-color">SparkCore SparkSQL SparkStreaming</span>
+                                                    <a href="/tags/Shell-Linux-%E5%A4%A7%E6%95%B0%E6%8D%AE/">
+                                                        <span class="chip bg-color">Shell Linux 大数据</span>
                                                     </a>
                                                     
                                             </div>
@@ -787,7 +1416,7 @@
         repo: 'boke-comment',
         owner: 'hyhzzz',
         admin: "hyhzzz",
-        id: '2021-07-05T10-27-34',
+        id: '2021-07-17T07-48-31',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1081,46 +1710,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/1000.html">
+                <a href="/posts/1004.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="VScode常用插件和配置">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Shell入门到实战">
                         
-                        <span class="card-title">VScode常用插件和配置</span>
+                        <span class="card-title">Shell入门到实战</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            vscode开发工具的一些插件和配置
+                            主要记录shell编程的语法和简单应用
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    前端开发工具
+                            <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" class="post-category">
+                                    大数据
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/VScode/">
-                        <span class="chip bg-color">VScode</span>
+                    <a href="/tags/Shell-Linux-%E5%A4%A7%E6%95%B0%E6%8D%AE/">
+                        <span class="chip bg-color">Shell Linux 大数据</span>
                     </a>
                     
                 </div>
@@ -1134,31 +1765,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/2e852b48.html">
+                <a href="/posts/1003.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Hadoop入门到实战">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="JS入门到精通">
                         
-                        <span class="card-title">Hadoop入门到实战</span>
+                        <span class="card-title">JS入门到精通</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            主要记录从Hadoop入门一直到MapReduce以及Yarn的全套知识点
+                            这里主要是记录JavaScript的笔记
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-05
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE-Hadoop/" class="post-category">
-                                    大数据 Hadoop
+                            <a href="/categories/%E5%A4%A7%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    大前端
                                 </a>
                             
                             
@@ -1168,8 +1799,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux-HDFS-MapReduce/">
-                        <span class="chip bg-color">Linux HDFS MapReduce</span>
+                    <a href="/tags/JS/">
+                        <span class="chip bg-color">JS</span>
                     </a>
                     
                 </div>
