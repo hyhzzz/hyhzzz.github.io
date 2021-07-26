@@ -352,31 +352,6 @@
     </entry>
     
     
-    
-    <entry>
-      <title>Hexo</title>
-      <link href="/posts/b132932.html"/>
-      <url>/posts/b132932.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><p>Hexo就是我们的个人博客网站的框架， 这里需要自己在电脑常里创建一个文件夹，可以命名为Blog，Hexo框架与以后你自己发布的网页都在这个文件夹中。创建好后，进入文件夹中，按住shift键，右击鼠标点击命令行<br><img src="/img/1.png" /></p><p>使用npm命令安装Hexo，输入：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install -g hexo-cli <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这个安装时间较长耐心等待，安装完成后，初始化我们的博客，输入：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo init blog<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>注意，这里的命令都是作用在刚刚创建的Blog文件夹中。</p><p>为了检测我们的网站雏形，分别按顺序输入以下三条命令：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo new test_my_sitehexo ghexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>这些命令在后面作介绍，完成后，打开浏览器输入地址：</p><p>localhost:4000</p><p>现在来介绍常用的Hexo 命令</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install hexo -g #安装Hexonpm update hexo -g #升级hexo init #初始化博客命令简写hexo n &quot;我的博客&quot; &#x3D;&#x3D; hexo new &quot;我的博客&quot; #新建文章hexo g &#x3D;&#x3D; hexo generate #生成hexo s &#x3D;&#x3D; hexo server #启动服务预览hexo d &#x3D;&#x3D; hexo deploy #部署hexo server #Hexo会监视文件变动并自动更新，无须重启服务器hexo server -s #静态模式hexo server -p 5000 #更改端口hexo server -i 192.168.1.1 #自定义 IPhexo clean #清除缓存，若是网页正常情况下可以忽略这条命令刚刚的三个命令依次是新建一篇博客文章、生成网页、在本地预览的操作。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>推送网站</strong></p><p>上面只是在本地预览，接下来要做的就是就是推送网站，也就是发布网站，让我们的网站可以被更多的人访问。在设置之前，需要解释一个概念，在blog根目录里的_config.yml文件称为<strong>站点</strong>配置文件，如下图</p><img src="/img/2.png" /><p>进入根目录里的themes文件夹，里面也有个_config.yml文件，这个称为<strong>主题</strong>配置文件，如下图</p><img src="/img/3.png" /><p>下一步将我们的Hexo与GitHub关联起来，打开站点的配置文件_config.yml，翻到最后修改为：</p><p>deploy:<br>type: git<br>repo: 这里填入你之前在GitHub上创建仓库的完整路径，记得加上 .git<br>branch: master参考如下：</p><img src="/img/4.png" /><p>保存站点配置文件。</p><p>其实就是给hexo d 这个命令做相应的配置，让hexo知道你要把blog部署在哪个位置，很显然，我们部署在我们GitHub的仓库里。最后安装Git部署插件，输入命令：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这时，我们分别输入三条命令：</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">hexo cleanhexo ghexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>你就会发现你的博客已经上线了，可以在网络上被访问了。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Hexo </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
   
   
 </search>
