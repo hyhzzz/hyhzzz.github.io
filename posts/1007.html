@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="AJAX入门, coderhyh,jin">
+    <meta name="keywords" content="性能优化, coderhyh,jin">
     <meta name="description" content="学习交流的网站">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>AJAX入门 | coderhyh</title>
+    <title>性能优化 | coderhyh</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -355,12 +355,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">AJAX入门</h1>
+                    <h1 class="description center-align post-title">性能优化</h1>
                 </div>
             </div>
         </div>
@@ -476,8 +476,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/1005-ajax/">
-                                    <span class="chip bg-color">1005 ajax</span>
+                                <a href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+                                    <span class="chip bg-color">性能优化</span>
                                 </a>
                                 
                         </div>
@@ -518,7 +518,7 @@
                                     <div class="info-break-policy">
                                         <i class="far fa-file-word fa-fw"></i>
                                         文章字数:&nbsp;&nbsp;
-                                            3k
+                                            7.4k
                                     </div>
                                     
 
@@ -526,7 +526,7 @@
                                             <div class="info-break-policy">
                                                 <i class="far fa-clock fa-fw"></i>
                                                 阅读时长:&nbsp;&nbsp;
-                                                    12
+                                                    26
                                                         分
                                             </div>
                                             
@@ -551,388 +551,443 @@
 
                         <div class="card-content article-card-content">
                             <div id="articleContent">
-                                <h1 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h1><h2 id="1-Ajax-简介"><a href="#1-Ajax-简介" class="headerlink" title="1 Ajax 简介"></a>1 Ajax 简介</h2><p>Ajax 全称为 Asynchronous Javascript And XML，就是异步的 JavaScrript 和 XML。</p>
-<p>通过 Ajax 可以在浏览器中向服务器发送异步请求，最大的优势：==页面无刷新获取数据==。</p>
-<p>Ajax 不是新的编程语言，而是一种将现有的标准组合在一起使用的新方式。</p>
-<h2 id="2-XML-简介"><a href="#2-XML-简介" class="headerlink" title="2 XML 简介"></a>2 XML 简介</h2><p>XML 可扩展标记语言。</p>
-<p>XML 被设计用来传输和存储数据。</p>
-<p>XML 和 HTML类似，不同的是HTML中都是预定义标签，而XML中没有预定义标签，全都是自定义标签，用来表示一些数据。</p>
+                                <h1 id="性能优化"><a href="#性能优化" class="headerlink" title="性能优化"></a>性能优化</h1><h2 id="一、浏览器功能与组成"><a href="#一、浏览器功能与组成" class="headerlink" title="一、浏览器功能与组成"></a>一、浏览器功能与组成</h2><h3 id="浏览器应该有的功能"><a href="#浏览器应该有的功能" class="headerlink" title="浏览器应该有的功能"></a>浏览器应该有的功能</h3><pre class="line-numbers language-html" data-language="html"><code class="language-html">网络：
+	浏览器通过网络模块来下载各式各样的资源，例如html文本；javascript代码；样式表；图片；音视频文件等。
+	网络部分尤为重要，因为它耗时长，而且需要安全访问互联网上的资源。
+
+资源管理：
+	从网络下载，或者本地获取到的资源需要有高效的机制来管理它们。
+	例如如何避免重复下载，资源如何缓存等等
+
+网页浏览：
+	这是浏览器的核心也是最基本的功能，最重要的功能。
+	如何将资源转变为可视化的结果。
+	
+多页面管理
+插件与管理
+账户和同步
+安全机制
+开发者工具
+
+浏览器的主要功能总结起来就是一句话:将用户输入的url转变成可视化的图像。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>###浏览器的内核(渲染引擎)    </p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">在浏览器中有一个最重要的模块，它主要的作用把一切请求回来的资源变为可视化的图像。
+这个模块就是浏览器内核，通常它也被称为渲染引擎。
+浏览器内核总结：
+IE---------->Trident
+
+Safari------>WebKit
+	WebKit本身主要是由两个小引擎构成的，
+		一个正是渲染引擎“WebCore”，
+		另一个则是javascript解释引擎“JSCore”，
+		它们均是从KDE的渲染引擎KHTML及javascript解释引擎KJS衍生而来。
+		
+Chrome------>WebKit的分支引擎----->Blink
+	 在13年发布的Chrome 28.0.1469.0版本开始，Chrome放弃Chromium引擎转
+	 而使用最新的Blink引擎（基于WebKit2——苹果公司于2010年推出的新的WebKit引擎），
+	 Blink对比上一代的引擎精简了代码、改善了DOM框架，也提升了安全性。
+	 
+Opera
+	旧版Opera 4至6版本 :Elektra排版引擎
+	Opera7.0	:Presto渲染引擎
+	Opera在2013年2月宣布放弃Presto:
+				采用Chromium引擎;
+				又转为Blink引擎;
+				
+Firefox------>Gecko<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>###进程与线程</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">进程: 程序的一次执行, 它占有一片独有的内存空间.是操作系统执行的基本单元。
+	一个进程中至少有一个运行的线程: 主线程,  进程启动后自动创建
+	一个进程中也可以同时运行多个线程, 我们会说程序是多线程运行的
+	一个进程内的数据可以供其中的多个线程直接共享，多个进程之间的数据是不能直接共享的
+
+线程：是进程内的一个独立执行单元,是CPU调度的最小单元。程序运行的基本单元
+	线程池(thread pool): 保存多个线程对象的容器, 实现线程对象的反复利用
+
+JS引擎是单线程运行的！（回忆事件轮询机制）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>###现代浏览器：多进程、多线程模型</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">1.不堪回首的过去:
+	当你通过浏览器打开很多页面的时候,如果其中一个页面不响应了或者崩溃了,
+	那么随之而来的将会是更不幸的事情,你开打的所有页面都会得不到响应,
+	最让人不能忍受的是,其中的一些页面可能还包含了未保存或者未发送的信息
+	
+2.浏览器产商如何解决？
+	采用多进程模型,该模型可以带来的好处
+	①.避免因单个页面的不响应或者崩溃影响整个浏览器的稳定性
+	②.当第三方插件崩溃时,也不会影响整个浏览器的稳定性
+	③.安全
+	
+3.浏览器到底有些什么进程
+	①.Browser进程:
+		浏览器的主进程,负责浏览器界面的显示,和各个页面的管理,
+		浏览器中所有其他类型进程的祖先,负责其他进程的的创建和销毁
+		它有且只有一个!
+	②.Renderer进程:
+		网页渲染进程,负责页面的渲染,可以有多个
+		当然渲染进程的数量不一定等于你开打网页的个数
+	③.各种插件进程
+	④.GPU进程	
+	移动设备的浏览器可能不太一样:
+		Android不支持插件,所以就没有插件进程
+		GPU演化成了Browser进程的一个线程
+		Renderer进程演化成了操作系统的一个服务进程,它仍然是独立的
+
+4.每个进程内部又有很多线程
+	多线程的目的主要是保持用户界面的高度响应
+	例如:为了不让Browser进程的UI线程被其他耗时的操作(大文件的加载,本地文件读写)所阻塞,
+		那么我们就把这些操作放到分线程中去处理。
+	在Renderer进程中,为了不让其他操作阻止渲染线程的高速执行,我们通常会将渲染过程【管线化】,
+	利用计算机的多核优势,让渲染的不同阶段在不同的线程中执行<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<p>​    一、浏览器渲染引擎</p>
+<h3 id="主要模块"><a href="#主要模块" class="headerlink" title="主要模块"></a>主要模块</h3><ul>
+<li>一个渲染引擎主要包括：HTML解析器，CSS解析器，javascript引擎，布局layout模块，绘图模块<ul>
+<li>HTML解析器：解释HTML文档的解析器，主要作用是将HTML文本解释成DOM树。</li>
+<li>CSS解析器：它的作用是为DOM中的各个元素对象计算出样式信息，为布局提供基础设施</li>
+<li>Javascript引擎：使用Javascript代码可以修改网页的内容，也能修改css的信息，javascript引擎能够解释javascript代码，并通过DOM接口和CSS树接口来修改网页内容和样式信息，从而改变渲染的结果。</li>
+<li>布局（layout）：在DOM创建之后，Webkit需要将其中的元素对象同样式信息结合起来，计算他们的大小位置等布局信息，形成一个能表达这所有信息的内部表示模型</li>
+<li>绘图模块（paint）：使用图形库将布局计算后的各个网页的节点绘制成图像结果</li>
+</ul>
+</li>
+</ul>
 <blockquote>
-<p>比如说我有一个学生数据： name = “孙悟空” ; age = 18 ; gender = “男” ;<br>用XML表示：</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>student</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>孙悟空<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>age</span><span class="token punctuation">></span></span>18<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>age</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>gender</span><span class="token punctuation">></span></span>男<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>gender</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>student</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>现在 XML 已经被 JSON 取代了，用 JSON 表示上述数据：</p>
-<pre class="line-numbers language-json" data-language="json"><code class="language-json"><span class="token punctuation">&#123;</span><span class="token property">"name"</span><span class="token operator">:</span><span class="token string">"孙悟空"</span><span class="token punctuation">,</span><span class="token property">"age"</span><span class="token operator">:</span><span class="token number">18</span><span class="token punctuation">,</span><span class="token property">"gender"</span><span class="token operator">:</span><span class="token string">"男"</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>备注：文档对象模型（Document Object Model，简称DOM）</p>
 </blockquote>
-<h2 id="3-AJax-的特点"><a href="#3-AJax-的特点" class="headerlink" title="3 AJax 的特点"></a>3 AJax 的特点</h2><h3 id="3-1-AJax-的优点"><a href="#3-1-AJax-的优点" class="headerlink" title="3.1 AJax 的优点"></a>3.1 AJax 的优点</h3><ol>
-<li><p>可以无需刷新页面而与服务器端进行通信。</p>
-</li>
-<li><p>允许你根据用户事件来更新部分页面内容。</p>
+<h3 id="大致的渲染过程"><a href="#大致的渲染过程" class="headerlink" title="大致的渲染过程"></a>大致的渲染过程</h3><ul>
+<li>浏览器渲染页面的整个过程：浏览器会从上到下解析文档。<ol>
+<li>遇见 HTML 标记，调用HTML解析器解析为对应的 token （一个token就是一个标签文本的序列化）并构建 DOM 树（就是一块内存，保存着tokens，建立它们之间的关系）。<ol start="2">
+<li>遇见 style/link 标记调用相应解析器处理CSS标记，并构建出CSS样式树。</li>
+<li>遇见 script 标记 调用javascript引擎 处理script标记、绑定事件、修改DOM树/CSS树等</li>
+<li>将 DOM树 与 CSS树 合并成一个渲染树。</li>
+<li>根据渲染树来渲染，以计算每个节点的几何信息（这一过程需要依赖GPU）。</li>
+<li>最终将各个节点绘制到屏幕上。</li>
+</ol>
 </li>
 </ol>
-<h3 id="3-2-Ajax-的缺点"><a href="#3-2-Ajax-的缺点" class="headerlink" title="3.2 Ajax 的缺点"></a>3.2 Ajax 的缺点</h3><ol>
-<li><p>没有浏览历史，不能回退。</p>
 </li>
-<li><p>存在跨域问题。</p>
-</li>
-<li><p>SEO不友好。</p>
-</li>
-</ol>
-<h1 id="2-原生-Ajax-使用"><a href="#2-原生-Ajax-使用" class="headerlink" title="2.原生 Ajax 使用"></a>2.原生 Ajax 使用</h1><h2 id="1-基本使用步骤"><a href="#1-基本使用步骤" class="headerlink" title="1 基本使用步骤"></a>1 基本使用步骤</h2><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 第一步 创建 xhr 对象</span>
-<span class="token keyword">var</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</ul>
+<blockquote>
+<p>以上这些模块依赖很多其他的基础模块，包括要使用到网络 存储 2D/3D图像 音频视频解码器 和 图片解码器。<br>所以渲染引擎中还会包括如何使用这些依赖模块的部分。</p>
+</blockquote>
+<h2 id="二、阻塞渲染"><a href="#二、阻塞渲染" class="headerlink" title="二、阻塞渲染"></a>二、阻塞渲染</h2><p>####1.关于css阻塞： </p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">声明：只有link引入的外部css才能够产生阻塞。
+1.style标签中的样式：
+    (1). 由html解析器进行解析；
+    (2). 不阻塞浏览器渲染（可能会产生“闪屏现象”）；
+    (3). 不阻塞DOM解析；
+    
+2.link引入的外部css样式（推荐使用的方式）：
+    (1). 由CSS解析器进行解析。
+    (2). 阻塞浏览器渲染(可以利用这种阻塞避免“闪屏现象”)。       
+    (3). 阻塞其后面的js语句的执行：
+    (4). 不阻塞DOM的解析(绝大多数浏览器的工作方式)：
+                 
+3.优化核心理念：尽可能快的提高外部css加载速度
+    	(1).使用CDN节点进行外部资源加速。
+	    (2).对css进行压缩(利用打包工具，比如webpack,gulp等)。
+	    (3).减少http请求数，将多个css文件合并。
+	    (4).优化样式表的代码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<span class="token comment">// 第二步 请求初始化</span>
-xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token string">'/getData'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p>####2.关于js阻塞：</p>
+<pre><code>1.阻塞后续DOM解析:
+        原因：浏览器不知道后续脚本的内容，如果先去解析了下面的DOM，而随后的js删除了后面所有的DOM，
+          那么浏览器就做了无用功，浏览器无法预估脚本里面具体做了什么操作，例如像document.write
+          这种操作，索性全部停住，等脚本执行完了，浏览器再继续向下解析DOM。    
+2.阻塞页面渲染:
+        原因：js中也可以给DOM设置样式，浏览器等该脚本执行完毕，渲染出一个最终结果，避免做无用功。
+3.阻塞后续js的执行:
+    原因：维护依赖关系，例如：必须先引入jQuery再引入bootstrap
+</code></pre>
+<p>####3.备注</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">【备注<span class="token number">1</span>】：css的解析和js的执行是互斥的（互相排斥），css解析的时候js停止执行，js执行的时候css停止解析。
 
-<span class="token comment">// 第三步 监听请求状态，等响应结束后获取响应内容</span>
-xhr<span class="token punctuation">.</span><span class="token function-variable function">onreadystatechange</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">===</span> <span class="token number">4</span> <span class="token operator">&amp;&amp;</span> xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span><span class="token function">getAllResponseHeaders</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// 获取所有的响应头信息</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span><span class="token function">getResponseHeader</span><span class="token punctuation">(</span><span class="token string">'Content-Length'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 获取指定的响应头信息</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>responseText<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 获取响应体文本</span>
-  <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
+【备注<span class="token number">2</span>】：无论css阻塞，还是js阻塞，都不会阻塞浏览器加载外部资源（图片、视频、样式、脚本等）
+            原因：浏览器始终处于一种：“先把请求发出去”的工作模式，只要是涉及到网络请求的内容，
+                无论是：图片、样式、脚本，都会先发送请求去获取资源，至于资源到本地之后什么时候用，
+                由浏览器自己协调。这种做法效率很高。
+                
+【备注<span class="token number">3</span>】：WebKit 和 Firefox 都进行了【预解析】这项优化。在执行js脚本时，浏览器的其他线程会预解析文档的其余部分，
+          找出并加载需要通过网络加载的其他资源。通过这种方式，资源可以在并行连接上加载，
+          从而提高总体速度。请注意，预解析器不会修改 <span class="token constant">DOM</span> 树<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<span class="token comment">// 第四步 发送请求</span>
-xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="2-GET-请求和-POST-请求"><a href="#2-GET-请求和-POST-请求" class="headerlink" title="2 GET 请求和 POST 请求"></a>2 GET 请求和 POST 请求</h2><h3 id="2-1-发送-GET-请求"><a href="#2-1-发送-GET-请求" class="headerlink" title="2.1 发送 GET 请求"></a>2.1 发送 GET 请求</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js">xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token string">'/submitData?a=100&amp;b=200'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// 把要传递的数据拼接到 url 中</span>
-xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h3 id="2-2-发送-POST-请求"><a href="#2-2-发送-POST-请求" class="headerlink" title="2.2 发送 POST 请求"></a>2.2 发送 POST 请求</h3><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 请求初始化</span>
-xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'POST'</span><span class="token punctuation">,</span> <span class="token string">'/submitData?m=edit'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">// 设置请求体的内容类型</span>
-xhr<span class="token punctuation">.</span><span class="token function">setRequestHeader</span><span class="token punctuation">(</span><span class="token string">'Content-type'</span><span class="token punctuation">,</span> <span class="token string">'application/x-www-form-urlencoded'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">// 发送请求</span>
-xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'a=100&amp;b=200&amp;c=hello&amp;msg=安妮你真好'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 把要传递的数据写在请求体中</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="2-3-其他请求方式"><a href="#2-3-其他请求方式" class="headerlink" title="2.3 其他请求方式"></a>2.3 其他请求方式</h3><p><strong>不允许发送请求体的请求方式：</strong> HEAD、GET，用法与发送 GET 请求相似。</p>
-<p><strong>允许发送请求体的请求方式：</strong> POST、PUT、DELETE、OPTIONS、PATCH，用法与发送 POST 请求相似。</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 请求初始化</span>
-xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'PUT'</span><span class="token punctuation">,</span> <span class="token string">'/submitData'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">// 设置请求体的内容类型</span>
-xhr<span class="token punctuation">.</span><span class="token function">setRequestHeader</span><span class="token punctuation">(</span><span class="token string">'Content-type'</span><span class="token punctuation">,</span> <span class="token string">'application/x-www-form-urlencoded'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">// 发送请求</span>
-xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'a=100&amp;b=200&amp;c=hello&amp;msg=安妮你真好'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 把要传递的数据写在请求体中</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="3-同步请求和异步请求"><a href="#3-同步请求和异步请求" class="headerlink" title="3 同步请求和异步请求"></a>3 同步请求和异步请求</h2><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 异步请求，open 的第三个参数设置为 ture 或者不设置，默认值也会去 true</span>
-xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token string">'/submitData'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token string">'/submitData'</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">// 同步请求，open 第三个参数设置为 false</span>
-xhr<span class="token punctuation">.</span><span class="token function">open</span><span class="token punctuation">(</span><span class="token string">'GET'</span><span class="token punctuation">,</span> <span class="token string">'/submitData'</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
-<p><strong>注意：</strong> 不建议使用同步请求，目前大部分浏览器同步请求，相关事件都不会被触发。</p>
+<p>在上述的过程中，网页在加载和渲染过程中会触发“DOMContentLoaded”和“onload”事件<br>分别是在DOM树构建（解析）完成之后，以及DOM树构建完并且网页所依赖的资源都加载完之后</p>
 </blockquote>
-<h2 id="4-响应-JSON-数据"><a href="#4-响应-JSON-数据" class="headerlink" title="4 响应 JSON 数据"></a>4 响应 JSON 数据</h2><h3 id="4-1-服务端设置"><a href="#4-1-服务端设置" class="headerlink" title="4.1 服务端设置"></a>4.1 服务端设置</h3><p>服务端需设置响应头指定内容类型:</p>
-<pre class="line-numbers language-none"><code class="language-none">Content-Type: application&#x2F;json;charset&#x3D;utf-8<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>​    上面介绍的是一个完整的渲染过程，但现代网页很多都是动态的，这意味着在渲染完成之后，由于网页的动画或者用户的交互，<br>​    浏览器其实一直在不停地重复执行渲染过程。（重绘重排），以上的数字表示的是基本顺序，这不是严格一致的，<br>这个过程可能重复也可能交叉</p>
+<h2 id="三、图层与重绘重排"><a href="#三、图层与重绘重排" class="headerlink" title="三、图层与重绘重排"></a>三、图层与重绘重排</h2><p>###css图层</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css">浏览器在渲染一个页面时，会将页面分为很多个图层，图层有大有小，每个图层上有一个或多个节点。
+在渲染DOM的时候，浏览器所做的工作实际上是：
+	1. 获取DOM后分割为多个图层
+	2. 对每个图层的节点计算样式结果		（Recalculate style--样式重计算）
+	3. 为每个节点生成图形和位置			（Layout--布局，重排<span class="token punctuation">,</span>回流）
+	4. 将每个节点绘制填充到图层位图中		（Paint--重绘）
+	5. 图层作为纹理上传至GPU
+	6. 组合多个图层到页面上生成最终屏幕图像	（Composite Layers--图层重组）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="4-2-客户端处理-JSON-数据"><a href="#4-2-客户端处理-JSON-数据" class="headerlink" title="4.2 客户端处理 JSON 数据"></a>4.2 客户端处理 JSON 数据</h3><h4 id="①-方式一-使用-JSON-parse-方法"><a href="#①-方式一-使用-JSON-parse-方法" class="headerlink" title="① 方式一 使用 JSON.parse 方法"></a>① 方式一 使用 JSON.parse 方法</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js">xhr<span class="token punctuation">.</span><span class="token function-variable function">onreadystatechange</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">===</span> <span class="token number">4</span> <span class="token operator">&amp;&amp;</span> xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>responseText<span class="token punctuation">)</span>
-  <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>###图层创建的条件</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css">Chrome浏览器满足以下任意情况就会创建图层：
+	1. 拥有具有3D变换的CSS属性
+	2. 使用加速视频解码的&lt;video>节点
+	3. &lt;canvas>节点
+	4. CSS3动画的节点
+	5. 拥有CSS加速属性的元素<span class="token punctuation">(</span>will-change<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="②-方式二-使用-responseType-属性设置响应内容类型为-json"><a href="#②-方式二-使用-responseType-属性设置响应内容类型为-json" class="headerlink" title="② 方式二 使用 responseType 属性设置响应内容类型为 json"></a>② 方式二 使用 responseType 属性设置响应内容类型为 json</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 设置响应内容为 json 格式</span>
-xhr<span class="token punctuation">.</span>responseType <span class="token operator">=</span> <span class="token string">'json'</span><span class="token punctuation">;</span>
+<p>###重绘(Repaint)</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css">重绘是一个元素外观的改变所触发的浏览器行为，例如改变outline、背景色等属性。浏览器会根据元素的新属性重新绘制，
+使元素呈现新的外观。重绘不会带来重新布局，所以并不一定伴随重排。
 
-<span class="token comment">// 监听请求状态，响应结束后获取响应内容</span>
-xhr<span class="token punctuation">.</span><span class="token function-variable function">onreadystatechange</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">===</span> <span class="token number">4</span> <span class="token operator">&amp;&amp;</span> xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    xhr<span class="token punctuation">.</span>response<span class="token punctuation">;</span>  <span class="token comment">// 会返回一个对象</span>
-  <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+需要注意的是：重绘是以图层为单位，如果图层中某个元素需要重绘，那么整个图层都需要重绘。
+所以为了提高性能，我们应该让这些“变化的东西”拥有一个自己一个图层，
+不过好在绝大多数的浏览器自己会为CSS3动画的节点自动创建图层。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="5-HTTP-进度事件"><a href="#5-HTTP-进度事件" class="headerlink" title="5 HTTP 进度事件"></a>5 HTTP 进度事件</h2><h3 id="5-1-监测进度的事件"><a href="#5-1-监测进度的事件" class="headerlink" title="5.1 监测进度的事件"></a>5.1 监测进度的事件</h3><pre class="line-numbers language-none"><code class="language-none">loadstart    接收到响应数据时触发。 
-load    请求成功完成时触发。
-loadend    当请求结束时触发, 无论请求成功 (load) 还是失败 (abor 或 error)。
-progress    当请求接收到更多数据时，周期性地触发。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>###重排(Reflow 又称：回流)</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css">渲染对象在创建完成并添加到渲染树时，并不包含位置和大小信息。计算这些值的过程称为布局或重排
 
+<span class="token string">"重绘"</span>不一定需要<span class="token string">"重排"</span>，比如改变某个网页元素的颜色，就只会触发<span class="token string">"重绘"</span>，不会触发<span class="token string">"重排"</span>，因为布局没有改变。
+<span class="token string">"重排"</span>大多数情况下会导致<span class="token string">"重绘"</span>，比如改变一个网页元素的位置，就会同时触发<span class="token string">"重排"</span>和<span class="token string">"重绘"</span>，因为布局改变了。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>###触发重绘的属性</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css">* color							* background								* outline-color
+* border-style					* background-image							* outline
+* border-radius					* background-position						* outline-style
+* visibility					* background-repeat							* outline-width
+* text-decoration				* background-size							* box-shadow<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>###触发重排(回流)的属性</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css">* width						* top									* text-align
+* height					* bottom								* overflow-y
+* padding					* left									* font-weight
+* margin					* right									* overflow
+* display					* position								* font-family
+* border-width				* float									* line-height
+* border					* clear									* vertival-align
+* min-height														* white-space<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>###常见的触发重排的操作</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token function">Reflow</span><span class="token punctuation">(</span>重排<span class="token punctuation">)</span> 的成本比 <span class="token function">Repaint</span><span class="token punctuation">(</span>重绘<span class="token punctuation">)</span> 的成本高很多很多。
+一个结点的 Reflow 很有可能导致子结点，甚至父点以及同级结点的 Reflow。
+在一些高性能的电脑上也许还没什么，但是如果 Reflow 发生在手机上，那么这个过程是非常痛苦和耗电的。
+
+所以，下面这些动作有很大可能会是成本比较高的。
+	当你增加、删除、修改 DOM 结点时，会导致 Reflow <span class="token punctuation">,</span> Repaint。
+	当你移动 DOM 的位置
+	当你修改 CSS 样式的时候。
+	当你 Resize 窗口的时候（移动端没有这个问题，因为移动端的缩放没有影响布局视口<span class="token punctuation">)</span>
+	当你修改网页的默认字体时。
+	【获取某些属性时<span class="token punctuation">(</span>width<span class="token punctuation">,</span>height...<span class="token punctuation">)</span>！！！！！】
+	<span class="token property">注：display</span><span class="token punctuation">:</span>none 会触发 reflow，而 <span class="token property">visibility</span><span class="token punctuation">:</span>hidden 只会触发 repaint，因为没有发生位置变化。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>###优化方案</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css">我们已知：浏览器渲染页面时经历了如下“细致”的环节：
+	1. 计算需要被加载到节点上的样式结果（Recalculate style--样式重计算）
+	2. 为每个节点生成图形和位置（Layout--重排或回流）
+	3. 将每个节点填充到图层中（Paint--重绘）
+	4. 组合图层到页面上（Composite Layers--图层重组）
+如果我们需要提升性能，需要做的就是减少浏览器在运行时所需要做的工作，即：尽量减少1234步。
+
+【具体优化方案如下】：
+1.元素位置移动变换时尽量使用CSS3的transform来代替对top left等的操作
+	变换（transform）和透明度（opacity）的改变仅仅影响图层的组合
+2.【使用opacity来代替visibility】
+    <span class="token punctuation">(</span>1<span class="token punctuation">)</span>.使用visibility不触发重排，但是依然重绘。
+    <span class="token punctuation">(</span>2<span class="token punctuation">)</span>.直接使用opacity即触发重绘，又触发重排（GPU底层设计如此！）。
+    <span class="token punctuation">(</span>3<span class="token punctuation">)</span>.opacity配合图层使用，即不触发重绘也不触发重排。
+        原因：
+		透明度的改变时，GPU在绘画时只是简单的降低之前已经画好的纹理的alpha值来达到效果，并不需要整体的重绘。
+		不过这个前提是这个被修改opacity本身必须是一个图层。
+3.【不要使用table布局】
+	table-cell
+4.将【多次改变样式属性的操作合并成一次】操作
+	不要一条一条地修改DOM的样式，预先定义好class，然后修改DOM的className
+5.【将DOM离线后再修改】
+	由于display属性为none的元素不在渲染树中，对隐藏的元素操作不会引发其他元素的重排。
+	如果要对一个元素进行复杂的操作时，可以先隐藏它，操作完成后再显示。这样只在隐藏和显示时触发2次重排。
+6.【利用文档碎片】<span class="token punctuation">(</span>documentFragment<span class="token punctuation">)</span>------vue使用了该种方式提升性能。
+7.【不要把获取某些DOM节点的属性值放在一个循环里当成循环的变量】
+	当你请求向浏览器请求一些 style信息的时候，就会让浏览器flush队列，比如：
+		1. offsetTop<span class="token punctuation">,</span> offsetLeft<span class="token punctuation">,</span> offsetWidth<span class="token punctuation">,</span> offsetHeight
+		2. scrollTop/Left/Width/Height
+		3. clientTop/Left/Width/Height
+		4. width<span class="token punctuation">,</span>height
+    当你请求上面的一些属性的时候，浏览器为了给你最精确的值，需要刷新内部队列，
+    因为队列中可能会有影响到这些值的操作。即使你获取元素的布局和样式信息跟最近发生或改变的布局信息无关，
+    浏览器都会强行刷新渲染队列。
+8.<span class="token property">动画实现过程中，启用GPU硬件加速</span><span class="token punctuation">:</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">tranlateZ</span><span class="token punctuation">(</span>0<span class="token punctuation">)</span>
+9.为动画元素新建图层<span class="token punctuation">,</span>提高动画元素的z-index
+10.编写动画时，尽量使用如下的API<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>###requestAnimationFrame—请求动画帧</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css">1.window.<span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     说明：该方法会告诉浏览器在下一次重绘重排之前调用你所指定的函数    1.参数：该方法使用一个回调函数作为参数，这个回调函数会在浏览器下一次重绘之前调用。            回调函数会被自动传入一个参数，DOMHighResTimeStamp，标识<span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span>开始触发回调函数的当前时间    2.返回值：            一个 long 整数，请求 ID ，是回调列表中唯一的标识。是个非零值，没别的意义。你可以传这个值给 window.<span class="token function">cancelAnimationFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 以取消回调函数。            备注：若你想在浏览器下次重绘之前继续更新下一帧动画，那么回调函数自身必须再次调用window.<span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span> 2.window.<span class="token function">cancelAnimationFrame</span><span class="token punctuation">(</span>requestID<span class="token punctuation">)</span>    取消一个先前通过调用window.<span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span>方法添加到计划中的动画帧请求。    requestID是先前调用window.<span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span><span class="token punctuation">)</span>方法时返回的值，它是一个时间标识，用法与定时器的id类似。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="函数防抖-debounce"><a href="#函数防抖-debounce" class="headerlink" title="函数防抖(debounce)"></a>函数防抖(debounce)</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html">概念：延迟要执行的动作，若在延时的这段时间内，再次触发了，则取消之前开启的动作，重新计时。
+举例：电脑无操作1分钟内如果没有操作会进入休眠，当40秒时鼠标被移动了一下，重新计时1分钟
+实现：定时器
+应用：搜索时等用户完整输入内容后在发送查询请求,如果没用防抖，就会出现用户还没输入完整就发送查询请求，这样子服务器压力很大，用户只想查一次，你给查询了多次<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="函数节流-throttle"><a href="#函数节流-throttle" class="headerlink" title="函数节流(throttle)"></a>函数节流(throttle)</h2><pre class="line-numbers language-html" data-language="html"><code class="language-html">概念：设定一个特定的时间，让函数在特定的实际内只执行一次，不会频繁执行
+距离：fps游戏，鼠标按住不松手，子弹也不会连成一条线
+实现：定时器、标识<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="四、CDN"><a href="#四、CDN" class="headerlink" title="四、CDN"></a>四、CDN</h2><p>###什么是CDN？工作原理是什么？</p>
+<p>网站通常将其所有的服务器都放在同一个地方，当用户群增加时，公司就必须在多个地理位置不同的服务器上部署内容<br>为了缩短http请求的时间，我们应该把大量的静态资源放置的离用户近一点。</p>
+<p>内容发布网络CDN（Content  Delivery Networks）<br>CDN是一组分布在多个不同地理位置的web服务器，用于更加有效的向用户发布内容</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">基本思路：
+    尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，使内容传输的更快、更稳定。
+    通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，
+    CDN系统能够实时地根据网络流量和各节点的连接、负载状况以及到用户的距离和响应时间等综合信息
+    将用户的请求重新导向离用户最近的服务节点上。
+
+基础架构：最简单的CDN网络由一个DNS服务器和几台缓存服务器组成
+    1.用户输入的url，会经过DNS解析“翻译”成对应的ip地址，从而找到CDN专用的服务器。
+    2.CDN“拿到”用户的IP地址，随后和区域负载均衡设备配合，选择一台用户所属区域的区域负载均衡设备，告诉用户向这台设备发起请求。
+    3.上述步骤中的“选择”依据
+            (1).选择的依据包括：根据用户IP地址，判断哪一台服务器距用户最近；
+            (2).根据用户所请求的URL中携带的内容名称，判断哪一台服务器上有用户所需内容；
+            (3).查询各个服务器当前的负载情况，判断哪一台服务器尚有服务能力。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="五、浏览器本地存储"><a href="#五、浏览器本地存储" class="headerlink" title="五、浏览器本地存储"></a>五、浏览器本地存储</h2><h3 id="浏览器存储"><a href="#浏览器存储" class="headerlink" title="浏览器存储"></a>浏览器存储</h3><pre class="line-numbers language-html" data-language="html"><code class="language-html">Cookie, SessionStorage, LocalStorage这三者都可以被用来在浏览器端存储数据，而且都是字符串类型的键值对！
+
+注意：session和SessionStorage不是一个概念！在服务端有一种存储方式叫做：session会话存储，常常被简称session<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+<h3 id="Web-Storage"><a href="#Web-Storage" class="headerlink" title="Web Storage"></a>Web Storage</h3><pre class="line-numbers language-html" data-language="html"><code class="language-html">SessionStorage和LocalStorage都是浏览器本地存储，统称为Web Storage，存储内容大小一般支持5-10MB
+浏览器端通过 Window.sessionStorage 和 Window.localStorage 属性来实现本地存储机制。
+
+相关API：
+1. localStorage.setItem('key', 'value');
+		该方法接受一个键名和值作为参数，将会把键值对添加到存储中，如果键名存在，则更新其对应的值。
+		
+2. var data = xxxxxStorage.getItem('person');
+	该方法接受一个键名作为参数，返回键名对应的值。
+
+3. xxxxxStorage.removeItem('key');
+	该方法接受一个键名作为参数，并把该键名从存储中删除。
+	
+4. xxxxxStorage.clear()
+	调用该方法会清空存储中的所有键名
+
+备注：SessionStorage存储的内容会随着浏览器窗口关闭而消失。
+      LocalStorage存储的内容，需要手动清除才会消失。一般用的这个存储
+
+storage事件：	
+	1. Storage对象发生变化时触发（即创建/更新/删除数据项时，Storage.clear() 只会触发一次）
+	2. 在同一个页面内发生的改变不会起作用
+	3. 在相同域名下的其他页面发生的改变才会起作用。(修改的页面不会触发事件，与它共享的页面会触发事件)
+		key 	    :  修改或删除的key值，如果调用clear(),为null
+		newValue    :  新设置的值，如果调用clear(),为null
+		oldValue    :  调用改变前的value值,如果调用clear(),为null
+		url         :  触发该脚本变化的文档的url
+		storageArea :  当前的storage对象
+使用方法：
+        window.addEventListener('storage',function (event) &#123;
+            //此处写具体业务逻辑
+          &#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>###浏览器储存量的支持</p>
 <blockquote>
-<p>触发顺序：loadstart、load、loaded。</p>
+<p><a target="_blank" rel="noopener" href="http://dev-test.nemikor.com/web-storage/support-test/">http://dev-test.nemikor.com/web-storage/support-test/</a></p>
 </blockquote>
-<h3 id="5-2-ProgressEvent-对象"><a href="#5-2-ProgressEvent-对象" class="headerlink" title="5.2 ProgressEvent 对象"></a>5.2 ProgressEvent 对象</h3><p>上面事件的回调函数中可以获取到 ProgressEvent 对象，用于查看请求进度。</p>
-<p>可以使用属性 <strong>loaded</strong> 得到目前已经接收到的字节长度，使用属性<strong>total</strong>得到总的字节长度。</p>
-<h2 id="6-请求超时终止"><a href="#6-请求超时终止" class="headerlink" title="6 请求超时终止"></a>6 请求超时终止</h2><h4 id="①-方式一-xhr2-方案"><a href="#①-方式一-xhr2-方案" class="headerlink" title="① 方式一 xhr2 方案"></a>① 方式一 xhr2 方案</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 设置请求超时时间,超时后请求会自动中断</span>
-xhr<span class="token punctuation">.</span>timeout <span class="token operator">=</span> <span class="token number">3000</span><span class="token punctuation">;</span>
+<h2 id="六、缓存机制"><a href="#六、缓存机制" class="headerlink" title="六、缓存机制"></a>六、缓存机制</h2><h4 id="1-缓存理解"><a href="#1-缓存理解" class="headerlink" title="1. 缓存理解"></a>1. 缓存理解</h4><pre><code>1. 缓存定义:
+   1. 浏览器在本地磁盘上将用户之前请求的数据存储起来，当访问者再次需要改数据的时候无需再次发送请求，直接从浏览器本地获取数据
+2. 缓存的好处:
+   1. 减少请求的个数
+   2. 节省带宽，避免浪费不必要的网络资源
+   3. 减轻服务器压力
+   4. 提高浏览器网页的加载速度，提高用户体验
+</code></pre>
+<h4 id="2-缓存分类"><a href="#2-缓存分类" class="headerlink" title="2. 缓存分类"></a>2. 缓存分类</h4><pre><code>先去验证强制缓存，再去找协商缓存
+1. 强缓存
+   1. 不会向服务器发送请求，直接从本地缓存中获取数据
+   2. 请求资源的的状态码为: 200 ok(from memory cache)
+2. 协商缓存
+   1. 向服务器发送请求，服务器会根据请求头的资源判断是否命中协商缓存
+   2. 如果命中，则返回304状态码通知浏览器从缓存中读取资源
+   
+3. 强缓存 &amp; 协商缓存的共同点
+   1. 都是从浏览器端读取资源
+4. 强缓存 VS 协商缓存的不同点
+   1. 强缓存不发请求给服务器
+   2. 协商缓存发请求给服务器，根据服务器返回的信息决定是否使用缓存
+</code></pre>
+<h4 id="3-缓存使用示意图"><a href="#3-缓存使用示意图" class="headerlink" title="3. 缓存使用示意图"></a>3. 缓存使用示意图</h4><img src="../img/性能优化/image-20210711112228333.png" style="zoom:80%;" />
 
-<span class="token comment">// 请求超时触发 timeout 事件</span>
-xhr<span class="token punctuation">.</span><span class="token function-variable function">ontimeout</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'请求超时'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-
-<span class="token comment">// 监听请求状态，响应结束后获取响应内容</span>
-xhr<span class="token punctuation">.</span><span class="token function-variable function">onreadystatechange</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  <span class="token keyword">if</span> <span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>readyState <span class="token operator">===</span> <span class="token number">4</span> <span class="token operator">&amp;&amp;</span> xhr<span class="token punctuation">.</span>status <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>xhr<span class="token punctuation">.</span>response<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 会返回一个对象</span>
-  <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="②-方式二-兼容性方案"><a href="#②-方式二-兼容性方案" class="headerlink" title="② 方式二 兼容性方案"></a>② 方式二 兼容性方案</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 发送请求</span>
-xhr<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">// 超时之后中断连接</span>
-<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-  xhr<span class="token punctuation">.</span><span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'请求超时'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="附录-XMLHttpRequest-对象"><a href="#附录-XMLHttpRequest-对象" class="headerlink" title="附录 XMLHttpRequest 对象"></a>附录 XMLHttpRequest 对象</h2><h3 id="①-XHR-对象概述"><a href="#①-XHR-对象概述" class="headerlink" title="① XHR 对象概述"></a>① XHR 对象概述</h3><p>1）XMLHttpRequest 对象简称 <strong>XHR</strong> 对象。</p>
-<p>2）XMLHttpRequest 对象提供了对 HTTP 协议的完全的访问，包括做出 POST 和 HEAD 请求以及普通的 GET 请求的能力。</p>
-<p>3）XMLHttpRequest 可以同步或异步地返回 Web 服务器的响应，并且能够以文本或者一个 DOM 文档的形式返回内容。</p>
-<p>4）尽管名为 XMLHttpRequest，它并不限于和 XML 文档一起使用，它可以接收任何形式的文本文档。</p>
-<h3 id="②-创建-XHR-对象"><a href="#②-创建-XHR-对象" class="headerlink" title="② 创建 XHR 对象"></a>② 创建 XHR 对象</h3><p>使用构造函数 XMLHttpRequest 就可以创建一个 XHR 对象。</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">let</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">XMLHttpRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span>；<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>注意：在古老的 IE 浏览器中（如：IE6），需要使用其他方式来创建 XHR 对象。</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// IE5、IE6</span>
-<span class="token keyword">let</span> xhr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ActiveXObject</span><span class="token punctuation">(</span><span class="token string">"Microsoft.XMLHTTP"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h3 id="③-XHR对象的属性"><a href="#③-XHR对象的属性" class="headerlink" title="③ XHR对象的属性"></a>③ XHR对象的属性</h3><table>
-<thead>
-<tr>
-<th>属性名</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>readyState</td>
-<td>返回一个数字，表示请求的状态： 0 – UNSET – XHR对象已创建或已被 abort() 方法重置。 1 – OPENDED – <code>open()</code> 方法已经被调用。 2 – HEADERS_RECEIVED – <code>send()</code> 方法已经被调用，并且响应头和响应状态已经可获得。 3 – LOADING – 下载中， <code>responseText</code> 属性已经包含部分数据。 4 – DONE – 所有响应数据接收完毕。</td>
-</tr>
-<tr>
-<td>status</td>
-<td>响应状态码，如 404、200 等。</td>
-</tr>
-<tr>
-<td>statusText</td>
-<td>响应状态码的文本描述，如 200 对应的是 “OK”。</td>
-</tr>
-<tr>
-<td>responseXML</td>
-<td>接收格式为 XML 的响应数据，返回一个 document 对象。</td>
-</tr>
-<tr>
-<td>responseText</td>
-<td>获取响应文本，返回一个字符串。</td>
-</tr>
-<tr>
-<td>responseType</td>
-<td>用于设置响应内容的类型 <em>xhr2</em></td>
-</tr>
-<tr>
-<td>response</td>
-<td>返回的类型取决于 responseType 的设置。 <em>xhr2</em></td>
-</tr>
-<tr>
-<td>timeout</td>
-<td>设置超时时间。<em>xhr2</em></td>
-</tr>
-</tbody></table>
-<h3 id="④-XHR-对象的方法"><a href="#④-XHR-对象的方法" class="headerlink" title="④ XHR 对象的方法"></a>④ XHR 对象的方法</h3><table>
-<thead>
-<tr>
-<th>方法名</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>open()</td>
-<td>初始化 HTTP 请求，用来指定请求方式和 URL。 <code>xhr.open(method, url, [async], [user], [password])</code></td>
-</tr>
-<tr>
-<td>send()</td>
-<td>发送 HTTP 请求，参数可以设置请求体，没有请求体无需设置参数。</td>
-</tr>
-<tr>
-<td>setRequestHeader()</td>
-<td>设置 HTTP 请求头的值。必须在 <code>open()</code> 之后、<code>send()</code> 之前调用。</td>
-</tr>
-<tr>
-<td>abort()</td>
-<td>如果请求已被发出，则立刻中止请求。</td>
-</tr>
-<tr>
-<td>getAllResponseHeaders()</td>
-<td>以字符串形式返回所有的响应头。</td>
-</tr>
-<tr>
-<td>getResponseHeader()</td>
-<td>返回指定的响应头。</td>
-</tr>
-</tbody></table>
-<h3 id="⑤-XHR-对象的事件"><a href="#⑤-XHR-对象的事件" class="headerlink" title="⑤ XHR 对象的事件"></a>⑤ XHR 对象的事件</h3><table>
-<thead>
-<tr>
-<th>事件名</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>readystatechange</td>
-<td>readyState 属性值发生变化触发该事件。</td>
-</tr>
-<tr>
-<td>abort</td>
-<td>请求终止时触发。</td>
-</tr>
-<tr>
-<td>error</td>
-<td>请求遇到错误时触发。</td>
-</tr>
-<tr>
-<td>loadstart</td>
-<td>接收到响应数据时触发。 <em>xhr2</em></td>
-</tr>
-<tr>
-<td>load</td>
-<td>请求成功完成时触发。<em>xhr2</em></td>
-</tr>
-<tr>
-<td>loaded</td>
-<td>当请求结束时触发, 无论请求成功 ( <code>load</code>) 还是失败 (<code>abor</code> 或 <code>error</code>)。<em>xhr2</em></td>
-</tr>
-<tr>
-<td>progress</td>
-<td>当请求接收到更多数据时，周期性地触发。<em>xhr2</em></td>
-</tr>
-<tr>
-<td>timeout</td>
-<td>在预设时间内没有接收到响应时触发。<em>xhr2</em></td>
-</tr>
-</tbody></table>
-<h1 id="3-jQuery-中-Ajax-的使用"><a href="#3-jQuery-中-Ajax-的使用" class="headerlink" title="3.jQuery 中 Ajax 的使用"></a>3.jQuery 中 Ajax 的使用</h1><h2 id="1-相关-ajax-方法"><a href="#1-相关-ajax-方法" class="headerlink" title="1 相关 ajax 方法"></a>1 相关 ajax 方法</h2><h4 id="①-get-发送-GET-请求"><a href="#①-get-发送-GET-请求" class="headerlink" title="① $.get() 发送 GET 请求"></a>① $.get() 发送 GET 请求</h4><pre class="line-numbers language-none"><code class="language-none">$.get(url, [data], [callback], [type])<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<h4 id="4-缓存中的header参数"><a href="#4-缓存中的header参数" class="headerlink" title="4. 缓存中的header参数"></a>4. 缓存中的header参数</h4><h5 id="1、强缓存的header参数"><a href="#1、强缓存的header参数" class="headerlink" title="1、强缓存的header参数"></a>1、强缓存的header参数</h5><hr>
+<pre><code>1. expires：
+   1. 这是http1.0时的规范；它的值为一个绝对时间的GMT格式的时间字符串，如```Mon, 10 Jun 2015 21:31:12 GMT```，如果发送请求的时间在expires之前，那么本地缓存始终有效，否则就会发送请求到服务器来获取资源
+2. cache-control：max-age=number
+   1. 这是http1.1时出现的header信息，主要是利用该字段的max-age值来进行判断，它是一个相对值；资源第一次的请求时间和Cache-Control设定的有效期，计算出一个资源过期时间，再拿这个过期时间跟当前的请求时间比较，如果请求时间在过期时间之前，就能命中缓存，否则就不行；
+   2. cache-control常用的值（做一个简单了解即可）：
+      1. no-cache: 不使用本地缓存，需要使用协商缓存。先与服务器确认返回的响应是否被更改，如果之前的响应中存在Etag，那么请求的额时候会与服务器端进行验证，如果资源为被更改则使用缓存。
+      2. no-store: 直接禁止游览器缓存数据，每次用户请求该资源，都会向服务器发送一个请求，每次都会下载完整的资源。
+      3. public：可以被所有的用户缓存，包括终端用户和CDN等中间代理服务器。
+      4. private：只能被终端用户的浏览器缓存，不允许CDN等中继缓存服务器对其缓存。
+   3. &lt;font color=red&gt;注意：当cache-control与Expires共存的时候cache-control的优先级高&lt;/font&gt;
+</code></pre>
+<h5 id="2、协商缓存的header参数"><a href="#2、协商缓存的header参数" class="headerlink" title="2、协商缓存的header参数"></a>2、协商缓存的header参数</h5><hr>
+<p>  <font color=red> 重点：协商缓存都是由服务器来确定缓存资源是否可用的，所以客户端与服务器端要通过某种标识来进行通信，从而让服务器判断请求资源是否可以缓存访问</font></p>
 <ul>
-<li>url：请求的URL地址。</li>
-<li>data：请求携带的参数。</li>
-<li>callback：载入成功时回调函数。</li>
-<li>type：设置响应内容的格式，xml, html, script, json, text 等。</li>
-</ul>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">$<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'/server'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>a<span class="token operator">:</span><span class="token number">100</span><span class="token punctuation">,</span> b<span class="token operator">:</span><span class="token number">200</span><span class="token punctuation">,</span>wd<span class="token operator">:</span> <span class="token number">618</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-  <span class="token comment">//data中存放的是响应体的结果</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="②-post-发送-POST-请求"><a href="#②-post-发送-POST-请求" class="headerlink" title="② $.post() 发送 POST 请求"></a>② $.post() 发送 POST 请求</h4><pre class="line-numbers language-none"><code class="language-none">$.post(url, [data], [callback], [type])<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>url：请求的URL地址。</li>
-<li>data：请求携带的参数。</li>
-<li>callback：载入成功时回调函数。</li>
-<li>type：设置响应内容的格式，xml, html, script, json, text 等。</li>
-</ul>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">$<span class="token punctuation">.</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'/server'</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span>username<span class="token operator">:</span><span class="token string">'anni'</span><span class="token punctuation">,</span> password<span class="token operator">:</span><span class="token string">"123123"</span><span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="③-ajax-发送指定的请求"><a href="#③-ajax-发送指定的请求" class="headerlink" title="③ $.ajax() 发送指定的请求"></a>③ $.ajax() 发送指定的请求</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js">$<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> <span class="token punctuation">[</span>settings<span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>url：请求的URL地址。</li>
-<li>settings：Ajax 请求设置，是一个对象，通过对象属性设置各种选项，所有选项都是可选的</li>
-</ul>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">$<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">&#123;</span>
-   type<span class="token operator">:</span> <span class="token string">"POST"</span><span class="token punctuation">,</span>
-   url<span class="token operator">:</span> <span class="token string">"some.php"</span><span class="token punctuation">,</span>
-   data<span class="token operator">:</span> <span class="token punctuation">&#123;</span>username<span class="token operator">:</span><span class="token string">'anni'</span><span class="token punctuation">,</span> password<span class="token operator">:</span><span class="token string">"123123"</span><span class="token punctuation">&#125;</span>，
-   dataType<span class="token operator">:</span> <span class="token string">'json'</span><span class="token punctuation">,</span>   <span class="token comment">// 响应内容的类型</span>
-   <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">msg</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-     <span class="token function">alert</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="2-表单数据处理"><a href="#2-表单数据处理" class="headerlink" title="2 表单数据处理"></a>2 表单数据处理</h2><h4 id="①-serialize-序列表表格内容为字符串"><a href="#①-serialize-序列表表格内容为字符串" class="headerlink" title="① serialize() 序列表表格内容为字符串"></a>① serialize() 序列表表格内容为字符串</h4><pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"form"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">serialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h2 id="3-JSONP-方法"><a href="#3-JSONP-方法" class="headerlink" title="3 JSONP 方法"></a>3 JSONP 方法</h2><h4 id="①-getJSON-用于-jsonp-请求"><a href="#①-getJSON-用于-jsonp-请求" class="headerlink" title="① $.getJSON() 用于 jsonp 请求"></a>① $.getJSON() 用于 jsonp 请求</h4><pre class="line-numbers language-none"><code class="language-none">$.getJSON(url,[data], [callback])<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<ul>
-<li>url：发送请求地址。</li>
-<li>data：待发送 Key/value 参数。</li>
-<li>callback：载入成功时回调函数。</li>
-</ul>
-<p>您可以通过使用 JSONP 形式的回调函数来加载其他网域的JSON数据，如 “myurl?callback=?”。jQuery 将自动替换 ? 为正确的函数名，以执行回调函数。</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">$<span class="token punctuation">.</span><span class="token function">getJSON</span><span class="token punctuation">(</span><span class="token string">"/serverr"</span><span class="token punctuation">,</span> <span class="token punctuation">&#123;</span> name<span class="token operator">:</span> <span class="token string">"John"</span><span class="token punctuation">,</span> time<span class="token operator">:</span> <span class="token string">"2pm"</span> <span class="token punctuation">&#125;</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">json</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-  <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"JSON Data: "</span> <span class="token operator">+</span> json<span class="token punctuation">.</span>users<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="4-跨域"><a href="#4-跨域" class="headerlink" title="4.跨域"></a>4.跨域</h1><h2 id="1-同源策略"><a href="#1-同源策略" class="headerlink" title="1 同源策略"></a>1 同源策略</h2><p><strong>1）什么是同源策略？</strong></p>
+<li><p>Last-Modified/If-Modified-Since:二者的值都是GMT格式的时间字符串</p>
 <ol>
-<li>同源策略是由Netscape提出的一个著名的安全策略，现在所有支持JavaScript 的浏览器都会使用这个策略。</li>
-<li>Web是构建在同源策略基础之上的，浏览器只是针对同源策略的一种实现。</li>
-<li>所谓同源是指：协议，域名（IP），端口必须要完全相同<br>即：协议、域名（IP）、端口都相同，才能算是在同一个域里。</li>
+<li> 浏览器第一次跟服务器请求一个资源，服务器在返回这个资源的同时，在respone的header加上Last-Modified的header，这个header表示这个资源在服务器上的最后修改时间</li>
+<li> 浏览器再次跟服务器请求这个资源时，在request的header上加上If-Modified-Since的header，这个header的值就是上一次请求时返回的Last-Modified的值</li>
+<li> 服务器再次收到资源请求时，根据浏览器传过来If-Modified-Since和资源在服务器上的最后修改时间判断资源是否有变化，如果没有变化则返回304 Not Modified，但是不会返回资源内容；如果有变化，就正常返回资源内容。当服务器返回304 Not Modified的响应时，response header中不会再添加Last-Modified的header，因为既然资源没有变化，那么Last-Modified也就不会改变，这是服务器返回304时的response header</li>
+<li> 浏览器收到304的响应后，就会从缓存中加载资源</li>
+<li> 如果协商缓存没有命中，浏览器直接从服务器加载资源时，Last-Modified的Header在重新加载的时候会被更新，下次请求时，If-Modified-Since会启用上次返回的Last-Modified值</li>
 </ol>
-<p><strong>2）什么是同源?</strong></p>
-<ol>
-<li>同源策略是由Netscape提出的一个著名的安全策略，现在所有支持JavaScript 的浏览器都会使用这个策略。</li>
-<li>Web是构建在同源策略基础之上的，浏览器只是针对同源策略的一种实现。</li>
-<li>所谓同源是指：协议，域名（IP），端口必须要完全相同<br>即：协议、域名（IP）、端口都相同，才能算是在同一个域里。</li>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Etag/If-None-Match<ol>
+<li>这两个值是由服务器生成的每个资源的唯一标识字符串，只要资源有变化就这个值就会改变</li>
+<li>其判断过程与Last-Modified/If-Modified-Since类似</li>
 </ol>
-<p><strong>3）什么是跨域？</strong></p>
-<p>违背同源策略就是跨域。</p>
-<p><strong>4）跨域解决方案有什么？</strong></p>
-<ol>
-<li>CORS</li>
-<li>JSONP</li>
-<li>使用代理服务器</li>
+</li>
+</ul>
+<hr>
+<ul>
+<li>既生Last-Modified何生Etag<ol>
+<li>HTTP1.1中Etag的出现主要是为了解决几个Last-Modified比较难解决的问题</li>
+<li>一些文件也许会周期性的更改，但是他的内容并不改变(仅仅改变的修改时间)，这个时候我们并不希望客户端认为这个文件被修改了，而重新GET</li>
+<li>某些文件修改非常频繁，比如在秒以下的时间内进行修改，(比方说1s内修改了N次)，If-Modified-Since能检查到的粒度是s级的，这种修改无法判断(或者说UNIX记录MTIME只能精确到秒)；</li>
+<li>某些服务器不能精确的得到文件的最后修改时间。</li>
 </ol>
-<h2 id="2-CORS"><a href="#2-CORS" class="headerlink" title="2 CORS"></a>2 CORS</h2><p><strong>1） CORS是什么？</strong></p>
-<p>CORS（Cross-Origin Resource Sharing），跨域资源共享。CORS是官方的跨域解决方案，它的特点是不需要在客户端做任何特殊的操作，完全在服务器中进行处理，支持get和post请求。</p>
-<p><strong>2）CORS怎么工作的？</strong></p>
-<p>CORS是通过设置一个响应头 <code>Access-Control-Allow-Origin</code> 来告诉浏览器，该请求允许跨域，浏览器收到该响应以后就会对响应放行。</p>
-<p><strong>3）相关响应头介绍：</strong></p>
-<p><code>Access-Control-Allow-Origin</code>：允许的域名，该字段是必须的，设置为 <code>*</code>，表示取消跨域限制。 <code>Access-Control-Allow-Credentials</code>：该字段可选。它的值是一个布尔值，表示是否允许发送 Cookie。默认情况下，Cookie不包括在CORS请求之中 <code>Access-Control-Expose-Headers</code>：该字段可选。CORS请求时，XMLHttpRequest 对象的 getResponseHeader()方 法只能拿到6个基本字段：Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma。如果想拿到其他字段，就必须在Access-Control-Expose-Headers里面指定。</p>
-<pre class="line-numbers language-none"><code class="language-none">Access-Control-Allow-Origin: http:&#x2F;&#x2F;api.bob.com
-Access-Control-Allow-Credentials: true
-Access-Control-Expose-Headers: content-type,cache-control<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="3-JSONP"><a href="#3-JSONP" class="headerlink" title="3 JSONP"></a>3 JSONP</h2><p><strong>1） 什么是JSONP ?</strong></p>
-<p>JSONP(JSON with Padding)，是一个非官方的跨域解决方案，纯粹凭借程序员的聪明才智开发出来，只支持get请求。</p>
-<p>在网页有一些标签天生具有跨域能力，比如：img link iframe script，JSONP就是利用 script 标签的跨域能力来发送请求的。</p>
-<p><strong>2）JSONP 使用步骤</strong></p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 1.动态的创建一个script标签</span>
-<span class="token keyword">var</span> script <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"script"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">// 2.设置script的 src</span>
-script<span class="token punctuation">.</span>src <span class="token operator">=</span> <span class="token string">"http://localhost:3000/testAJAX?callback=abc"</span><span class="token punctuation">;</span>
-
-<span class="token comment">// 3. 定义回调函数</span>
-<span class="token keyword">function</span> <span class="token function">abc</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token function">alert</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
-
-<span class="token comment">// 4.将script添加到 body 中,会发送请求</span>
-document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>script<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>3）服务端的处理</strong></p>
-<pre class="line-numbers language-j's" data-language="j's"><code class="language-j's">var callback &#x3D; req.query.callback;
-var obj &#x3D; &#123;
-  name:&quot;孙悟空&quot;,
-  age:18
-&#125;
-res.send(callback+&quot;(&quot;+JSON.stringify(obj)+&quot;)&quot;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>4）jQuery 中jsonp 的使用</strong></p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">$<span class="token punctuation">.</span><span class="token function">getJSON</span><span class="token punctuation">(</span><span class="token string">"http://api.douban.com/v2/movie/in_theaters?callback=?"</span><span class="token punctuation">,</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-  <span class="token comment">//获取所有的电影的条目</span>
-  <span class="token keyword">var</span> subjects <span class="token operator">=</span> data<span class="token punctuation">.</span>subjects<span class="token punctuation">;</span>
-  <span class="token comment">//遍历电影条目</span>
-  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span> <span class="token punctuation">;</span> i<span class="token operator">&lt;</span>subjects<span class="token punctuation">.</span>length <span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#list"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span><span class="token string">"&lt;li>"</span><span class="token operator">+</span>
-                      subjects<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>title<span class="token operator">+</span><span class="token string">"&lt;br />"</span><span class="token operator">+</span>
-                      <span class="token string">"&lt;img src=\""</span><span class="token operator">+</span>subjects<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>images<span class="token punctuation">.</span>large<span class="token operator">+</span><span class="token string">"\" >"</span><span class="token operator">+</span>
-                      <span class="token string">"&lt;/li>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+</li>
+</ul>
+<hr>
+<ul>
+<li><p>小结：</p>
+<ul>
+<li><p>利用Etag能够更加准确的控制缓存，因为Etag是服务器自动生成或者由开发者生成的对应资源在服务器端的唯一标识符。</p>
+</li>
+<li><p>Last-Modified与ETag是可以一起使用的，服务器会优先验证ETag，一致的情况下，才会继续比对Last-Modified，最后才决定是否返回304。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-强缓存如何重新加载新的资源"><a href="#5-强缓存如何重新加载新的资源" class="headerlink" title="5. 强缓存如何重新加载新的资源"></a>5. 强缓存如何重新加载新的资源</h4><ul>
+<li>通过更新页面中引用的资源路径，让浏览器主动放弃加载缓存去加载新的资源</li>
+<li>示例：<code>https://www.baidu.com/s?t=7aec0h3KB3Ba8lAbuyPg0AC0eDa59IvtDSmtMQBc6eW </code></li>
+<li>好处：<ul>
+<li>每次文件改变后query的值就会发生修改，当query值不同的时候也就是页面引用的资源路径不同。此时浏览器会主动加载新的资源。</li>
+</ul>
+</li>
+</ul>
+<p>##七、涉及到相关单词</p>
+<ul>
+<li>performance: 性能</li>
+<li>parse: 解析，编译</li>
+<li>Recalculate Style：重新计算样式</li>
+<li>layout： 布局</li>
+<li>Update Layer Tree：更新图层树</li>
+<li>paint：绘制</li>
+<li>Composite Layers：合成图层</li>
+</ul>
 
                                     
                             </div>
@@ -959,7 +1014,7 @@ res.send(callback+&quot;(&quot;+JSON.stringify(obj)+&quot;)&quot;);<span aria-hi
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hyhzzz.github.io/posts/null.html">https://hyhzzz.github.io/posts/null.html</a>
+                    <a href="https://hyhzzz.github.io/posts/1007.html">https://hyhzzz.github.io/posts/1007.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -997,8 +1052,8 @@ res.send(callback+&quot;(&quot;+JSON.stringify(obj)+&quot;)&quot;);<span aria-hi
                                         
                                             <div class="article-tag">
                                                 
-                                                    <a href="/tags/1005-ajax/">
-                                                        <span class="chip bg-color">1005 ajax</span>
+                                                    <a href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+                                                        <span class="chip bg-color">性能优化</span>
                                                     </a>
                                                     
                                             </div>
@@ -1169,7 +1224,7 @@ res.send(callback+&quot;(&quot;+JSON.stringify(obj)+&quot;)&quot;);<span aria-hi
         repo: 'boke-comment',
         owner: 'hyhzzz',
         admin: "hyhzzz",
-        id: '2021-07-31T21-58-56',
+        id: '2021-07-31T22-12-52',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1463,9 +1518,60 @@ res.send(callback+&quot;(&quot;+JSON.stringify(obj)+&quot;)&quot;);<span aria-hi
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/1007.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="性能优化">
+                        
+                        <span class="card-title">性能优化</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            主要记录了前端的一些性能优化
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-31
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%A4%A7%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    大前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+                        <span class="chip bg-color">性能优化</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/posts/1006.html">
                     <div class="card-image">
@@ -1483,9 +1589,9 @@ res.send(callback+&quot;(&quot;+JSON.stringify(obj)+&quot;)&quot;);<span aria-hi
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-31
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1503,55 +1609,6 @@ res.send(callback+&quot;(&quot;+JSON.stringify(obj)+&quot;)&quot;);<span aria-hi
                     
                     <a href="/tags/ES5-11%E6%96%B0%E7%89%B9%E6%80%A7/">
                         <span class="chip bg-color">ES5-11新特性</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/1004.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Shell入门到实战">
-                        
-                        <span class="card-title">Shell入门到实战</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            主要记录shell编程的语法和简单应用
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-17
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" class="post-category">
-                                    大数据
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Shell-Linux-%E5%A4%A7%E6%95%B0%E6%8D%AE/">
-                        <span class="chip bg-color">Shell Linux 大数据</span>
                     </a>
                     
                 </div>
