@@ -6,7 +6,7 @@
   <link href="https://hyhzzz.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyhzzz.github.io/"/>
-  <updated>2021-07-17T00:08:20.565Z</updated>
+  <updated>2021-07-31T14:08:19.675Z</updated>
   <id>https://hyhzzz.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ES5-11</title>
+    <link href="https://hyhzzz.github.io/posts/1006.html"/>
+    <id>https://hyhzzz.github.io/posts/1006.html</id>
+    <published>2021-07-31T14:01:26.000Z</published>
+    <updated>2021-07-31T14:08:19.675Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-ES6-简介&quot;&gt;&lt;a href=&quot;#1-ES6-简介&quot; class=&quot;headerlink&quot; title=&quot;1.ES6+ 简介&quot;&gt;&lt;/a&gt;1.ES6+ 简介&lt;/h1&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="大前端" scheme="https://hyhzzz.github.io/categories/%E5%A4%A7%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="ES5-11新特性" scheme="https://hyhzzz.github.io/tags/ES5-11%E6%96%B0%E7%89%B9%E6%80%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AJAX入门</title>
+    <link href="https://hyhzzz.github.io/posts/null.html"/>
+    <id>https://hyhzzz.github.io/posts/null.html</id>
+    <published>2021-07-31T13:58:56.000Z</published>
+    <updated>2021-07-31T14:02:39.534Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-概述&quot;&gt;&lt;a href=&quot;#1-概述&quot; class=&quot;headerlink&quot; title=&quot;1.概述&quot;&gt;&lt;/a&gt;1.概述&lt;/h1&gt;&lt;h2 id=&quot;1-Ajax-简介&quot;&gt;&lt;a href=&quot;#1-Ajax-简介&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="大前端" scheme="https://hyhzzz.github.io/categories/%E5%A4%A7%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="1005 ajax" scheme="https://hyhzzz.github.io/tags/1005-ajax/"/>
+    
+  </entry>
   
   <entry>
     <title>Shell入门到实战</title>
