@@ -551,7 +551,7 @@
 
                         <div class="card-content article-card-content">
                             <div id="articleContent">
-                                <h1 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h1><h2 id="1、为什么要使用Maven"><a href="#1、为什么要使用Maven" class="headerlink" title="1、为什么要使用Maven"></a>1、为什么要使用Maven</h2><p>​            Maven是干什么用的？</p>
+                                <h1 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h1><h2 id="1-为什么要使用Maven"><a href="#1-为什么要使用Maven" class="headerlink" title="1.为什么要使用Maven"></a>1.为什么要使用Maven</h2><p>​            Maven是干什么用的？</p>
 <p>​            因为即使不使用Maven我们仍然可以进行B/S结构项目的开发。从表述层、业务逻辑层到持久化层再到数据库都有成熟的解决方案——不使用Maven我们一样可以开发项目啊？所以我们有必要通过企业开发中的实际需求来看一看哪些方面是我们现有技术的不足。</p>
 <h3 id="1-1添加第三方jia包"><a href="#1-1添加第三方jia包" class="headerlink" title="1.1添加第三方jia包"></a>1.1添加第三方jia包</h3><img src="../img/maven/image-20210101091758931.png"  style="zoom:80%;" />
 
@@ -582,7 +582,7 @@
 <h3 id="1-6实现项目的分布式部署"><a href="#1-6实现项目的分布式部署" class="headerlink" title="1.6实现项目的分布式部署"></a>1.6实现项目的分布式部署</h3><p>​        在实际生产环境中，项目规模增加到一定程度后，可能每个模块都需要运行在独立的服务器上，我们称之为分布式部署，这里同样需要用到Maven。</p>
 <img src="../img/maven/clip_image002-1609463955513.png"  style="zoom:80%;" />
 
-<h2 id="2、Maven是什么？"><a href="#2、Maven是什么？" class="headerlink" title="2、Maven是什么？"></a>2、Maven是什么？</h2><img src="../img/maven/clip_image002-1609463975598.png"  style="zoom:80%;" />
+<h2 id="2-Maven是什么？"><a href="#2-Maven是什么？" class="headerlink" title="2.Maven是什么？"></a>2.Maven是什么？</h2><img src="../img/maven/clip_image002-1609463975598.png"  style="zoom:80%;" />
 
 <p>如果上面的描述能够使你认识到使用Maven是多么的重要，我们下面就来介绍一下Maven是什么。</p>
 <h3 id="2-1自动化构建工具"><a href="#2-1自动化构建工具" class="headerlink" title="2.1自动化构建工具"></a>2.1自动化构建工具</h3><ol>
@@ -657,8 +657,7 @@
 <li><p>聚合</p>
 </li>
 </ol>
-<p>##3、Maven如何使用</p>
-<p>我们来看看Maven核心程序的安装和本地仓库的必要设置。然后我们就可以编写第一个Maven程序了。</p>
+<h2 id="3-Maven如何使用"><a href="#3-Maven如何使用" class="headerlink" title="3.Maven如何使用"></a>3.Maven如何使用</h2><p>我们来看看Maven核心程序的安装和本地仓库的必要设置。然后我们就可以编写第一个Maven程序了。</p>
 <h3 id="3-1安装Maven核心程序"><a href="#3-1安装Maven核心程序" class="headerlink" title="3.1安装Maven核心程序"></a>3.1安装Maven核心程序</h3><ol>
 <li>检查JAVA_HOME环境变量。Maven是使用Java开发的，所以必须知道当前系统环境中JDK的安装目录。</li>
 </ol>
@@ -882,7 +881,7 @@ OS name<span class="token operator">:</span> <span class="token string">"windows
     <span class="token operator">&lt;</span><span class="token operator">/</span>plugins<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>build<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="4、Maven的核心概念"><a href="#4、Maven的核心概念" class="headerlink" title="4、Maven的核心概念"></a>4、Maven的核心概念</h2><h3 id="4-1核心概念"><a href="#4-1核心概念" class="headerlink" title="4.1核心概念"></a>4.1核心概念</h3><ol>
+<h2 id="4-Maven的核心概念"><a href="#4-Maven的核心概念" class="headerlink" title="4.Maven的核心概念"></a>4.Maven的核心概念</h2><h3 id="4-1核心概念"><a href="#4-1核心概念" class="headerlink" title="4.1核心概念"></a>4.1核心概念</h3><ol>
 <li><p>POM</p>
 </li>
 <li><p>约定的目录结构</p>
@@ -1220,7 +1219,7 @@ OS name<span class="token operator">:</span> <span class="token string">"windows
 </li>
 </ol>
 <p>例如：compile就是插件maven-compiler-plugin的一个功能；pre-clean是插件maven-clean-plugin的一个目标。</p>
-<p>##5、继承</p>
+<p>##5.继承</p>
 <h3 id="5-1为什么需要继承机制"><a href="#5-1为什么需要继承机制" class="headerlink" title="5.1为什么需要继承机制"></a>5.1为什么需要继承机制</h3><p>由于非compile范围的依赖信息是不能在“依赖链”中传递的，所以有需要的工程只能单独配置。例如：</p>
 <table>
 <thead>
@@ -1287,7 +1286,7 @@ OS name<span class="token operator">:</span> <span class="token string">"windows
     <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">></span></span>junit<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="6、聚合"><a href="#6、聚合" class="headerlink" title="6、聚合"></a>6、聚合</h2><h3 id="6-1为什么要使用聚合？"><a href="#6-1为什么要使用聚合？" class="headerlink" title="6.1为什么要使用聚合？"></a>6.1为什么要使用聚合？</h3><p>​        将多个工程拆分为模块后，需要手动逐个安装到仓库后依赖才能够生效。修改源码后也需要逐个手动进行clean操作。而使用了聚合之后就可以批量进行Maven工程的安装、清理工作。</p>
+<h2 id="6-聚合"><a href="#6-聚合" class="headerlink" title="6.聚合"></a>6.聚合</h2><h3 id="6-1为什么要使用聚合？"><a href="#6-1为什么要使用聚合？" class="headerlink" title="6.1为什么要使用聚合？"></a>6.1为什么要使用聚合？</h3><p>​        将多个工程拆分为模块后，需要手动逐个安装到仓库后依赖才能够生效。修改源码后也需要逐个手动进行clean操作。而使用了聚合之后就可以批量进行Maven工程的安装、清理工作。</p>
 <h3 id="6-2如何配置聚合？"><a href="#6-2如何配置聚合？" class="headerlink" title="6.2如何配置聚合？"></a>6.2如何配置聚合？</h3><p>在总的聚合工程中使用modules/module标签组合，指定模块工程的相对路径即可</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>聚合<span class="token operator">--</span><span class="token operator">></span>
 <span class="token generics"><span class="token punctuation">&lt;</span>modules<span class="token punctuation">></span></span>
@@ -1298,7 +1297,7 @@ OS name<span class="token operator">:</span> <span class="token string">"windows
 <span class="token operator">&lt;</span><span class="token operator">/</span>modules<span class="token operator">></span>
 <span class="token class-name">Maven</span>可以根据各个模块的继承和依赖关系自动选择安装的顺序    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="7、通过Maven创建Web工程"><a href="#7、通过Maven创建Web工程" class="headerlink" title="7、通过Maven创建Web工程"></a>7、通过Maven创建Web工程</h2><p>1)创建简单的Maven工程，打包方式为war包</p>
+<h2 id="7-通过Maven创建Web工程"><a href="#7-通过Maven创建Web工程" class="headerlink" title="7.通过Maven创建Web工程"></a>7.通过Maven创建Web工程</h2><p>1)创建简单的Maven工程，打包方式为war包</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">></span></span>com<span class="token punctuation">.</span>atguigu<span class="token punctuation">.</span>maven<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
 <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">></span></span><span class="token class-name">MavenWeb</span><span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
 <span class="token generics"><span class="token punctuation">&lt;</span>packaging<span class="token punctuation">></span></span>war<span class="token operator">&lt;</span><span class="token operator">/</span>packaging<span class="token operator">></span>
@@ -1327,7 +1326,7 @@ OS name<span class="token operator">:</span> <span class="token string">"windows
 <ol start="5">
 <li>部署到Tomcat上运行</li>
 </ol>
-<h2 id="8、Maven酷站"><a href="#8、Maven酷站" class="headerlink" title="8、Maven酷站"></a>8、Maven酷站</h2><p>我们可以到<a target="_blank" rel="noopener" href="http://mvnrepository.com/%E6%90%9C%E7%B4%A2%E9%9C%80%E8%A6%81%E7%9A%84jar%E5%8C%85%E7%9A%84%E4%BE%9D%E8%B5%96%E4%BF%A1%E6%81%AF%E3%80%82">http://mvnrepository.com/搜索需要的jar包的依赖信息。</a></p>
+<h2 id="8-Maven酷站"><a href="#8-Maven酷站" class="headerlink" title="8.Maven酷站"></a>8.Maven酷站</h2><p>我们可以到<a target="_blank" rel="noopener" href="http://mvnrepository.com/%E6%90%9C%E7%B4%A2%E9%9C%80%E8%A6%81%E7%9A%84jar%E5%8C%85%E7%9A%84%E4%BE%9D%E8%B5%96%E4%BF%A1%E6%81%AF%E3%80%82">http://mvnrepository.com/搜索需要的jar包的依赖信息。</a></p>
 <p><a target="_blank" rel="noopener" href="http://search.maven.org/">http://search.maven.org/</a></p>
 
                                     
