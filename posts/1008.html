@@ -424,7 +424,7 @@
                                     <div class="info-break-policy">
                                         <i class="far fa-file-word fa-fw"></i>
                                         文章字数:&nbsp;&nbsp;
-                                            7.6k
+                                            7.5k
                                     </div>
                                     
 
@@ -499,9 +499,7 @@
 </ol>
 <p>史上构建工具的发展也经历了一系列的演化和变迁：</p>
 <p>Make→Ant→Maven→Gradle→其他……</p>
-<h3 id="2-2构建的概论"><a href="#2-2构建的概论" class="headerlink" title="2.2构建的概论"></a>2.2构建的概论</h3><ol>
-<li>构建并不是创建，创建一个工程并不等于构建一个项目。要了解构建的含义我们应该由浅入深的从以下三个层面来看：</li>
-</ol>
+<h3 id="2-2构建的概论"><a href="#2-2构建的概论" class="headerlink" title="2.2构建的概论"></a>2.2构建的概论</h3><p>构建并不是创建，创建一个工程并不等于构建一个项目。要了解构建的含义我们应该由浅入深的从以下三个层面来看：</p>
 <p>①纯Java代码</p>
 <p>大家都知道，我们Java是一门编译型语言，.java扩展名的源文件需要编译成.class扩展名的字节码文件才能够执行。所以编写任何Java代码想要执行的话就必须经过编译得到对应的.class文件。</p>
 <p>②Web工程</p>
@@ -538,7 +536,7 @@
 <p>从中我们发现，托马斯的很大一部分时间花在了“编译、打包、部署、测试”这些程式化的工作上面，而真正需要由“人”的智慧实现的分析问题和编码却只占了很少一部分。</p>
 <img src="../img/maven/clip_image002-1609464010771.png"  style="zoom:80%;" />
 
-<p>能否将这些程式化的工作交给机器****自动****完成呢？——当然可以！这就是自动化构建。</p>
+<p>能否将这些程式化的工作交给机器自动完成呢？——当然可以！这就是自动化构建。</p>
 <img src="../img/maven/clip_image002-1609464014927.png"  style="zoom:80%;" />
 
 <p>那么Maven又是如何实现自动化构建的呢？简单的说来就是它可以自动的从构建过程的起点一直执行到终点：</p>
@@ -648,15 +646,23 @@ OS name<span class="token operator">:</span> <span class="token string">"windows
 </ol>
 <img src="../img/maven/wps112.jpg"  style="zoom:80%;" />
 
-<p>Ø Maven home directory：可以指定本地 Maven 的安装目录所在，因为我已经配置了 M2_HOME 系统参数，所以直接这样配置 IntelliJ IDEA 是可以找到的。但是假如你没有配置的话，这里可以选择你的 Maven 安装目录。此外，这里不建议使用IDEA默认的。</p>
-<p>Ø User settings file / Local repository：我们还可以指定 Maven 的 settings.xml 位置和本地仓库位置。</p>
+<ul>
+<li><p>Maven home directory：可以指定本地 Maven 的安装目录所在，因为我已经配置了 M2_HOME 系统参数，所以直接这样配置 IntelliJ IDEA 是可以找到的。但是假如你没有配置的话，这里可以选择你的 Maven 安装目录。此外，这里不建议使用IDEA默认的。</p>
+</li>
+<li><p>User settings file / Local repository：我们还可以指定 Maven 的 settings.xml 位置和本地仓库位置。</p>
+</li>
+</ul>
 <ol start="2">
 <li>配置Maven自动导入依赖的jar包</li>
 </ol>
 <img src="../img/maven/wps113.jpg"  style="zoom:80%;" />
 
-<p>Ø Import Maven projects automatically：表示 IntelliJ IDEA 会实时监控项目的 pom.xml 文件，进行项目变动设置，勾选上。</p>
-<p>Ø Automatically download：在 Maven 导入依赖包的时候是否自动下载源码和文档。默认是没有勾选的，也不建议勾选，原因是这样可以加快项目从外网导入依赖包的速度，如果我们需要源码和文档的时候我们到时候再针对某个依赖包进行联网下载即可。IntelliJ IDEA 支持直接从公网下载源码和文档的。</p>
+<ul>
+<li><p> Import Maven projects automatically：表示 IntelliJ IDEA 会实时监控项目的 pom.xml 文件，进行项目变动设置，勾选上。</p>
+</li>
+<li><p> Automatically download：在 Maven 导入依赖包的时候是否自动下载源码和文档。默认是没有勾选的，也不建议勾选，原因是这样可以加快项目从外网导入依赖包的速度，如果我们需要源码和文档的时候我们到时候再针对某个依赖包进行联网下载即可。IntelliJ IDEA 支持直接从公网下载源码和文档的。</p>
+</li>
+</ul>
 <p>VM options for importer：可以设置导入的 VM 参数。一般这个都不需要主动改，除非项目真的导入太慢了我们再增大此参数。</p>
 <h3 id="3-4第一个Maven程序"><a href="#3-4第一个Maven程序" class="headerlink" title="3.4第一个Maven程序"></a>3.4第一个Maven程序</h3><ol>
 <li>右键→new Module→Maven</li>
@@ -702,8 +708,6 @@ OS name<span class="token operator">:</span> <span class="token string">"windows
 
 <span class="token operator">&lt;</span><span class="token operator">/</span>project<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-
 <ol start="6">
 <li>编写主代码</li>
 </ol>
@@ -733,8 +737,6 @@ OS name<span class="token operator">:</span> <span class="token string">"windows
         <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>maven<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">&#125;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
 
 <ol start="8">
 <li>使用Maven的方式运行Maven工程</li>
@@ -932,23 +934,23 @@ OS name<span class="token operator">:</span> <span class="token string">"windows
 <h4 id="4-5-1-依赖的范围"><a href="#4-5-1-依赖的范围" class="headerlink" title="4.5.1 依赖的范围"></a>4.5.1 依赖的范围</h4><ol>
 <li>compile（默认就是这个范围）</li>
 </ol>
-<p>[1]main目录下的Java代码****可以****访问这个范围的依赖</p>
-<p>[2]test目录下的Java代码****可以****访问这个范围的依赖</p>
-<p>[3]部署到Tomcat服务器上运行时****要****放在WEB-INF的lib目录下</p>
+<p>[1]main目录下的Java代码可以访问这个范围的依赖</p>
+<p>[2]test目录下的Java代码可以访问这个范围的依赖</p>
+<p>[3]部署到Tomcat服务器上运行时要放在WEB-INF的lib目录下</p>
 <p>例如：对Hello的依赖。主程序、测试程序和服务器运行时都需要用到。</p>
 <ol start="2">
 <li>test</li>
 </ol>
-<p>[1]main目录下的Java代码****不能****访问这个范围的依赖</p>
-<p>[2]test目录下的Java代码****可以****访问这个范围的依赖</p>
-<p>[3]部署到Tomcat服务器上运行时****不会****放在WEB-INF的lib目录下</p>
+<p>[1]main目录下的Java代码不能访问这个范围的依赖</p>
+<p>[2]test目录下的Java代码可以访问这个范围的依赖</p>
+<p>[3]部署到Tomcat服务器上运行时不会放在WEB-INF的lib目录下</p>
 <p>例如：对junit的依赖。仅仅是测试程序部分需要。</p>
 <ol start="3">
 <li>provided</li>
 </ol>
-<p>[1]main目录下的Java代码****可以****访问这个范围的依赖</p>
-<p>[2]test目录下的Java代码****可以****访问这个范围的依赖</p>
-<p>[3]部署到Tomcat服务器上运行时****不会****放在WEB-INF的lib目录下</p>
+<p>[1]main目录下的Java代码可以访问这个范围的依赖</p>
+<p>[2]test目录下的Java代码可以访问这个范围的依赖</p>
+<p>[3]部署到Tomcat服务器上运行时不会放在WEB-INF的lib目录下</p>
 <p>例如：servlet-api在服务器上运行时，Servlet容器会提供相关API，所以部署的时候不需要。</p>
 <ol start="4">
 <li>其他：runtime、import、system等。</li>
@@ -1109,12 +1111,12 @@ OS name<span class="token operator">:</span> <span class="token string">"windows
 <li><p>Site Lifecycle生成项目报告，站点，发布站点。</p>
 </li>
 </ul>
-<p>再次强调一下它们是****相互独立的****，你可以仅仅调用clean来清理工作目录，仅仅调用site来生成站点。当然你也可以直接运行 <em><strong>*mvn clean install site*</strong></em> 运行所有这三套生命周期。</p>
+<p>再次强调一下它们是相互独立的，你可以仅仅调用clean来清理工作目录，仅仅调用site来生成站点。当然你也可以直接运行 mvn clean install site运行所有这三套生命周期。</p>
 <p>​        每套生命周期都由一组阶段(Phase)组成，我们平时在命令行输入的命令总会对应于一个特定的阶段。比如，运行mvn clean，这个clean是Clean生命周期的一个阶段。有Clean生命周期，也有clean阶段。</p>
 <ol start="2">
 <li>生命周期与自动化构建</li>
 </ol>
-<p>****运行任何一个阶段的时候，它前面的所有阶段都会被运行****，例如我们运行mvn install 的时候，代码会被编译，测试，打包。这就是Maven为什么能够自动执行构建过程的各个环节的原因。此外，Maven的插件机制是完全依赖Maven的生命周期的，因此理解生命周期至关重要。</p>
+<p>运行任何一个阶段的时候，它前面的所有阶段都会被运行，例如我们运行mvn install 的时候，代码会被编译，测试，打包。这就是Maven为什么能够自动执行构建过程的各个环节的原因。此外，Maven的插件机制是完全依赖Maven的生命周期的，因此理解生命周期至关重要。</p>
 <h3 id="4-8插件和目标"><a href="#4-8插件和目标" class="headerlink" title="4.8插件和目标"></a>4.8插件和目标</h3><ol>
 <li><p>Maven的核心仅仅定义了抽象的生命周期，具体的任务都是交由插件完成的。</p>
 </li>
@@ -1780,7 +1782,7 @@ OS name<span class="token operator">:</span> <span class="token string">"windows
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            主要记录Maven的细节
+                            主要记录Maven的知识点
                         
                     </div>
                     <div class="publish-info">
