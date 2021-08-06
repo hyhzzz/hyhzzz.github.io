@@ -6,7 +6,7 @@
   <link href="https://hyhzzz.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyhzzz.github.io/"/>
-  <updated>2021-07-31T14:14:57.007Z</updated>
+  <updated>2021-08-06T13:45:25.345Z</updated>
   <id>https://hyhzzz.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Maven入门到实战</title>
+    <link href="https://hyhzzz.github.io/posts/null.html"/>
+    <id>https://hyhzzz.github.io/posts/null.html</id>
+    <published>2021-08-06T13:26:14.000Z</published>
+    <updated>2021-08-06T13:45:25.345Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Maven&quot;&gt;&lt;a href=&quot;#Maven&quot; class=&quot;headerlink&quot; title=&quot;Maven&quot;&gt;&lt;/a&gt;Maven&lt;/h1&gt;&lt;h2 id=&quot;1、为什么要使用Maven&quot;&gt;&lt;a href=&quot;#1、为什么要使用Maven&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="大数据" scheme="https://hyhzzz.github.io/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+    
+    <category term="Maven" scheme="https://hyhzzz.github.io/tags/Maven/"/>
+    
+  </entry>
   
   <entry>
     <title>性能优化</title>
@@ -121,7 +146,7 @@
     <link href="https://hyhzzz.github.io/posts/1003.html"/>
     <id>https://hyhzzz.github.io/posts/1003.html</id>
     <published>2021-07-09T04:17:54.000Z</published>
-    <updated>2021-07-09T04:35:09.670Z</updated>
+    <updated>2021-08-06T13:45:53.932Z</updated>
     
     
       
