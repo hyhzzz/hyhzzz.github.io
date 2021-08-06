@@ -837,7 +837,7 @@ OS name<span class="token operator">:</span> <span class="token string">"windows
 </ol>
 <img src="../img/maven/wps117.jpg"  style="zoom:80%;" />
 
-<h2 id="3-5-Maven编译版本"><a href="#3-5-Maven编译版本" class="headerlink" title="3.5 Maven编译版本"></a>3.5 Maven编译版本</h2><p>在settings.xml中的<profiles></profiles>标签中加入如下内容</p>
+<h3 id="3-5-Maven编译版本"><a href="#3-5-Maven编译版本" class="headerlink" title="3.5 Maven编译版本"></a>3.5 Maven编译版本</h3><p>在settings.xml中的<profiles></profiles>标签中加入如下内容</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token generics"><span class="token punctuation">&lt;</span>profile<span class="token punctuation">></span></span>
   <span class="token generics"><span class="token punctuation">&lt;</span>id<span class="token punctuation">></span></span>jdk<span class="token operator">-</span><span class="token number">1.8</span><span class="token operator">&lt;</span><span class="token operator">/</span>id<span class="token operator">></span>
   <span class="token generics"><span class="token punctuation">&lt;</span>activation<span class="token punctuation">></span></span>
@@ -851,7 +851,7 @@ OS name<span class="token operator">:</span> <span class="token string">"windows
   <span class="token operator">&lt;</span><span class="token operator">/</span>properties<span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>profile<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="3-6-Maven打包插件"><a href="#3-6-Maven打包插件" class="headerlink" title="3.6 Maven打包插件"></a>3.6 Maven打包插件</h2><p>Maven本身的打包插件不负责将依赖的jar包一并打入到jar包中。如果项目所依赖的jar包在服务器环境中提供了还好，如果服务器环境中没有提供，则比较悲惨，运行各种ClassNotFound….你们懂的!</p>
+<h3 id="3-6-Maven打包插件"><a href="#3-6-Maven打包插件" class="headerlink" title="3.6 Maven打包插件"></a>3.6 Maven打包插件</h3><p>Maven本身的打包插件不负责将依赖的jar包一并打入到jar包中。如果项目所依赖的jar包在服务器环境中提供了还好，如果服务器环境中没有提供，则比较悲惨，运行各种ClassNotFound….你们懂的!</p>
 <p>因此需要一款能够将项目所依赖的jar包 一并打入到jar中的插件来解决这些问题.</p>
 <p>在pom.xml中加入如下内容:</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token generics"><span class="token punctuation">&lt;</span>build<span class="token punctuation">></span></span>
